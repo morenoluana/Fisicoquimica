@@ -169,3 +169,5 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 .examen { margin-bottom: 30px; }
 .examen > h3 { font-size: 22px; margin: 0 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--acento); }
 .examen .ej { border-left-color: var(--acento); }
+#previo { margin-bottom: 18px; border-color: var(--acento); }
+#previo table.datos { max-width: none; }

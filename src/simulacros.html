@@ -1,29 +1,136 @@
 <!-- Exámenes y simulacros de Alderete, resueltos. Al agregar uno nuevo: sumarlo en la tabla "Qué se repite". -->
 
+<div class="aviso" id="previo">
+  <h3>El final previo tiene siempre la misma estructura</h3>
+  <p>Los previos de febrero, junio y septiembre 2026 son un <b>caso integrador</b> (un proceso industrial inventado) con 4 o 5 preguntas que se repiten casi iguales. Si practicás estas cinco "recetas", tenés el previo:</p>
+  <div class="scroll">
+  <table class="datos">
+    <tr><th>Bloque</th><th>Qué piden</th><th>Cómo se hace</th></tr>
+    <tr><td>Mezclas</td><td>molalidad, fracciones molares en líquido y vapor; clasificar en ideal, idealmente diluida o real; a veces ascenso ebulloscópico</td><td>$m = n_{st}/\text{kg}_{\text{solv}}$ · $y_i = p_i/P$ · solvente vs Raoult ($x_Ap_A^*$), soluto vs Henry ($p_B/x_B$ cte) · $\Delta T_e = K_em$</td></tr>
+    <tr><td>Gas real</td><td>w, q, ΔU de un gas en recipiente rígido; p final con Van der Waals o virial; masa de un vapor</td><td>rígido → w = 0, q = ΔU = nC<sub>V</sub>ΔT · VdW: V inicial iterando, p final con la misma V · virial: $Z = 1 + B'p$, $n = pV/ZRT$</td></tr>
+    <tr><td>Termoquímica</td><td>ΔH por energías de enlace, ΔU, ΔH a otra T</td><td>rotos − formados (gas; si el agua es líquida, −44 kJ/mol) · ΔU = ΔH − Δn<sub>g</sub>RT · Kirchhoff con ΔCp</td></tr>
+    <tr><td>Espontaneidad</td><td>ΔG°, ¿espontánea?, temperatura de inversión, trabajo máximo, calor</td><td>ΔS° de tabla · ΔG = ΔH − TΔS · T = ΔH/ΔS · w<sub>max</sub> = ΔA, w<sub>útil</sub> = ΔG · q<sub>p</sub> = ΔH</td></tr>
+    <tr><td>Cinética</td><td>k con dos concentraciones, t½, tiempo hasta cierta concentración, efecto de T</td><td>"elemental" y un solo reactivo → orden 1 · $k = \ln(C_0/C)/t$ · $t = \ln(C_0/C_f)/k$ · Arrhenius cualitativo</td></tr>
+  </table>
+  </div>
+</div>
+
 <div class="aviso" id="repite">
-  <h3>Qué se repite (9 exámenes: finales 2022–2024, parciales 2023–2024, recuperatorio e integrador)</h3>
+  <h3>Qué se repite (11 exámenes: previos 2026, finales 2022–2024, parciales 2023–2024, recuperatorio e integrador)</h3>
   <p>El profesor <b>recicla mucho</b>: el recuperatorio del 1.er parcial 2023 tiene 6 de 10 ejercicios iguales al 1.er parcial 2024 o al final nov-24, y casi la mitad de los puntos son ejercicios de las guías. Si sabés hacer las guías y estos modelos, tenés la mayor parte del examen.</p>
   <div class="scroll">
   <table class="datos">
     <tr><th>Tema</th><th>Exámenes</th><th>Dónde</th></tr>
-    <tr><td><b>Kirchhoff y Cp(T)</b> (formular un caso, CO₂ de 25 a 500 °C, ΔH a otra T)</td><td>3</td><td>1.er parcial 23 y 24, recup. 23</td></tr>
-    <tr><td><b>1.ª ley con Van der Waals</b> (N₂ a V fijo, H₂S isobárico adiabático)</td><td>3</td><td>1.er parcial 23 y 24, recup. 23</td></tr>
-    <tr><td><b>Energías de enlace</b> (N≡N, HClO₄)</td><td>3</td><td>final nov-24, 1.er parcial 23, recup. 23</td></tr>
+    <tr><td><b>Kirchhoff y Cp(T)</b> (formular un caso, CO₂ de 25 a 500 °C, ΔH a otra T)</td><td>4</td><td>1.er parcial 23 y 24, recup. 23, previo jun-26</td></tr>
+    <tr><td><b>1.ª ley con gas real</b> (VdW a V fijo, H₂S isobárico, virial)</td><td>5</td><td>1.er parcial 23 y 24, recup. 23, previos jun y sep-26</td></tr>
+    <tr><td><b>Energías de enlace</b> (N≡N, HClO₄, precursores orgánicos)</td><td>5</td><td>final nov-24, 1.er parcial 23, recup. 23, previos jun y sep-26</td></tr>
     <tr><td><b>Clapeyron / punto triple</b> (V sólido vs líquido, ΔH<sub>fus</sub>, p de sublimación)</td><td>4</td><td>2.º parcial 23 y 24, final nov-24, integrador</td></tr>
-    <tr><td><b>Mezcla binaria con Raoult</b> (hexano/octano, ¿ideal o diluida?)</td><td>3</td><td>finales dic-22 y nov-24, integrador</td></tr>
+    <tr><td><b>Mezcla binaria: fracciones molares y ¿ideal o idealmente diluida?</b></td><td>6</td><td>finales dic-22 y nov-24, integrador, previos feb, jun y sep-26</td></tr>
     <tr><td>Olla a presión (200 o 120 kPa)</td><td>2</td><td>2.º parciales · <a href="#f1-3">guía</a></td></tr>
     <tr><td>Arrhenius: T para t½ = 10 h</td><td>2</td><td>2.º parciales · <a href="#c1-8">guía</a></td></tr>
     <tr><td>Descomposición del HI</td><td>2</td><td>2.º parcial 23 y 24 · <a href="#c1-9">guía</a></td></tr>
-    <tr><td>Orden y k con datos [A] vs t, o deducir t½ de un orden raro</td><td>4</td><td>finales dic-22 y nov-24, 2.º parcial, integrador</td></tr>
+    <tr><td><b>Cinética de primer orden</b>: k con dos concentraciones, tiempo hasta otra, t½; o deducir t½ de otro orden</td><td>6</td><td>finales dic-22 y nov-24, 2.º parcial, integrador, previos jun y sep-26</td></tr>
     <tr><td>Combustión del butano (q y ΔU)</td><td>2</td><td>1.er parcial 24, recup. 23</td></tr>
     <tr><td>ΔfH° del diamante vs grafito</td><td>2</td><td>final nov-24, recup. 23</td></tr>
     <tr><td>μ de un disolvente real; racional vs práctico</td><td>4</td><td>2.º parciales, finales</td></tr>
-    <tr><td>ΔG, ΔA, espontaneidad, E°</td><td>2</td><td>1.er parcial 23, integrador</td></tr>
+    <tr><td><b>ΔG, ΔA, temperatura de inversión, trabajo máximo</b></td><td>4</td><td>1.er parcial 23, integrador, previos jun y sep-26</td></tr>
     <tr><td>Teoría corta: coloides, geles, agua ligada, monocapa, virial, utilidad de Kirchhoff, ec. fundamental, K vs T</td><td>5</td><td>como preguntas o bonus</td></tr>
   </table>
   </div>
-  <p><b>Prioridad:</b> 1) primera ley y termoquímica (VdW, Kirchhoff, Hess, enlaces, calorimetría), 2) cambio de fases con Clapeyron y Clausius-Clapeyron, 3) cinética (orden con datos, Arrhenius, t½), 4) mezclas (Raoult/Henry, racional/práctico). Segunda ley y equilibrio aparecen como ítems sueltos (ΔG, ΔA, E°); biorreactores no apareció nunca.</p>
+  <p><b>Prioridad para el previo:</b> las cinco recetas de arriba. Después, para finales y parciales: cambio de fases con Clapeyron, calorimetría, Hess y teoría corta. Biorreactores no apareció nunca.</p>
 </div>
+
+<section class="examen" id="x-previo-jun26">
+<h3>Final previo · 9 de junio de 2026 · Luminurina</h3>
+<p class="nota">Caso: extracción de Luminurina (3-aminopropanal, M = 210 g/mol según el enunciado) con etilbenceno, calentamiento del vapor, síntesis desde 3-amino-1-propanol y degradación en almacenamiento. Cada pregunta vale 20 %.</p>
+
+<article class="ej" id="xpj-1">
+  <h4>1 · Molalidad, fracciones molares y clasificación de la solución</h4>
+  <p class="rta"><b>a) m = 0,414 mol/kg · x<sub>L</sub> = 0,042, x<sub>EB</sub> = 0,958 · b) y<sub>EB</sub> = 0,971, y<sub>L</sub> = 0,029 · idealmente diluida (aprox.)</b></p>
+  <details><summary>Resolución</summary>
+    <p>a) 2,00 kg al 8 % m/m: 160 g de soluto (0,762 mol) y 1,840 kg de EB (17,36 mol). $m = 0{,}762/1{,}840 = 0{,}414$ mol/kg. $x_L = 0{,}762/18{,}12 = 0{,}042$; $x_{EB} = 0{,}958$.</p>
+    <p>b) Solución A: $P = 3{,}95 + 0{,}12 = 4{,}07$ kPa → $y_{EB} = 3{,}95/4{,}07 = 0{,}971$; $y_L = 0{,}029$.</p>
+    <p>Solvente vs Raoult: A $0{,}955\cdot4{,}10 = 3{,}92$ (medido 3,95); B $0{,}920\cdot4{,}10 = 3{,}77$ (medido 3,80): cumple Raoult (desvío &lt; 1 %). Soluto vs Henry: $p_L/m_{st} = 0{,}12/0{,}60 = 0{,}200$ y $0{,}25/1{,}20 = 0{,}208$: casi constante, cumple Henry. Solvente Raoult + soluto Henry → <b>idealmente diluida</b>. No es ideal: si el soluto siguiera Raoult, $p_L/x_L$ sería la p* del soluto puro y acá cambia con la concentración.</p>
+    <p class="nota">Las leves desviaciones positivas indican que, estrictamente, es real. Decilo como matiz.</p>
+  </details>
+</article>
+
+<article class="ej" id="xpj-2">
+  <h4>2 · Calentar 1,50 mol de vapor de EB en reactor rígido (298 → 380 K)</h4>
+  <p class="rta"><b>w = 0 · q = ΔU ≈ +14,8 kJ · p<sub>f</sub> ≈ 1,29 bar (VdW) vs 1,32 bar ideal</b></p>
+  <details><summary>Resolución</summary>
+    <p>a) Rígido → ΔV = 0 → w = 0 → q = ΔU. Hipótesis: C<sub>V</sub> constante y el término de atracción de VdW no cambia porque V es constante. Con C<sub>p,m</sub>(EB, g) ≈ 128,4 J/K·mol, $C_{V,m} = 120{,}1$: $\Delta U = 1{,}5\cdot120{,}1\cdot82 = 14{,}8$ kJ.</p>
+    <p>b) Tolueno: a = 24,38 L²bar/mol², b = 0,1463 L/mol. V inicial iterando VdW a 298 K y 1 bar: V = 35,9 L. Con esa V a 380 K: $p = \dfrac{nRT}{V - nb} - \dfrac{an^2}{V^2} = 1{,}29$ bar.</p>
+    <p>c) Ideal en el mismo volumen: $p = nRT/V = 1{,}32$ bar. El real da menos porque las atracciones bajan la presión sobre las paredes.</p>
+  </details>
+</article>
+
+<article class="ej" id="xpj-3">
+  <h4>3 · ΔH° por energías de enlace, ΔU°, ΔH a 398 K</h4>
+  <p class="rta"><b>ΔH° ≈ −230 kJ/mol · ΔU° ≈ −228 kJ/mol · ΔH(398) ≈ −224 kJ/mol · exotérmica</b> (los valores cambian un poco según la tabla)</p>
+  <details><summary>Resolución</summary>
+    <p>$\text{H}_2\text{N-CH}_2\text{CH}_2\text{CH}_2\text{-OH} + \tfrac12\text{O}_2 \to \text{H}_2\text{N-CH}_2\text{CH}_2\text{-CHO} + \text{H}_2\text{O}$. Solo cambia el extremo: el CH₂–OH pasa a CHO.</p>
+    <p>Rotos: 1 C–H (412) + 1 O–H (463) + 1 C–O (360) + ½ O=O (248,5) = 1483,5. Formados: 1 C=O (743) + 2 O–H del agua (926) = 1669. $\Delta H_{(g)} = -185{,}5$ kJ. Como el agua sale líquida, se resta la vaporización: $\Delta H^\circ = -185{,}5 - 44 = -229{,}5$ kJ/mol.</p>
+    <p>$\Delta n_g = 1 - 1{,}5 = -0{,}5$ → $\Delta U = \Delta H + 0{,}5RT = -228{,}3$ kJ/mol.</p>
+    <p>Kirchhoff: $\Delta C_p = 98 + 75{,}3 - 105 - \tfrac12(29{,}4) = 53{,}6$ J/K → $\Delta H(398) = -229{,}5 + 0{,}0536\cdot100 = -224{,}1$ kJ/mol. ΔH &lt; 0: exotérmica.</p>
+  </details>
+</article>
+
+<article class="ej" id="xpj-4">
+  <h4>4 · ΔG°, espontaneidad, temperatura de inversión, trabajo máximo</h4>
+  <p class="rta"><b>ΔS° = −52,7 J/K · ΔG° ≈ −214 kJ/mol (espontánea) · T<sub>inv</sub> ≈ 4360 K · w<sub>max</sub> ≈ 213 kJ/mol</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\Delta S^\circ = 330 + 69{,}9 - 350 - \tfrac12(205{,}1) = -52{,}7$ J/K. $\Delta G^\circ = -229{,}5 - 298{,}15(-0{,}0527) = -213{,}8$ kJ/mol → espontánea.</p>
+    <p>ΔH &lt; 0 y ΔS &lt; 0: espontánea a T bajas, deja de serlo arriba de $T = \Delta H/\Delta S = 229{,}5/0{,}0527 \approx 4360$ K (fuera de todo rango práctico).</p>
+    <p>Trabajo máximo: $\Delta A = \Delta U - T\Delta S = -212{,}6$ kJ/mol (el sistema puede entregar 212,6 kJ). Trabajo útil no expansivo: $\Delta G = -213{,}8$ kJ/mol. El calor a p constante es ΔH = −229,5 kJ/mol.</p>
+  </details>
+</article>
+
+<article class="ej" id="xpj-5">
+  <h4>5 · Degradación en almacenamiento (8,0 % → 5,6 % en 12 días)</h4>
+  <p class="rta"><b>Orden 1 · k = 0,0297 d⁻¹ · t½ = 23,3 d · 20 % a los 54 d</b></p>
+  <details><summary>Resolución</summary>
+    <p>a) Elemental y con un solo reactivo → unimolecular → orden 1 (en una elemental el orden es la molecularidad).</p>
+    <p>b) Con densidad constante el % m/m es proporcional a la concentración: $k = \dfrac{\ln(8{,}0/5{,}6)}{12} = 0{,}0297$ d⁻¹. c) $t_{1/2} = \ln2/k = 23{,}3$ d. d) $t = \ln(100/20)/k = \ln5/k = 54$ d.</p>
+    <p>e) Arrhenius: k crece exponencialmente con T, así que subir T 10 % (308 → 339 K) aumenta mucho k y la degradación es bastante más rápida: conviene almacenar en frío.</p>
+  </details>
+</article>
+</section>
+
+<section class="examen" id="x-previo-sep26">
+<h3>Final previo · septiembre 2026 (reconstruido de memoria)</h3>
+<p class="nota">No hay enunciado escrito: esto es la estructura que recordás, con el método para resolverla. Si conseguís los números, los resuelvo.</p>
+
+<article class="ej" id="xps-1">
+  <h4>1 · Masa de solvente extraído (virial con B') y ascenso ebulloscópico</h4>
+  <details open><summary>Método</summary>
+    <p>Con B', p, V y T del vapor: $Z = 1 + B'p$ → $n = \dfrac{pV}{ZRT}$ → masa = n·M. Ojo con las unidades de B' (atm⁻¹ o Pa⁻¹, igual que p).</p>
+    <p>Ebullición con soluto al x % m/m en m kg de solución: masa de soluto = x %·m; kg de solvente = el resto; molalidad = (masa soluto/M)/kg solvente; $\Delta T_e = K_em$ y $T_e = T_e^* + \Delta T_e$. Si no te dan K<sub>e</sub>: $K_e = RT_e^{*2}M_A/\Delta H_{vap}$.</p>
+  </details>
+</article>
+
+<article class="ej" id="xps-2">
+  <h4>2 · k con dos concentraciones (9 → 7) y tiempo hasta 5</h4>
+  <details open><summary>Método</summary>
+    <p>Si es orden 1: $k = \dfrac{\ln(9/7)}{t_1}$ y $t = \dfrac{\ln(9/5)}{k}$. Atajo: $t = t_1\dfrac{\ln(9/5)}{\ln(9/7)} = 2{,}34\,t_1$.</p>
+    <p class="nota">Si fuera orden 0: t = 2 t₁; orden 2: t = 2,8 t₁. Justificá el orden: "elemental, un reactivo", o lo que diga el enunciado.</p>
+  </details>
+</article>
+
+<article class="ej" id="xps-3">
+  <h4>3 · Temperatura máxima para que sea espontánea, calor y trabajo útil</h4>
+  <details open><summary>Método</summary>
+    <p>ΔH con energías de enlace (rotos − formados), ΔS con S° de tabla (productos − reactivos). Si ΔH &lt; 0 y ΔS &lt; 0, es espontánea hasta $T_{max} = \Delta H/\Delta S$ (ΔS en kJ/K). Calor a p constante: q = ΔH. Trabajo máximo útil: ΔG = ΔH − TΔS. Es la misma estructura que la pregunta 4 del previo de junio.</p>
+  </details>
+</article>
+
+<article class="ej" id="xps-4">
+  <h4>4 · Fracciones molares en el gas; ¿ideal o idealmente diluida?</h4>
+  <details open><summary>Método</summary>
+    <p>Igual que la pregunta 1b de junio y el ejercicio 2 del <a href="#xf22-2">final dic-22</a>: $y_i = p_i/P$; el solvente se compara con Raoult ($x_Ap_A^*$) y el soluto con Henry ($p_B/x_B$ constante, distinto de $p_B^*$).</p>
+  </details>
+</article>
+</section>
 
 <section class="examen" id="x-final-nov24">
 <h3>Final adelantado · noviembre 2024</h3>
