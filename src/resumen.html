@@ -15,6 +15,7 @@
   <p>Las moléculas sí ocupan volumen y sí se atraen y repelen. A <b>baja presión y alta temperatura</b> el gas se parece al ideal; a presión alta o temperatura baja aparecen desviaciones. Se miden con el <b>factor de compresión</b>:</p>
   <p class="eq">$Z = \dfrac{pV_m}{RT}$</p>
   <p class="clave">Z = 1 ideal. Z &lt; 1: dominan las atracciones (el gas ocupa menos que el ideal). Z &gt; 1: dominan las repulsiones (ocupa más).</p>
+  <!-- figura: z-vs-p -->
   <p><b>Ecuación del virial</b>: $Z = 1 + B/V_m + C/V_m^2 + \dots$ (o en potencias de p). Los coeficientes B, C… dependen solo de T. En la <b>temperatura de Boyle</b> B = 0 y el gas se comporta idealmente en un rango amplio de presiones.</p>
 
   <h3>Van der Waals</h3>
@@ -42,6 +43,7 @@
   <p>$dw = -p_{ex}dV$. Contra el vacío ($p_{ex}=0$) o a volumen constante, $w = 0$. Contra presión externa constante (irreversible), $w = -p_{ex}\Delta V$. En un proceso <b>reversible</b> $p_{ex} = p$ en cada paso (sucesión de equilibrios) y para un gas ideal isotérmico:</p>
   <p class="eq">$w = -nRT\ln\dfrac{V_f}{V_i}$</p>
   <p>En el diagrama p–V el trabajo es el área bajo la curva. Cuantos más pasos, más se acerca a la isoterma: en una <b>expansión</b> el reversible da el <b>trabajo máximo</b> que entrega el sistema; en una <b>compresión</b> da el <b>trabajo mínimo</b> que hay que hacer.</p>
+  <!-- figura: trabajo-pv -->
   <p>Para un gas de Van der Waals: $w = -nRT\ln\frac{V_f - nb}{V_i - nb} - an^2\left(\frac1{V_f} - \frac1{V_i}\right)$. El log corrige por volumen excluido y el segundo término por atracciones.</p>
 
   <h3>Capacidad calorífica y entalpía</h3>
@@ -97,6 +99,7 @@
   <p>A <b>T y p constantes</b> (lo habitual en química y en la célula) espontáneo ⇔ $\Delta G &lt; 0$; a <b>T y V constantes</b> ⇔ $\Delta A &lt; 0$; $= 0$ es equilibrio. Hay dos porque cada una corresponde a un par de variables que se mantienen fijas. En química interesa más G porque casi todo pasa a presión constante.</p>
   <p>Relación con el trabajo: $\Delta A = w_{max}$ (todo el trabajo, A viene de "Arbeit") y $\Delta G = w_{\text{útil, no expansión}}$ (eléctrico, muscular, de síntesis). No toda la energía de un proceso espontáneo se convierte en trabajo: solo la parte "libre".</p>
   <p>Cuadrantes de $\Delta G = \Delta H - T\Delta S$: ΔH−/ΔS+ siempre espontánea; ΔH+/ΔS− nunca; ΔH−/ΔS− a T bajas; ΔH+/ΔS+ a T altas (ej: evaporación, disolución de sales). La temperatura de cambio es $T = \Delta H/\Delta S$.</p>
+  <!-- figura: cuadrantes -->
   <p>Ejemplo biológico: la oxidación de glucosa tiene ΔG° ≈ −2870 kJ/mol (espontánea, exergónica: pasa de una molécula compleja a muchas simples, sube S). La fotosíntesis es el proceso inverso: ΔG &gt; 0, necesita energía de la luz.</p>
 </section>
 
@@ -112,6 +115,7 @@
   <p>Con el avance de reacción $\xi$ ($dn_i = \nu_i d\xi$): $\Delta_rG = (\partial G/\partial\xi)_{T,p} = \sum\nu_i\mu_i$. Reemplazando μ:</p>
   <p class="eq">$\Delta_rG = \Delta_rG^\circ + RT\ln Q \qquad \text{equilibrio: } \Delta_rG^\circ = -RT\ln K$</p>
   <p class="clave">Q &lt; K: faltan productos, ΔG &lt; 0, avanza hacia la derecha. Q &gt; K: sobran productos, va a la izquierda. Q = K: equilibrio.</p>
+  <!-- figura: g-vs-xi -->
   <p>K depende de cómo se escribe la reacción (duplicar coeficientes eleva K al cuadrado) y sobre todo de T; también del solvente; la presión casi no la afecta. K y ΔG° <b>no dicen si la reacción ocurre</b> (eso depende de Q), sino qué predomina en el equilibrio: K ≫ 1 productos, K ≪ 1 reactivos.</p>
   <p>Gases: $K_p = K_c(RT)^{\Delta n_g}$ y $K_p = K_x\,p_T^{\Delta n_g}$; si $\Delta n_g \ne 0$, cambiar la presión total cambia $K_x$ (la composición) aunque $K_p$ siga igual.</p>
   <p><b>Equilibrio heterogéneo</b>: sólidos y líquidos puros tienen actividad 1 y no aparecen en K. Ej: $\text{CaCO}_3(s) \rightleftharpoons \text{CaO}(s) + \text{CO}_2(g)$, $K_p = p_{\text{CO}_2}$.</p>
@@ -140,9 +144,11 @@
 
   <h3>μ vs T</h3>
   <p>$(\partial\mu/\partial T)_p = -S_m$: la pendiente es más negativa cuanto más desordenada la fase (gas &gt; líquido &gt; sólido). A T baja el sólido tiene el menor μ (fase estable); a T alta el gas. Donde las rectas se cruzan están $T_f$ y $T_e$. $(\partial\mu/\partial p)_T = V_m$.</p>
+  <!-- figura: mu-vs-t -->
 
   <h3>Diagrama de fases</h3>
   <p>Regiones = fase estable; curvas = coexistencia de dos fases; punto triple = tres fases; <b>punto crítico</b> = fin de la curva líquido-vapor (arriba solo hay fluido supercrítico). CO₂: punto triple a 5,2 bar, por eso a 1 atm sublima (−78 °C) y no existe líquido; punto crítico 31 °C y 73 atm.</p>
+  <!-- figura: diagrama-fases -->
   <p><b>Presión de vapor</b>: la del vapor en equilibrio con el líquido; sube con T y casi no depende de la presión externa. Ebullición: $p_{vap} = p_{ext}$; normal a 1 atm. Por eso la curva $p_{vap}(T)$ también es $T_{eb}(p)$. Sustancias con fuerzas intermoleculares débiles (éter) tienen p<sub>vap</sub> alta y hierven antes. Durante un cambio de fase T no cambia: el calor se usa en separar partículas.</p>
 
   <h3>Clapeyron y Clausius-Clapeyron</h3>
@@ -165,6 +171,7 @@
   <p><b>Gas ideal</b>: $\mu = \mu^\circ + RT\ln(p/p^\circ)$, con $p^\circ = 1$ bar. Se usa como referencia porque en el equilibrio líquido-vapor $\mu_{líq} = \mu_{vap}$.</p>
   <p><b>Solución ideal</b>: todos los componentes cumplen <b>Raoult</b>, $p_i = x_ip_i^*$. Las interacciones A-B son iguales a A-A y B-B, así que $\Delta_{mix}H = 0$ y $\Delta_{mix}V = 0$; mezclar es espontáneo solo por entropía: $\Delta_{mix}G = nRT\sum x_i\ln x_i &lt; 0$. Potencial: $\mu_i = \mu_i^* + RT\ln x_i$ (convención I).</p>
   <p><b>Solución idealmente diluida</b>: el solvente cumple Raoult y el soluto volátil cumple <b>Henry</b>, $p_B = K_Bx_B$ (K<sub>B</sub> depende de T y del solvente, no es la presión de vapor del puro). Potencial del soluto con convención II: $\mu^\circ_{(II)} = \mu^\circ + RT\ln K_B$.</p>
+  <!-- figura: raoult-henry -->
 
   <h3>Propiedades coligativas</h3>
   <p>Dependen de <b>cuántas</b> partículas de soluto hay, no de cuáles. Todas salen de lo mismo: el soluto (no volátil) baja el μ del solvente ($RT\ln x_A &lt; 0$), entonces baja su presión de vapor ($\Delta p = x_Bp_A^*$). Consecuencias:</p>
@@ -192,6 +199,7 @@
 
   <h3>Leyes integradas</h3>
   <p>Orden 0: [A] baja linealmente. Orden 1: $\ln[A] = \ln[A]_0 - kt$, decaimiento exponencial y $t_{1/2} = \ln2/k$ <b>independiente de [A]₀</b> (radiactividad, sacarosa, H₂O₂). Orden 2: $1/[A] = 1/[A]_0 + kt$ y $t_{1/2} = 1/k[A]_0$ (más concentrado, más rápido). Para saber el orden con datos [A] vs t: probar qué gráfico da recta.</p>
+  <!-- figura: primer-orden -->
 
   <h3>Cómo se determina el orden</h3>
   <p><b>Velocidades iniciales</b>: se varía una sola concentración y se compara: si al duplicar [A] la velocidad se duplica, orden 1; si se cuadruplica, orden 2; si no cambia, orden 0. <b>Aislamiento</b>: todos en exceso menos uno; queda una ley de pseudo-orden $v = k'[A]^\alpha$ con $k' = k[B]^\beta_{exceso}$.</p>
@@ -209,6 +217,7 @@
 
   <h3>Catálisis y enzimas</h3>
   <p>El catalizador abre un camino con <b>menor E<sub>a</sub></b>; no cambia ΔG ni K, solo llega antes al equilibrio. Homogénea (misma fase) o heterogénea (en superficie, con adsorción). Enzimas: proteínas muy específicas y eficientes (la catalasa descompone 10⁷ H₂O₂ por segundo); modelo llave-cerradura y ajuste inducido.</p>
+  <!-- figura: perfil-energia -->
   <p><b>Michaelis-Menten</b>: $E + S \rightleftharpoons ES \to E + P$ con estado estacionario para ES:</p>
   <p class="eq">$v = \dfrac{k_{cat}[E]_0[S]}{K_M + [S]}$</p>
   <p>A [S] baja, v crece casi lineal; a [S] alta se satura en $v_{max}$. $K_M$ es la [S] a la que $v = v_{max}/2$ (menor K<sub>M</sub>, más afinidad). Lineweaver-Burk (1/v vs 1/[S]) da una recta: pendiente $K_M/v_{max}$, ordenada $1/v_{max}$. Inhibición <b>competitiva</b>: el inhibidor ocupa el sitio activo, sube K<sub>M</sub> aparente y v<sub>max</sub> no cambia (se revierte con más sustrato). <b>No competitiva</b>: se une a otro sitio, baja v<sub>max</sub> y K<sub>M</sub> no cambia.</p>
@@ -234,6 +243,7 @@
 
   <h3>Agua en alimentos</h3>
   <p><b>Actividad de agua</b> $a_w = p/p^* = HR\%/100$: mide el agua disponible, no la cantidad total. <b>Agua libre</b>: retenida físicamente, con propiedades de agua pura. <b>Agua ligada</b>: interactúa con solutos y biopolímeros; movilidad restringida, no congela (hasta ~−40 °C), no se elimina por secado, no sirve como solvente. <b>Humedad de monocapa</b>: cada grupo polar tiene una molécula de agua; es el punto de máxima estabilidad (por encima, el agua actúa como solvente y aceleran el deterioro y la reacción de Maillard, que se frena a a<sub>w</sub> baja). <b>Histéresis</b>: la curva de desorción queda por encima de la de adsorción (a igual a<sub>w</sub>, más humedad al secar) por capilaridad y cambios de estructura. Medición: gravimétrica (equilibrar con sales saturadas de a<sub>w</sub> conocida) o higrómetro.</p>
+  <!-- figura: isoterma -->
 
   <h3>Sistemas dispersos</h3>
   <p>Dos fases no miscibles, una finamente dividida (fase dispersa) en la otra (dispersante). Al dividir aumenta la relación área/volumen y pesan los fenómenos de superficie. <b>Tensión superficial</b>: tendencia del líquido a minimizar su área (J/m²).</p>

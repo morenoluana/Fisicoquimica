@@ -17,6 +17,7 @@ Material para preparar el examen de Fisicoquímica (UADE, prof. Juan M. Alderete
 El contenido está en `src/` (HTML con fórmulas en `$...$`). Para regenerar todo:
 
 ```sh
+python3 scripts/figuras.py # gráficos SVG del resumen (src/figuras/)
 node scripts/build.mjs     # index.html, hoja-de-formulas.html, resumen.html
 node scripts/pdf.mjs       # los dos PDF (Playwright + Chromium)
 python3 scripts/verificar.py   # recalcula los resultados de los ejercicios

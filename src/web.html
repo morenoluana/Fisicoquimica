@@ -6,7 +6,9 @@
   <div class="dentro">
     <span class="eyebrow">UADE · Biotecnología · Prof. Juan M. Alderete</span>
     <h1>Fisicoquímica<span class="eq-titulo">ΔG = ΔH − TΔS</span></h1>
+    <ul class="chips-unidades">{{CHIPS}}</ul>
   </div>
+  <div class="espectro" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </div>
 
 <nav class="nav" aria-label="Secciones">
@@ -21,12 +23,12 @@
 </nav>
 
 <main>
-  <section class="seccion" id="inicio">
+  <section class="seccion" id="sec-inicio">
     <div class="inicio-grid">
       <div>
         <h2 style="font-size:28px;margin-bottom:14px">Cómo usar esto para el examen</h2>
         <ol class="pasos">
-          <li><div><b>Leé el resumen de una unidad</b><p>Diez unidades, de gases reales a biorreactores. Lo azul es lo que conviene saber de memoria; lo rojo, los errores típicos.</p></div></li>
+          <li><div><b>Leé el resumen de una unidad</b><p>Diez unidades, de gases reales a biorreactores. Cada unidad tiene su color: lo resaltado con ese color conviene saberlo de memoria y lo rojo son errores típicos. Hay gráficos en los temas clave.</p></div></li>
           <li><div><b>Hacé los ejercicios de esa unidad sin mirar</b><p>Tapá la resolución, resolvé y compará. Tildá "Lo resolví" cuando te salga sola.</p></div></li>
           <li><div><b>Repasá con la hoja de fórmulas</b><p>Es la misma que vas a llevar impresa: practicá usándola, así sabés dónde está cada cosa.</p></div></li>
           <li><div><b>Contestá las preguntas de teoría en voz alta</b><p>Las preguntas de cada guía, con respuesta corta. Marcá las que ya sabés.</p></div></li>
@@ -57,20 +59,20 @@
     </div>
   </section>
 
-  <section class="seccion" id="resumen" hidden>
+  <section class="seccion" id="sec-resumen" hidden>
     <h2>Resumen</h2>
     <p class="bajada">Armado con tus teóricos, los powers de la cátedra y las preguntas de cada guía.</p>
     <ul class="indice">{{INDICE_RESUMEN}}</ul>
     {{RESUMEN}}
   </section>
 
-  <section class="seccion" id="formulas" hidden>
+  <section class="seccion" id="sec-formulas" hidden>
     <h2>Hoja de fórmulas</h2>
     <p class="bajada">La versión para imprimir entra en dos carillas A4 (archivo <b>hoja-de-formulas.pdf</b> del repositorio). Acá la misma información, más grande.</p>
     <div class="hoja">{{FORMULAS}}</div>
   </section>
 
-  <section class="seccion" id="ejercicios" hidden>
+  <section class="seccion" id="sec-ejercicios" hidden>
     <h2>Ejercicios de las guías</h2>
     <p class="bajada">Todos resueltos y verificados. <span class="chip ok">coincide</span> con la guía · <span class="chip dif">difiere</span> de la guía (nuestro valor es el correcto) · <span class="chip nd">sin dato</span> en la guía.</p>
     <div class="filtros" role="group" aria-label="Filtrar ejercicios">
@@ -82,13 +84,13 @@
     {{EJERCICIOS}}
   </section>
 
-  <section class="seccion" id="preguntas" hidden>
+  <section class="seccion" id="sec-preguntas" hidden>
     <h2>Preguntas de teoría</h2>
     <p class="bajada">Las "preguntas básicas" de cada guía. Pensá la respuesta antes de abrirla.</p>
     {{PREGUNTAS}}
   </section>
 
-  <section class="seccion" id="simulacros" hidden>
+  <section class="seccion" id="sec-simulacros" hidden>
     <h2>Simulacros y exámenes</h2>
     <p class="bajada">Exámenes de Alderete resueltos. Los ejercicios que ya estaban en las guías llevan link a su resolución.</p>
     {{SIMULACROS}}

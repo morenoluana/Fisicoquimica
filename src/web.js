@@ -13,10 +13,10 @@
     if (!sec && id) {
       destino = document.getElementById(id);
       const contenedor = destino && destino.closest(".seccion");
-      if (contenedor) sec = contenedor.id;
+      if (contenedor) sec = contenedor.id.replace("sec-", "");
     }
     sec = sec || "inicio";
-    SECCIONES.forEach((s) => { document.getElementById(s).hidden = s !== sec; });
+    SECCIONES.forEach((s) => { document.getElementById("sec-" + s).hidden = s !== sec; });
     document.querySelectorAll(".nav a").forEach((a) => {
       if (a.getAttribute("href") === "#" + sec) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -72,7 +72,7 @@
   let filtro = "todos";
   function aplicarFiltro() {
     document.querySelectorAll(".filtros button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.f === filtro)));
-    document.querySelectorAll("#ejercicios .ej").forEach((ej) => {
+    document.querySelectorAll("#sec-ejercicios .ej").forEach((ej) => {
       const hecho = ej.querySelector(".hecho input").checked;
       ej.hidden = (filtro === "dif" && ej.dataset.estado !== "dif") || (filtro === "pendientes" && hecho);
     });
@@ -99,6 +99,7 @@
       const total = ejs.length + prs.length;
       const pct = total ? Math.round(100 * (ejOk + prOk) / total) : 0;
       const tr = document.createElement("tr");
+      tr.dataset.u = u;
       tr.innerHTML =
         '<td><a href="#u' + u + '">' + u + ". " + nombre + "</a></td>" +
         "<td>" + (ejs.length ? ejOk + "/" + ejs.length : "—") + "</td>" +

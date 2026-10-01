@@ -25,23 +25,26 @@ const katexCss = leer("assets/katex/katex.min.css").replace(
   (_, f) => `src:url(${b64("assets/katex/fonts/" + f + ".woff2")}) format("woff2")`
 );
 
-const resumen = mate(leer("src/resumen.html"));
+// Gráficos generados por scripts/figuras.py, insertados donde dice <!-- figura: nombre -->
+const conFiguras = (html) => html.replace(/<!-- figura: ([\w-]+) -->/g, (_, f) => leer(`src/figuras/${f}.html`));
+const resumen = conFiguras(mate(leer("src/resumen.html")));
 const formulas = mate(leer("src/formulas.html"));
 const ejercicios = mate(leer("src/ejercicios.html"));
 const preguntas = mate(leer("src/preguntas.html"));
 const simulacros = mate(leer("src/simulacros.html"));
 
 const titulos = [...leer("src/resumen.html").matchAll(/<section class="unidad" id="u(\d+)">\s*<h2><span class="num">\d+<\/span> ([^<]+)<\/h2>/g)];
-const indiceRes = titulos.map(([, n, t]) => `<li><a href="#u${n}"><b>${n}</b>${t}</a></li>`).join("");
+const chips = titulos.map(([, n, t]) => `<li data-u="${n}"><a href="#u${n}"><b>${n}</b>${t}</a></li>`).join("");
+const indiceRes = titulos.map(([, n, t]) => `<li data-u="${n}"><a href="#u${n}"><b>${n}</b>${t}</a></li>`).join("");
 const indiceEj = [...leer("src/ejercicios.html").matchAll(/<section class="unidad-ej" id="(ej\d+)" data-u="\d+">\s*<h2><span class="num">(\d+)<\/span> ([^<]+)<\/h2>/g)]
-  .map(([, id, n, t]) => `<li><a href="#${id}"><b>${n}</b>${t}</a></li>`).join("");
+  .map(([, id, n, t]) => `<li data-u="${n}"><a href="#${id}"><b>${n}</b>${t}</a></li>`).join("");
 
 const llenar = (plantilla, datos) => plantilla.replace(/\{\{(\w+)\}\}/g, (_, k) => datos[k] ?? "");
 const cssBase = fuentes + katexCss + leer("assets/estilo.css");
 
 const web = llenar(leer("src/web.html"), {
   CSS: cssBase, JS: leer("src/web.js"), RESUMEN: resumen, FORMULAS: formulas, EJERCICIOS: ejercicios, PREGUNTAS: preguntas, SIMULACROS: simulacros,
-  INDICE_RESUMEN: indiceRes, INDICE_EJ: indiceEj,
+  INDICE_RESUMEN: indiceRes, CHIPS: chips, INDICE_EJ: indiceEj,
 });
 // index.html: documento completo para abrir en el navegador o GitHub Pages
 const fin = web.indexOf("</style>") + "</style>".length; // título + estilos van al <head>

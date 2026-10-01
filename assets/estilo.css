@@ -1,37 +1,30 @@
 /* Fisicoquímica — estilos compartidos (web + impresión).
-   Concepto: cuaderno de laboratorio. Papel frío con cuadrícula tenue en la cabecera,
-   tinta azul para lo importante, lápiz rojo para los "ojo". */
+   Concepto: espectro. Un solo tema claro (elegido a propósito: se estudia con luz) y
+   un color propio por unidad, que tiñe su número, sus títulos, sus fórmulas y sus gráficos. */
 :root {
-  --papel: #f5f6f3;
-  --hoja: #fdfdfb;
-  --tinta: #1a2130;
-  --suave: #596273;
-  --linea: #d8dce2;
-  --cuadro: rgba(41, 68, 184, 0.07);
-  --acento: #2944b8;
-  --acento-suave: #e6eafb;
-  --rojo: #b3361f;
-  --verde: #2b7349;
-  --verde-suave: #e3f1e8;
-  --ambar: #9a5f00;
-  --ambar-suave: #fbf0dc;
+  color-scheme: light;
+  --papel: #f3f6fb;
+  --hoja: #ffffff;
+  --tinta: #172033;
+  --suave: #55607a;
+  --linea: #dde4ee;
+  --cuadro: rgba(37, 99, 235, 0.07);
+  --acento: #2563eb;
+  --acento-suave: #e8effe;
+  --rojo: #d1342f;
+  --verde: #15803d;
+  --verde-suave: #e3f5e9;
+  --ambar: #b45309;
+  --ambar-suave: #fdf0dc;
+  /* series de los gráficos (validadas: contraste y daltonismo) */
+  --s1: #2563eb; --s2: #ea580c; --s3: #0d9488;
+  /* un color por unidad */
+  --u0: #334155; --u1: #0f766e; --u2: #c2410c; --u3: #b91c1c; --u4: #7c3aed; --u5: #1d4ed8;
+  --u6: #0369a1; --u7: #15803d; --u8: #be185d; --u9: #a16207; --u10: #4d7c0f; --u11: #172033;
+  --u: var(--acento);
   --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --cond: "IBM Plex Sans Condensed", "Arial Narrow", "IBM Plex Sans", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --papel: #10141b; --hoja: #161b24; --tinta: #e5e8ee; --suave: #9ca5b4; --linea: #2b3240;
-    --cuadro: rgba(142, 162, 255, 0.07); --acento: #93a6ff; --acento-suave: #1f2747;
-    --rojo: #ff8f75; --verde: #74d39c; --verde-suave: #16291f; --ambar: #e8b65f; --ambar-suave: #2c2414;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --papel: #10141b; --hoja: #161b24; --tinta: #e5e8ee; --suave: #9ca5b4; --linea: #2b3240;
-  --cuadro: rgba(142, 162, 255, 0.07); --acento: #93a6ff; --acento-suave: #1f2747;
-  --rojo: #ff8f75; --verde: #74d39c; --verde-suave: #16291f; --ambar: #e8b65f; --ambar-suave: #2c2414;
-  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -43,6 +36,7 @@ a { color: var(--acento); }
 
 /* ---------- Cabecera ---------- */
 .cabecera {
+  position: relative;
   background-color: var(--hoja);
   background-image:
     linear-gradient(var(--cuadro) 1px, transparent 1px),
@@ -171,3 +165,70 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 .examen .ej { border-left-color: var(--acento); }
 #previo { margin-bottom: 18px; border-color: var(--acento); }
 #previo table.datos { max-width: none; }
+
+/* ---------- Color por unidad ---------- */
+#u1, [data-u="1"] { --u: var(--u1); }  #u2, [data-u="2"] { --u: var(--u2); }
+#u3, [data-u="3"] { --u: var(--u3); }  #u4, [data-u="4"] { --u: var(--u4); }
+#u5, [data-u="5"] { --u: var(--u5); }  #u6, [data-u="6"] { --u: var(--u6); }
+#u7, [data-u="7"] { --u: var(--u7); }  #u8, [data-u="8"] { --u: var(--u8); }
+#u9, [data-u="9"] { --u: var(--u9); }  #u10, [data-u="10"] { --u: var(--u10); }
+[data-u="0"] { --u: var(--u0); }  [data-u="11"], [data-u="12"] { --u: var(--u11); }
+
+.espectro { display: flex; height: 6px; }
+.espectro i { flex: 1; }
+.espectro i:nth-child(1) { background: var(--u1); } .espectro i:nth-child(2) { background: var(--u2); }
+.espectro i:nth-child(3) { background: var(--u3); } .espectro i:nth-child(4) { background: var(--u4); }
+.espectro i:nth-child(5) { background: var(--u5); } .espectro i:nth-child(6) { background: var(--u6); }
+.espectro i:nth-child(7) { background: var(--u7); } .espectro i:nth-child(8) { background: var(--u8); }
+.espectro i:nth-child(9) { background: var(--u9); } .espectro i:nth-child(10) { background: var(--u10); }
+.cabecera h1 .eq-titulo { color: var(--u4); }
+.chips-unidades { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; padding: 0; list-style: none; }
+.chips-unidades a { display: inline-flex; gap: 6px; align-items: center; padding: 5px 10px 5px 5px; border-radius: 999px; background: color-mix(in srgb, var(--u) 10%, white); color: var(--u); font: 600 13px/1 var(--sans); text-decoration: none; }
+.chips-unidades a b { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--u); color: #fff; font: 600 11px/1 var(--mono); }
+
+.nav { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(6px); }
+.nav a[aria-current="page"] { color: var(--acento); border-bottom-color: var(--acento); }
+
+.unidad { border-top: 5px solid var(--u); }
+.num { color: #fff; background: var(--u); border-color: var(--u); }
+.unidad h3 { color: var(--u); }
+.unidad .eq { background: color-mix(in srgb, var(--u) 9%, white); }
+.unidad .clave { border-left-color: var(--u); background: color-mix(in srgb, var(--u) 5%, white); padding-block: 6px; border-radius: 0 6px 6px 0; }
+.indice a b { color: var(--u); }
+.bloque { border-top: 4px solid var(--u); }
+.bloque h3 { color: var(--u); }
+.unidad-ej > h2 .num, .unidad-pr > h2 .num { background: var(--u); }
+.pr summary::marker { color: var(--u); }
+.pr { border-left: 4px solid color-mix(in srgb, var(--u) 55%, white); }
+.ej { box-shadow: 0 1px 2px rgba(23, 32, 51, 0.05); }
+.aviso { box-shadow: 0 1px 2px rgba(23, 32, 51, 0.05); }
+.pasos li:nth-child(1)::before { --c: var(--u1); } .pasos li:nth-child(2)::before { --c: var(--u2); }
+.pasos li:nth-child(3)::before { --c: var(--u4); } .pasos li:nth-child(4)::before { --c: var(--u7); }
+.pasos li:nth-child(5)::before { --c: var(--u8); }
+.pasos li::before { border-color: var(--c); background: var(--c); color: #fff; }
+.barra i { background: linear-gradient(90deg, var(--u1), var(--u7)); }
+#previo { border-top: 5px solid var(--acento); }
+
+/* ---------- Gráficos ---------- */
+.fig { margin: 16px 0 18px; padding: 14px 14px 10px; background: color-mix(in srgb, var(--u) 4%, white); border: 1px solid color-mix(in srgb, var(--u) 18%, white); border-radius: 10px; max-width: 640px; }
+.fig svg { display: block; width: 100%; height: auto; max-width: 560px; margin: 0 auto; overflow: visible; }
+.fig figcaption { font-size: 14px; color: var(--suave); margin-top: 8px; line-height: 1.5; }
+.fig figcaption b { color: var(--tinta); }
+.fig text { fill: var(--tinta); font: 12px var(--sans); }
+.fig text.m { fill: var(--suave); font-size: 11px; }
+.fig text.t1 { fill: var(--s1); font-weight: 600; } .fig text.t2 { fill: var(--s2); font-weight: 600; } .fig text.t3 { fill: var(--s3); font-weight: 600; }
+.fig .eje { stroke: var(--tinta); stroke-width: 1.5; fill: none; }
+.fig .guia { stroke: var(--suave); stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+.fig .s1 { stroke: var(--s1); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.fig .s2 { stroke: var(--s2); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.fig .s3 { stroke: var(--s3); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.fig .d { stroke-dasharray: 6 5; }
+.fig .grueso { stroke-width: 4; }
+.fig .f1 { fill: var(--s1); fill-opacity: .14; stroke: none; }
+.fig .f2 { fill: var(--s2); fill-opacity: .28; stroke: none; }
+.fig .pt { fill: var(--tinta); }
+.fig .pt1 { fill: var(--s1); } .fig .pt2 { fill: var(--s2); }
+.fig .flecha { fill: var(--tinta); }
+.fig .bien { fill: var(--verde); fill-opacity: .14; } .fig .mal { fill: var(--rojo); fill-opacity: .12; } .fig .depende { fill: var(--ambar); fill-opacity: .14; }
+.tabla-progreso td:first-child a::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--u); margin-right: 8px; }
+.tabla-progreso .barra i { background: var(--u); }
