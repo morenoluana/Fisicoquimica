@@ -1,0 +1,180 @@
+<!-- Hoja de fórmulas. Se usa en la web (sección Fórmulas) y en hoja-de-formulas.pdf.
+     Cada .bloque es una unidad. .ojo = comentario corto en rojo; .nota = aclaración gris. -->
+
+<div class="bloque" data-u="0">
+  <h3>Constantes y unidades</h3>
+  <p>$R = 8{,}314\ \mathrm{J\,mol^{-1}K^{-1}} = 0{,}08206\ \mathrm{L\,atm\,mol^{-1}K^{-1}} = 1{,}987\ \mathrm{cal\,mol^{-1}K^{-1}}$</p>
+  <p>$F = 96\,485\ \mathrm{C\,mol^{-1}}$ · $k_B = 1{,}381\cdot10^{-23}\ \mathrm{J/K}$ · $h = 6{,}626\cdot10^{-34}\ \mathrm{J\,s}$ · $N_A = 6{,}022\cdot10^{23}$</p>
+  <p>$1\ \mathrm{atm} = 101\,325\ \mathrm{Pa} = 760\ \mathrm{mmHg\,(Torr)} = 1{,}01325\ \mathrm{bar}$ · $1\ \mathrm{L\,atm} = 101{,}325\ \mathrm{J}$ · $1\ \mathrm{cal} = 4{,}184\ \mathrm{J}$</p>
+  <p>$1\ \mathrm{dm^3} = 1\ \mathrm{L} = 10^{-3}\ \mathrm{m^3}$ · $T(\mathrm{K}) = t(°\mathrm{C}) + 273{,}15$ · $RT_{298} = 2{,}479\ \mathrm{kJ/mol}$ · $\tfrac{RT}{F}\big|_{298} = 0{,}02569\ \mathrm{V}$</p>
+  <p class="ojo">T siempre en K. Si R va en J, p en Pa y V en m³. Si R va en L·atm, p en atm y V en L.</p>
+</div>
+
+<div class="bloque" data-u="1">
+  <h3>1 · Gases reales</h3>
+  <p>$pV = nRT$ · $V_m = V/n$ · $\dfrac{p_1V_1}{T_1} = \dfrac{p_2V_2}{T_2}$ · $M = \dfrac{\rho RT}{p}$</p>
+  <p>Dalton: $p_T = \sum p_i$ · $p_i = x_i\,p_T$ · $x_i = n_i/n_T$</p>
+  <p>Factor de compresión: $Z = \dfrac{pV_m}{RT} = \dfrac{V_m}{V_m^{ideal}}$</p>
+  <p class="nota">Z = 1 ideal · Z &lt; 1 dominan atracciones · Z &gt; 1 dominan repulsiones</p>
+  <p>Virial: $Z = 1 + \dfrac{B}{V_m} + \dfrac{C}{V_m^2}+\dots$ · $Z = 1 + B'p+\dots$ · $B' \approx B/RT$</p>
+  <p class="nota">Hasta B: $B \approx (Z-1)\,V_m$. A la temperatura de Boyle B = 0 y el gas se comporta como ideal.</p>
+  <p>Van der Waals: $\left(p + \dfrac{an^2}{V^2}\right)(V - nb) = nRT$ · $p = \dfrac{RT}{V_m - b} - \dfrac{a}{V_m^2}$</p>
+  <p class="nota">a: atracciones · b: volumen excluido. Despejar V es una cúbica: arrancá con V ideal e iterá $V = \dfrac{nRT}{p + an^2/V^2} + nb$.</p>
+  <p>Punto crítico: $V_c = 3b$ · $p_c = \dfrac{a}{27b^2}$ · $T_c = \dfrac{8a}{27Rb}$ · $Z_c = \tfrac38$</p>
+  <p>Reducidas: $p_r = p/p_c$ · $T_r = T/T_c$ · $V_r = V_m/V_c$</p>
+  <p class="ojo">¿Ideal o real? Si $p_r \ll 1$ y $T_r \gg 1$ → casi ideal. Cerca del punto crítico ($T_r\approx1$, $p_r\approx1$) → real.</p>
+</div>
+
+<div class="bloque" data-u="2">
+  <h3>2 · Primera ley y calorimetría</h3>
+  <p>$\Delta U = q + w$ · $dU = dq - p_{ex}dV + dw_e$</p>
+  <p class="ojo">Convención: lo que el sistema recibe es (+). Expansión → w &lt; 0. Compresión → w &gt; 0.</p>
+  <p>Trabajo: $w = -\int p_{ex}\,dV$ · contra $p_{ex}$ cte: $w = -p_{ex}\Delta V$ · vacío o V cte: $w = 0$</p>
+  <p>Isotérmica reversible, gas ideal: $w = -nRT\ln\dfrac{V_f}{V_i} = -nRT\ln\dfrac{p_i}{p_f}$ · $\Delta U = 0 \Rightarrow q = -w$</p>
+  <p>Isotérmica reversible, VdW: $w = -nRT\ln\dfrac{V_f-nb}{V_i-nb} - an^2\left(\dfrac1{V_f}-\dfrac1{V_i}\right)$</p>
+  <p>Isotérmica reversible, virial: $w = -nRT\left[\ln\dfrac{V_f}{V_i} + nB\left(\dfrac1{V_i}-\dfrac1{V_f}\right)\right]$</p>
+  <p class="nota">Reversible = máximo trabajo en expansión, mínimo en compresión.</p>
+  <p>$H = U + pV$ · $q_V = \Delta U = \int C_V dT$ · $q_p = \Delta H = \int C_p dT$</p>
+  <p>$C_V = \left(\tfrac{\partial U}{\partial T}\right)_V$ · $C_p = \left(\tfrac{\partial H}{\partial T}\right)_p$ · gas ideal: $C_{p,m} - C_{V,m} = R$</p>
+  <p class="nota">Gas ideal monoatómico $C_{V,m}=\tfrac32R$; diatómico $\tfrac52R$. Para gas ideal $\Delta U = nC_{V,m}\Delta T$ y $\Delta H = nC_{p,m}\Delta T$ en cualquier proceso.</p>
+  <p>$C_{p,m} = a + bT + \dfrac{c}{T^2}$ → $\Delta H_m = a\Delta T + \dfrac b2(T_2^2-T_1^2) - c\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$</p>
+  <p>Adiabática reversible, gas ideal: $q=0$ · $w = \Delta U = nC_{V,m}\Delta T$ · $\dfrac{T_f}{T_i} = \left(\dfrac{V_i}{V_f}\right)^{R/C_{V,m}}$ · $pV^\gamma = \text{cte}$, $\gamma = C_p/C_V$</p>
+  <p>Gas real a V cte: $\Delta H = \Delta U + V\Delta p$ (sacá p con VdW en cada T).</p>
+  <p>Calorímetro: $\sum q = 0$ → $m_1c_1(T_f-T_1) + m_2c_2(T_f-T_2) + K_c(T_f-T_2) = 0$</p>
+  <p class="nota">$K_c$ = calor para subir 1 K el calorímetro. Supuesto: calorímetro aislado (sin pérdidas), c constante en el rango.</p>
+</div>
+
+<div class="bloque" data-u="3">
+  <h3>3 · Termoquímica</h3>
+  <p>Hess: $\Delta_rH^\circ = \sum \nu_p\,\Delta_fH^\circ_{prod} - \sum \nu_r\,\Delta_fH^\circ_{reac}$</p>
+  <p class="nota">$\Delta_fH^\circ$ de un elemento en su forma estable (O₂, C grafito, H₂, N₂…) = 0. Invertir la reacción cambia el signo; multiplicarla multiplica ΔH.</p>
+  <p>Con combustiones: $\Delta_rH^\circ = \sum \nu_r\,\Delta_cH^\circ_{reac} - \sum \nu_p\,\Delta_cH^\circ_{prod}$ <span class="ojo">(al revés)</span></p>
+  <p>$\Delta H = \Delta U + \Delta n_g RT$ · $\Delta n_g$ = moles de gas productos − reactivos</p>
+  <p>Enlaces: $\Delta_rH \approx \sum E_{\text{rotos}} - \sum E_{\text{formados}}$ <span class="nota">(solo gases, valores promedio)</span></p>
+  <p>Kirchhoff: $\Delta_rH^\circ(T_2) = \Delta_rH^\circ(T_1) + \int_{T_1}^{T_2}\Delta_rC_p\,dT$ · $\Delta_rC_p = \sum\nu_pC_{p,m} - \sum\nu_rC_{p,m}$</p>
+  <p class="ojo">En Kirchhoff de una formación, los elementos (C, H₂, O₂) también tienen Cp: van en ΔCp.</p>
+  <p>Disolución iónica: $\Delta_{sol}H^\circ = \sum \Delta_fH^\circ(\text{iones,ac}) - \Delta_fH^\circ(\text{sal,s})$ · $\Delta_fH^\circ(\mathrm{H^+,ac}) = 0$</p>
+  <p class="nota">ΔH &lt; 0 exotérmica · ΔH &gt; 0 endotérmica. En combustión el agua va líquida.</p>
+</div>
+
+<div class="bloque" data-u="4">
+  <h3>4 · Segunda ley</h3>
+  <p>$dS = \dfrac{dq_{rev}}{T}$ · $\Delta S_{univ} = \Delta S_{sis} + \Delta S_{ent} \ge 0$ · $\Delta S_{ent} = -\dfrac{q_{sis}}{T}$</p>
+  <p>$\Delta_rS^\circ = \sum\nu_pS^\circ_m - \sum\nu_rS^\circ_m$ <span class="ojo">S° de elementos ≠ 0; unidades J/K (no kJ)</span></p>
+  <p>Cambio de fase: $\Delta S_{tr} = \dfrac{\Delta H_{tr}}{T_{tr}}$ · Calentamiento: $\Delta S = nC_{p,m}\ln\dfrac{T_2}{T_1}$ · Isotérmica gas ideal: $\Delta S = nR\ln\dfrac{V_2}{V_1}$</p>
+  <p>$G = H - TS$ · $\Delta G = \Delta H - T\Delta S$ · $\Delta_rG^\circ = \sum\nu_p\Delta_fG^\circ - \sum\nu_r\Delta_fG^\circ$</p>
+  <p>$A = U - TS$ · $\Delta A = \Delta U - T\Delta S$</p>
+  <p>Espontaneidad: T,p ctes → $\Delta G &lt; 0$ · T,V ctes → $\Delta A &lt; 0$ · $= 0$ equilibrio</p>
+  <p>Trabajo: $w_{max} = \Delta A$ (total) · $w_{\text{útil, no expansión}} = \Delta G$</p>
+  <table class="mini">
+    <tr><th>ΔH</th><th>ΔS</th><th>¿Espontánea?</th></tr>
+    <tr><td>−</td><td>+</td><td>siempre</td></tr>
+    <tr><td>+</td><td>−</td><td>nunca</td></tr>
+    <tr><td>−</td><td>−</td><td>a T bajas</td></tr>
+    <tr><td>+</td><td>+</td><td>a T altas</td></tr>
+  </table>
+  <p class="ojo">Pasá ΔS a kJ/K antes de restar: ΔG = ΔH − T·(ΔS/1000).</p>
+</div>
+
+<div class="bloque" data-u="5">
+  <h3>5 · Equilibrio químico y electroquímica</h3>
+  <p>$\mu_i = \left(\tfrac{\partial G}{\partial n_i}\right)_{T,p,n_j}$ · $\mu_i = \mu_i^\circ + RT\ln a_i$ · $\xi = \dfrac{n_i - n_i^0}{\nu_i}$</p>
+  <p>$\Delta_rG = \Delta_rG^\circ + RT\ln Q$ · equilibrio: $\Delta_rG^\circ = -RT\ln K$ → $K = e^{-\Delta_rG^\circ/RT}$</p>
+  <p class="nota">Q &lt; K → avanza a productos (ΔG &lt; 0) · Q &gt; K → va a reactivos · Q = K equilibrio. Sólidos y líquidos puros: a = 1.</p>
+  <p>$K_p = K_c\,(RT)^{\Delta n_g}$ <span class="nota">(R = 0,08206 con p en atm, c en M)</span> · $K_p = K_x\,p_T^{\Delta n_g}$</p>
+  <p>Van't Hoff: $\ln\dfrac{K_2}{K_1} = -\dfrac{\Delta_rH^\circ}{R}\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$ · pendiente de $\ln K$ vs $1/T$ = $-\Delta_rH^\circ/R$</p>
+  <p class="ojo">Usá Δ<sub>r</sub>H (con los coeficientes), no Δ<sub>f</sub>H. Endo: K sube con T. Exo: K baja con T.</p>
+  <p>Le Chatelier: agregar reactivo → derecha · subir p (gases) → lado con menos moles de gas · subir T → sentido endotérmico</p>
+  <p>Electroquímica: $\Delta_rG = -nF\,E$ · $\Delta_rG^\circ = -nFE^\circ$ · $E^\circ = \dfrac{RT}{nF}\ln K$</p>
+  <p>Nernst: $E = E^\circ - \dfrac{RT}{nF}\ln Q = E^\circ - \dfrac{0{,}0592}{n}\log Q$ (25 °C)</p>
+  <p>$E^\circ_{celda} = E^\circ_{cátodo} - E^\circ_{ánodo}$ <span class="nota">(cátodo = reducción, ánodo = oxidación)</span> · E &gt; 0 espontánea</p>
+  <p>Potencial electroquímico: $\tilde\mu_i = \mu_i + z_iF\phi$ · transferencia: $\Delta G_{tr} = RT\ln\dfrac{a_i^\beta}{a_i^\alpha} + z_iF(\phi^\beta-\phi^\alpha)$</p>
+  <p class="nota">Bioquímico (ΔG°′): pH 7, 37 °C. Procesos acoplados: K total = K₁·K₂ (ΔG° se suman).</p>
+</div>
+
+<div class="bloque" data-u="6">
+  <h3>6 · Cambios de fase</h3>
+  <p>Equilibrio: $\mu^\alpha = \mu^\beta$ · la materia pasa de μ mayor a μ menor · $d\mu = -S_m dT + V_m dp$</p>
+  <p>Regla de las fases: $F = C - P + 2$ · un componente: $F = 3 - P$ <span class="nota">(punto triple F = 0)</span></p>
+  <p>Clapeyron: $\dfrac{dp}{dT} = \dfrac{\Delta S_{tr}}{\Delta V_{tr}} = \dfrac{\Delta H_{tr}}{T\,\Delta V_{tr}}$</p>
+  <p>Sólido–líquido: $p = p^* + \dfrac{\Delta H_{fus}}{\Delta V_{fus}}\ln\dfrac{T}{T^*}$ · $\Delta V_m = M\left(\dfrac1{\rho_l} - \dfrac1{\rho_s}\right)$</p>
+  <p class="nota">Si ΔV<sub>fus</sub> &lt; 0 (agua: el hielo flota) la pendiente es negativa: con presión se funde.</p>
+  <p>Clausius-Clapeyron (l–g, s–g): $\ln\dfrac{p_2}{p_1} = -\dfrac{\Delta H_{vap}}{R}\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$</p>
+  <p>Despejar T: $\dfrac1{T_2} = \dfrac1{T_1} - \dfrac{R}{\Delta H}\ln\dfrac{p_2}{p_1}$ · Despejar ΔH: $\Delta H = \dfrac{R\ln(p_2/p_1)}{1/T_1 - 1/T_2}$</p>
+  <p>$\Delta H_{sub} = \Delta H_{fus} + \Delta H_{vap}$ · $\Delta H_{vap} = -\Delta H_{cond}$</p>
+  <p class="ojo">Ebullición normal: p<sub>vap</sub> = 1 atm. Punto crítico: arriba de T<sub>c</sub> no se licúa. Supuestos de C-C: V<sub>gas</sub> ≫ V<sub>líq</sub>, gas ideal, ΔH cte.</p>
+  <p class="nota">Ehrenfest: 1.<sup>er</sup> orden salta H, S, V (fusión, vaporización) · 2.º orden salta Cp · λ: Cp → ∞ (He superfluido).</p>
+</div>
+
+<div class="bloque" data-u="7">
+  <h3>7 · Mezclas y coligativas</h3>
+  <p>$G = \sum n_i\mu_i$ · Gibbs-Duhem: $\sum n_i\,d\mu_i = 0$ → $x_A\,d\ln a_A + x_B\,d\ln a_B = 0$</p>
+  <p>Gas: $\mu = \mu^\circ + RT\ln\dfrac{p}{p^\circ}$ · Mezcla ideal: $\Delta_{mix}G = nRT\sum x_i\ln x_i$ · $\Delta_{mix}S = -nR\sum x_i\ln x_i$ · $\Delta_{mix}H = 0$</p>
+  <p class="ojo">Gases que arrancan a distinta p: $\Delta_{mix}G = RT\sum n_i\ln\dfrac{p_{i,f}}{p_{i,0}}$ (calcular p final con el V total).</p>
+  <p>Raoult (solvente, solución ideal): $p_A = x_A\,p_A^*$ · Henry (soluto volátil diluido): $p_B = K_B\,x_B$</p>
+  <p>Solución ideal: $\mu_i = \mu_i^* + RT\ln x_i$ · Real: $\mu_i = \mu_i^* + RT\ln a_i$ · $a_i = \gamma_i x_i$</p>
+  <p>Actividad (Raoult): $a_A = \dfrac{p_A}{p_A^*}$, $\gamma_A = \dfrac{a_A}{x_A}$ · (Henry): $a_B = \dfrac{p_B}{K_B}$</p>
+  <p class="nota">γ → 1 cuando x<sub>A</sub> → 1 (Raoult) o x<sub>B</sub> → 0 (Henry). K de Henry = pendiente de p vs x a dilución infinita.</p>
+  <p>Descenso de p de vapor: $\Delta p = x_B\,p_A^*$ · $\Delta\mu_A = RT\ln x_A$</p>
+  <p>Ebulloscópico: $\Delta T_e = K_e\,m$ · Crioscópico: $\Delta T_f = K_f\,m$ · $m$ = mol soluto / kg solvente</p>
+  <p>$K_f = \dfrac{RT_f^{*2}M_A}{\Delta H_{fus}}$ · $K_e = \dfrac{RT_e^{*2}M_A}{\Delta H_{vap}}$ <span class="nota">(M<sub>A</sub> en kg/mol)</span> · agua: K<sub>f</sub> = 1,86, K<sub>e</sub> = 0,51 K·kg/mol</p>
+  <p>Van't Hoff osmótica: $\pi = c\,RT$ <span class="nota">(c en mol/m³ y R = 8,314 da Pa; c en M y R = 0,08206 da atm)</span></p>
+  <p>Masa molar: $M = \dfrac{K_f\,w_B}{\Delta T_f\,w_A(\text{kg})}$ · $M = \dfrac{w_B RT}{\pi V}$ · electrolitos: × i (van't Hoff)</p>
+</div>
+
+<div class="bloque" data-u="8">
+  <h3>8 · Cinética</h3>
+  <p>$aA + bB \to cC$: $v = -\dfrac1a\dfrac{d[A]}{dt} = \dfrac1c\dfrac{d[C]}{dt}$ · $v = k[A]^\alpha[B]^\beta$ (órdenes experimentales)</p>
+  <table class="mini">
+    <tr><th>Orden</th><th>Integrada</th><th>Recta</th><th>t½</th><th>k</th></tr>
+    <tr><td>0</td><td>$[A] = [A]_0 - kt$</td><td>[A] vs t</td><td>$[A]_0/2k$</td><td>M s⁻¹</td></tr>
+    <tr><td>1</td><td>$\ln[A] = \ln[A]_0 - kt$</td><td>ln[A] vs t</td><td>$\ln2/k$</td><td>s⁻¹</td></tr>
+    <tr><td>2</td><td>$\dfrac1{[A]} = \dfrac1{[A]_0} + kt$</td><td>1/[A] vs t</td><td>$1/k[A]_0$</td><td>M⁻¹s⁻¹</td></tr>
+  </table>
+  <p>Velocidades iniciales: $\dfrac{v_2}{v_1} = \left(\dfrac{[A]_2}{[A]_1}\right)^\alpha$ → $\alpha = \dfrac{\ln(v_2/v_1)}{\ln([A]_2/[A]_1)}$</p>
+  <p class="nota">Orden con t½: si t½ no cambia con [A]₀ → orden 1; si t½·[A]₀ = cte → orden 2. Gases: usá presiones parciales.</p>
+  <p>Arrhenius: $k = A\,e^{-E_a/RT}$ · $\ln\dfrac{k_2}{k_1} = -\dfrac{E_a}{R}\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$ · $A = k\,e^{E_a/RT}$</p>
+  <p>Consecutivas $A\to B\to C$: $[A] = [A]_0e^{-k_1t}$ · Estado estacionario: $d[I]/dt \approx 0$ · Pre-equilibrio: $[B] = K_1[A]$, $K_1 = k_1/k_{-1}$</p>
+  <p>Eyring: $k = \dfrac{k_BT}{h}e^{\Delta S^\ddagger/R}e^{-\Delta H^\ddagger/RT}$</p>
+  <p>Michaelis-Menten: $v = \dfrac{v_{max}[S]}{K_M + [S]}$ · $v_{max} = k_{cat}[E]_0$ · $K_M = \dfrac{k_{-1}+k_2}{k_1}$ · si [S] = K<sub>M</sub>, v = v<sub>max</sub>/2</p>
+  <p>Lineweaver-Burk: $\dfrac1v = \dfrac{K_M}{v_{max}}\dfrac1{[S]} + \dfrac1{v_{max}}$</p>
+  <p class="nota">Inhib. competitiva: K<sub>M</sub> aparente = K<sub>M</sub>(1 + [I]/K<sub>i</sub>), v<sub>max</sub> igual · No competitiva: v<sub>max</sub> baja, K<sub>M</sub> igual. Catalizador: baja E<sub>a</sub>, no cambia K ni ΔG.</p>
+</div>
+
+<div class="bloque" data-u="9">
+  <h3>9 · Adsorción y sistemas dispersos</h3>
+  <p>Langmuir: $\theta = \dfrac{V}{V_m} = \dfrac{KP}{1+KP}$ · lineal: $\dfrac{P}{V} = \dfrac1{KV_m} + \dfrac{P}{V_m}$</p>
+  <p>BET: $\dfrac{a_w}{m(1-a_w)} = \dfrac1{m_mc} + \dfrac{(c-1)a_w}{m_mc}$ · válido $a_w &lt; 0{,}4$</p>
+  <p>GAB: $\dfrac{a_w}{m(1-Ka_w)} = \dfrac1{m_mKc} + \dfrac{(c-1)a_w}{m_mKc}$ · $0{,}05 &lt; a_w &lt; 0{,}8$ · K = 1 → BET</p>
+  <p>$a_w = \dfrac{p}{p^*} = \dfrac{HR\%}{100}$ · $c = e^{Q_{NST}/RT}$</p>
+  <p class="nota">Adsorción espontánea: ΔG &lt; 0, ΔS &lt; 0 ⇒ ΔH &lt; 0 (exotérmica) ⇒ sube T, baja θ. Fisisorción: Van der Waals, multicapa, reversible, ΔH chico. Quimisorción: enlace, monocapa, específica, ΔH grande.</p>
+  <p class="nota">Histéresis: a igual a<sub>w</sub> hay más humedad en desorción que en adsorción. Humedad de monocapa = máxima estabilidad.</p>
+</div>
+
+<div class="bloque" data-u="10">
+  <h3>10 · Biorreactores</h3>
+  <p>Monod: $\mu = \dfrac{\mu_{max}S}{K_S + S}$ · $r_X = \mu X$ · $r_S = -\dfrac{\mu X}{Y_{X/S}}$ · $Y_{X/S} = -\dfrac{\Delta X}{\Delta S}$</p>
+  <p>Balance: entrada − salida + generación = acumulación</p>
+  <p>Batch: $\dfrac{dX}{dt} = \mu X$ · $X = X_0 + Y(S_0 - S)$ · fase exp.: $\ln\dfrac{X}{X_0} = \mu_{max}t$</p>
+  <p>MM en batch (integrada): $K_M\ln\dfrac{S_0}{S} + (S_0 - S) = v_{max}\,t$</p>
+  <p>CSTR (quimiostato), estado estacionario: $D = \dfrac{F}{V} = \mu$ · $S = \dfrac{K_SD}{\mu_{max} - D}$ · $X = Y(S_0 - S)$</p>
+  <p class="nota">Lavado (washout) si $D \ge \dfrac{\mu_{max}S_0}{K_S + S_0}$. Con MM: $\tau(S_0 - S) = \dfrac{v_{max}S}{K_M+S}$.</p>
+  <p>Tubular (PFR): $\tau = \dfrac{V}{F} = \int_S^{S_0}\dfrac{dS}{-r_S}$ <span class="nota">(misma forma que el batch con t → τ)</span></p>
+</div>
+
+<div class="bloque recetas" data-u="11">
+  <h3>Recetas: qué hacer ante cada ejercicio</h3>
+  <p><b>Gas real:</b> calculá $T_r$ y $p_r$ → si está lejos del crítico, ideal. VdW: V ideal como semilla e iterá. Z &lt; 1 atracción.</p>
+  <p><b>w, q, ΔU, ΔH:</b> 1) ¿qué es constante? (T, p, V, q = 0) 2) ¿reversible o contra p<sub>ex</sub>? 3) gas ideal isotérmico → ΔU = ΔH = 0. 4) cerrá con ΔU = q + w.</p>
+  <p><b>ΔrH con tabla:</b> balanceá → productos − reactivos con coeficientes → elementos = 0 → fijate estado (l/g). ¿Otra T? Kirchhoff. ¿Te piden ΔU? restá Δn<sub>g</sub>RT.</p>
+  <p><b>¿Espontánea?</b> ΔH y ΔS de tabla → ΔS a kJ → ΔG = ΔH − TΔS → signo. ¿A qué T cambia? T = ΔH/ΔS.</p>
+  <p><b>Equilibrio:</b> ΔG° → K = e<sup>−ΔG°/RT</sup>. ¿Otra T? van't Hoff con Δ<sub>r</sub>H. ¿Concentraciones dadas? Q → comparar con K o ΔG = ΔG° + RT ln Q. ¿Pila? E = −ΔG/nF.</p>
+  <p><b>Fases:</b> ¿l–g o s–g? Clausius-Clapeyron (2 puntos: saco ΔH; 1 punto + ΔH: saco p o T). ¿s–l? Clapeyron con ΔV de densidades. Grados de libertad F = C − P + 2.</p>
+  <p><b>Coligativas:</b> pasá a molalidad → ΔT = K·m o π = cRT → despejá M = masa/moles.</p>
+  <p><b>Cinética:</b> tabla de v₀ → comparar de a pares. Datos [A] vs t → probar ln[A] y 1/[A]: el que da recta es el orden. Dos k y dos T → Arrhenius.</p>
+</div>
+
+<div class="bloque notas" data-u="12">
+  <h3>Mis notas</h3>
+  <div class="renglones"></div>
+</div>

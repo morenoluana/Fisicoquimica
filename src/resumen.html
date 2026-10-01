@@ -1,0 +1,252 @@
+<!-- Resumen por unidad. Basado en TEORICOS_LULA (clases 1–9), los powers de la cátedra y las guías 2024.
+     Convención: .clave = idea que conviene saber de memoria; .ojo = error típico. -->
+
+<section class="unidad" id="u1">
+  <h2><span class="num">1</span> Gases reales</h2>
+
+  <h3>Conceptos de base</h3>
+  <p>El estado de un sistema se define con p, V, T y n. Las variables <b>intensivas</b> no dependen de la cantidad de materia (p, T, densidad); las <b>extensivas</b> sí (V, masa, energía). Una <b>función de estado</b> depende solo del estado inicial y final (U, H, S, G); el calor y el trabajo son <b>funciones de trayectoria</b>.</p>
+
+  <h3>Gas ideal</h3>
+  <p>Modelo: partículas sin volumen propio y sin fuerzas entre ellas; la presión sale de los choques elásticos contra las paredes. Ecuación de estado $pV = nRT$, volumen molar $V_m = V/n$ (22,4 L a 0 °C y 1 atm). Casos particulares: Boyle ($pV$ cte a T cte), Charles ($V/T$ cte a p cte), Gay-Lussac ($p/T$ cte a V cte). Avogadro: a igual p y T, volúmenes iguales tienen el mismo número de moléculas, sin importar el gas.</p>
+  <p>Mezclas (Dalton): $p_T = \sum p_i$ y $p_i = x_i p_T$. Cada gas se comporta como si estuviera solo en todo el volumen.</p>
+
+  <h3>Por qué los gases son reales</h3>
+  <p>Las moléculas sí ocupan volumen y sí se atraen y repelen. A <b>baja presión y alta temperatura</b> el gas se parece al ideal; a presión alta o temperatura baja aparecen desviaciones. Se miden con el <b>factor de compresión</b>:</p>
+  <p class="eq">$Z = \dfrac{pV_m}{RT}$</p>
+  <p class="clave">Z = 1 ideal. Z &lt; 1: dominan las atracciones (el gas ocupa menos que el ideal). Z &gt; 1: dominan las repulsiones (ocupa más).</p>
+  <p><b>Ecuación del virial</b>: $Z = 1 + B/V_m + C/V_m^2 + \dots$ (o en potencias de p). Los coeficientes B, C… dependen solo de T. En la <b>temperatura de Boyle</b> B = 0 y el gas se comporta idealmente en un rango amplio de presiones.</p>
+
+  <h3>Van der Waals</h3>
+  <p class="eq">$\left(p + \dfrac{an^2}{V^2}\right)(V - nb) = nRT$</p>
+  <p>El término $a$ corrige las <b>atracciones</b> (bajan la presión que el gas ejerce sobre la pared) y $b$ el <b>volumen excluido</b> (el volumen libre es menor). Con esta ecuación se explican la licuefacción y el punto crítico.</p>
+  <p><b>Punto crítico</b> $(p_c, V_c, T_c)$: en la isoterma crítica la curva tiene primera y segunda derivada nulas (punto de inflexión horizontal). Por encima de $T_c$ el gas no se puede licuar por más presión que se aplique. De VdW: $V_c = 3b$, $p_c = a/27b^2$, $T_c = 8a/27Rb$, y $Z_c = 3/8$ igual para todos los gases.</p>
+  <p><b>Principio de estados correspondientes</b>: como $Z_c$ es casi el mismo para todos los gases, si se expresan p, V y T como fracción de los valores críticos ($p_r = p/p_c$, $T_r = T/T_c$) todos los gases se comportan parecido. Sirve para decidir si un gas está lejos (ideal) o cerca (real) de su punto crítico.</p>
+  <p>Otras ecuaciones: Berthelot (la atracción depende de T: $a/TV_m^2$), Clausius (agrega un parámetro c) y Redlich-Kwong (mejor para gases no polares a T moderadas y altas).</p>
+  <p class="ojo">La presión de vapor (y el cambio gas → líquido) solo existe en gases reales: en el modelo ideal no hay atracciones que permitan condensar.</p>
+</section>
+
+<section class="unidad" id="u2">
+  <h2><span class="num">2</span> Primera ley · Calorimetría</h2>
+
+  <h3>Definiciones</h3>
+  <p><b>Ley cero</b>: si A está en equilibrio térmico con B y B con C, A y C también lo están; define la temperatura. <b>Trabajo</b>: transferencia ordenada de energía (podría subir un peso en el entorno). <b>Calor</b>: transferencia de energía por diferencia de temperatura (conducción, convección, radiación); no es energía almacenada. <b>Energía interna U</b>: energía total de las partículas del sistema; importa su cambio, no su valor absoluto.</p>
+  <p>Sistemas: <b>abierto</b> (intercambia materia y energía), <b>cerrado</b> (solo energía), <b>aislado</b> (nada), <b>adiabático</b> (no intercambia calor).</p>
+
+  <h3>Primera ley</h3>
+  <p class="eq">$\Delta U = q + w \qquad dU = dq - p_{ex}dV + dw_e$</p>
+  <p class="clave">El sistema es "egoísta": es positivo lo que recibe (calor que entra, trabajo que le hacen) y negativo lo que entrega.</p>
+  <p>U es función de estado porque si no lo fuera, cambiando el camino se podría crear energía. q y w dependen del camino, pero su suma da siempre el mismo ΔU.</p>
+
+  <h3>Trabajo de expansión</h3>
+  <p>$dw = -p_{ex}dV$. Contra el vacío ($p_{ex}=0$) o a volumen constante, $w = 0$. Contra presión externa constante (irreversible), $w = -p_{ex}\Delta V$. En un proceso <b>reversible</b> $p_{ex} = p$ en cada paso (sucesión de equilibrios) y para un gas ideal isotérmico:</p>
+  <p class="eq">$w = -nRT\ln\dfrac{V_f}{V_i}$</p>
+  <p>En el diagrama p–V el trabajo es el área bajo la curva. Cuantos más pasos, más se acerca a la isoterma: en una <b>expansión</b> el reversible da el <b>trabajo máximo</b> que entrega el sistema; en una <b>compresión</b> da el <b>trabajo mínimo</b> que hay que hacer.</p>
+  <p>Para un gas de Van der Waals: $w = -nRT\ln\frac{V_f - nb}{V_i - nb} - an^2\left(\frac1{V_f} - \frac1{V_i}\right)$. El log corrige por volumen excluido y el segundo término por atracciones.</p>
+
+  <h3>Capacidad calorífica y entalpía</h3>
+  <p>$dq = C\,dT$; C depende de la sustancia y de las condiciones. A volumen constante no hay trabajo de expansión, así que todo el calor cambia U: $C_V = (\partial U/\partial T)_V$. A presión constante se define la <b>entalpía</b> $H = U + pV$ (función de estado), y si no hay otro trabajo:</p>
+  <p class="eq">$dH = dq_p \qquad C_p = \left(\dfrac{\partial H}{\partial T}\right)_p$</p>
+  <p>A p constante parte del calor se va en expandir el sistema, por eso $C_p &gt; C_V$. En general $C_p - C_V = \alpha^2TV/\kappa$; para gas ideal $C_{p,m} - C_{V,m} = R$. Cuando el intervalo de T es grande, $C_p$ varía: $C_{p,m} = a + bT + c/T^2$ y hay que integrar.</p>
+  <p class="ojo">No existe "capacidad calorífica a T constante": si T no cambia, dq/dT no tiene sentido.</p>
+
+  <h3>Calorimetría</h3>
+  <p>Mide el calor de un proceso con un recipiente aislado: el calor que cede lo caliente lo absorben lo frío y el propio calorímetro, $Q_1 + Q_2 + Q_c = 0$. La <b>constante del calorímetro</b> $K_c$ es el calor que necesita para subir 1 °C; se determina mezclando agua caliente y fría de temperaturas conocidas. Supuestos: el calorímetro no pierde calor, las capacidades caloríficas son constantes en el rango (no más de 50–60 °C de diferencia). Tipos: a presión constante (vaso, mide ΔH) y bomba calorimétrica a volumen constante (mide ΔU).</p>
+</section>
+
+<section class="unidad" id="u3">
+  <h2><span class="num">3</span> Termoquímica</h2>
+  <p>Aplica la primera ley a las reacciones. <b>Exotérmica</b>: libera calor, ΔH &lt; 0. <b>Endotérmica</b>: absorbe, ΔH &gt; 0.</p>
+
+  <h3>ΔH y ΔU</h3>
+  <p class="eq">$\Delta H = \Delta U + \Delta n_g RT$</p>
+  <p>Solo cuentan los moles de <b>gas</b>. Con solo sólidos y líquidos ΔV ≈ 0 y ΔH ≈ ΔU. Una bomba calorimétrica mide ΔU; para pasar a ΔH se usa esta relación.</p>
+
+  <h3>Estándar y formación</h3>
+  <p><b>Estado estándar</b>: sustancia pura a 1 bar (≈ 1 atm) y la T indicada (en tablas, 298 K); solutos 1 M. ΔH° depende de cómo se escribe la reacción: si se duplican los coeficientes, se duplica ΔH°. Siempre se aclara el estado físico (g, l, s, ac). En combustión el agua se toma líquida.</p>
+  <p><b>Entalpía estándar de formación</b> $\Delta_fH^\circ$: formar <b>1 mol</b> del compuesto a partir de sus elementos en su forma más estable (C grafito, O₂, H₂, S₈, P₄). Para esos elementos $\Delta_fH^\circ = 0$.</p>
+
+  <h3>Ley de Hess</h3>
+  <p>Como H es función de estado, la ΔH de una reacción no depende de las etapas: se pueden sumar reacciones conocidas (invertir cambia el signo, multiplicar multiplica ΔH). Consecuencia directa:</p>
+  <p class="eq">$\Delta_rH^\circ = \sum\nu_p\Delta_fH^\circ(\text{prod}) - \sum\nu_r\Delta_fH^\circ(\text{reac})$</p>
+  <p>Con entalpías de combustión es al revés (reactivos − productos), porque cada combustión lleva la sustancia a CO₂ y H₂O.</p>
+  <p>Ejemplo: $\Delta H_{vap}(\text{H}_2\text{O}) = \Delta_fH^\circ(g) - \Delta_fH^\circ(l) = -241{,}8 - (-285{,}8) = +44\ \mathrm{kJ/mol}$.</p>
+
+  <h3>Otras entalpías</h3>
+  <p>Combustión (con O₂ a CO₂ y H₂O), hidrogenación (agregar H₂ a un doble enlace), atomización (llevar a átomos gaseosos), sublimación = fusión + vaporización, solvatación/disolución (iones en solución). <b>Entalpía de enlace</b>: romper 1 mol de enlaces en fase gas, siempre positiva. $\Delta_rH \approx \sum E(\text{rotos}) - \sum E(\text{formados})$: contar solo los enlaces que cambian; un doble enlace es una entidad con su propia energía. Los <b>ciclos de Born-Haber</b> aplican Hess para obtener energías de red de sólidos iónicos, que no se miden directo.</p>
+
+  <h3>Ley de Kirchhoff</h3>
+  <p>Las tablas están a 298 K; para otra T:</p>
+  <p class="eq">$\Delta_rH^\circ(T_2) = \Delta_rH^\circ(T_1) + \int_{T_1}^{T_2}\Delta_rC_p\,dT$</p>
+  <p>con $\Delta_rC_p$ = Cp de productos − reactivos (con coeficientes). La pendiente de ΔH vs T es ΔCp.</p>
+  <p class="ojo">En una reacción de formación los elementos también aportan Cp (C grafito, H₂, O₂…). Olvidarlos es el error más común en el ejercicio del etano.</p>
+</section>
+
+<section class="unidad" id="u4">
+  <h2><span class="num">4</span> Segunda ley</h2>
+  <p>La primera ley dice qué procesos conservan la energía; la segunda dice <b>cuáles ocurren espontáneamente</b>. No espontáneo no significa imposible: significa que necesita aporte externo.</p>
+
+  <h3>Entropía</h3>
+  <p>Medida del desorden (de la dispersión de la energía). Función de estado: $dS = dq_{rev}/T$. Para un proceso a T y p constantes, $\Delta S_{sis} = \Delta H/T$ y el entorno gana lo opuesto, $\Delta S_{ent} = -\Delta H/T$.</p>
+  <p class="clave">Segunda ley: en un proceso espontáneo $\Delta S_{univ} = \Delta S_{sis} + \Delta S_{ent} \ge 0$. El sistema puede ordenarse si el entorno se desordena más.</p>
+  <p><b>Desigualdad de Clausius</b>: $dS \ge dq/T$ (igual solo si es reversible). <b>Tercera ley</b>: S = 0 para un cristal perfecto a 0 K; por eso las entropías se pueden tabular como valores absolutos (S° de los elementos <b>no</b> es cero). Reacción: $\Delta_rS^\circ = \sum\nu_pS^\circ - \sum\nu_rS^\circ$ en J/K.</p>
+
+  <h3>Gibbs y Helmholtz</h3>
+  <p>Medir ΔS del entorno es poco práctico, así que se definen funciones del sistema que ya incluyen al entorno:</p>
+  <p class="eq">$G = H - TS \qquad A = U - TS$</p>
+  <p>A <b>T y p constantes</b> (lo habitual en química y en la célula) espontáneo ⇔ $\Delta G &lt; 0$; a <b>T y V constantes</b> ⇔ $\Delta A &lt; 0$; $= 0$ es equilibrio. Hay dos porque cada una corresponde a un par de variables que se mantienen fijas. En química interesa más G porque casi todo pasa a presión constante.</p>
+  <p>Relación con el trabajo: $\Delta A = w_{max}$ (todo el trabajo, A viene de "Arbeit") y $\Delta G = w_{\text{útil, no expansión}}$ (eléctrico, muscular, de síntesis). No toda la energía de un proceso espontáneo se convierte en trabajo: solo la parte "libre".</p>
+  <p>Cuadrantes de $\Delta G = \Delta H - T\Delta S$: ΔH−/ΔS+ siempre espontánea; ΔH+/ΔS− nunca; ΔH−/ΔS− a T bajas; ΔH+/ΔS+ a T altas (ej: evaporación, disolución de sales). La temperatura de cambio es $T = \Delta H/\Delta S$.</p>
+  <p>Ejemplo biológico: la oxidación de glucosa tiene ΔG° ≈ −2870 kJ/mol (espontánea, exergónica: pasa de una molécula compleja a muchas simples, sube S). La fotosíntesis es el proceso inverso: ΔG &gt; 0, necesita energía de la luz.</p>
+</section>
+
+<section class="unidad" id="u5">
+  <h2><span class="num">5</span> Equilibrio químico</h2>
+  <p>Equilibrio <b>dinámico</b>: la reacción sigue en ambos sentidos a igual velocidad y las concentraciones quedan constantes (no iguales). Casi nunca se consumen todos los reactivos.</p>
+
+  <h3>Potencial químico</h3>
+  <p class="eq">$\mu_i = \left(\dfrac{\partial G}{\partial n_i}\right)_{T,p,n_j}$</p>
+  <p>Cuánto cambia G al agregar un poco de i. Es el "motor" de los procesos: la materia va de μ alto a μ bajo (el agua pasa de la mesa mojada al trapo seco). Para una sustancia pura μ es la G molar; en una mezcla $G = \sum n_i\mu_i$. Depende de la composición: $\mu_i = \mu_i^\circ + RT\ln a_i$ (a = x, p o c según el sistema).</p>
+
+  <h3>De μ a la constante de equilibrio</h3>
+  <p>Con el avance de reacción $\xi$ ($dn_i = \nu_i d\xi$): $\Delta_rG = (\partial G/\partial\xi)_{T,p} = \sum\nu_i\mu_i$. Reemplazando μ:</p>
+  <p class="eq">$\Delta_rG = \Delta_rG^\circ + RT\ln Q \qquad \text{equilibrio: } \Delta_rG^\circ = -RT\ln K$</p>
+  <p class="clave">Q &lt; K: faltan productos, ΔG &lt; 0, avanza hacia la derecha. Q &gt; K: sobran productos, va a la izquierda. Q = K: equilibrio.</p>
+  <p>K depende de cómo se escribe la reacción (duplicar coeficientes eleva K al cuadrado) y sobre todo de T; también del solvente; la presión casi no la afecta. K y ΔG° <b>no dicen si la reacción ocurre</b> (eso depende de Q), sino qué predomina en el equilibrio: K ≫ 1 productos, K ≪ 1 reactivos.</p>
+  <p>Gases: $K_p = K_c(RT)^{\Delta n_g}$ y $K_p = K_x\,p_T^{\Delta n_g}$; si $\Delta n_g \ne 0$, cambiar la presión total cambia $K_x$ (la composición) aunque $K_p$ siga igual.</p>
+  <p><b>Equilibrio heterogéneo</b>: sólidos y líquidos puros tienen actividad 1 y no aparecen en K. Ej: $\text{CaCO}_3(s) \rightleftharpoons \text{CaO}(s) + \text{CO}_2(g)$, $K_p = p_{\text{CO}_2}$.</p>
+
+  <h3>Temperatura: van't Hoff</h3>
+  <p class="eq">$\left(\dfrac{\partial\ln K}{\partial T}\right)_p = \dfrac{\Delta_rH^\circ}{RT^2} \;\Rightarrow\; \ln\dfrac{K_2}{K_1} = -\dfrac{\Delta_rH^\circ}{R}\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$</p>
+  <p>Endotérmica: K aumenta con T. Exotérmica: K disminuye. Graficando ln K vs 1/T, la pendiente es $-\Delta_rH^\circ/R$; si el rango de T es grande la recta se curva porque ΔH° varía.</p>
+
+  <h3>Le Chatelier</h3>
+  <p>Perturbar cambiando la composición cambia Q (K queda igual): el sistema reacciona hasta Q = K de nuevo. Cambiar T cambia K. Subir la presión favorece el lado con menos moles de gas. Ej: en $\text{N}_2 + 3\text{H}_2 \rightleftharpoons 2\text{NH}_3$ agregar H₂ baja Q por debajo de K y se forma más NH₃.</p>
+  <p><b>Procesos acoplados</b>: si dos equilibrios comparten una especie, la constante global es el producto de las constantes (los ΔG° se suman). Así la célula impulsa reacciones con ΔG° &gt; 0 acoplándolas a otras muy negativas (ATP).</p>
+
+  <h3>Electroquímica</h3>
+  <p>Redox: el que gana electrones se <b>reduce</b> (cátodo), el que los pierde se <b>oxida</b> (ánodo). En una pila los electrones van por el circuito externo del ánodo al cátodo; el cátodo es el polo positivo. La <b>FEM</b> se mide oponiendo un potencial casi igual (proceso reversible, potenciómetro). Referencia: electrodo normal de hidrógeno, E° = 0.</p>
+  <p class="eq">$\Delta_rG = -nFE \qquad E = E^\circ - \dfrac{RT}{nF}\ln Q \quad(\text{Nernst})$</p>
+  <p>Potencial electroquímico de un ion: $\tilde\mu_i = \mu_i + z_iF\phi$. En equilibrio entre fases, $\tilde\mu_i$ es igual en ambas. Si las fases tienen el mismo potencial eléctrico, vuelve a la condición química de siempre.</p>
+</section>
+
+<section class="unidad" id="u6">
+  <h2><span class="num">6</span> Cambios de fase</h2>
+  <p>Equilibrio <b>físico</b> de un componente entre dos fases a T y p constantes. Condición: $\mu^\alpha = \mu^\beta$. Fuera del equilibrio, $dG = (\mu^\alpha - \mu^\beta)dn^\alpha$: la sustancia pasa espontáneamente a la fase de <b>menor μ</b>.</p>
+
+  <h3>Regla de las fases</h3>
+  <p class="eq">$F = C - P + 2$</p>
+  <p>F: grados de libertad (variables intensivas que puedo fijar). Sale de contar variables (T, p y composiciones) menos restricciones (μ iguales entre fases y Σx = 1). Para un componente, F = 3 − P: una fase F = 2 (elijo T y p), dos fases F = 1 (una curva: fijo T y p queda determinada), tres fases F = 0 (punto triple, único). Agua + alcohol con su vapor: F = 2 − 2 + 2 = 2.</p>
+
+  <h3>μ vs T</h3>
+  <p>$(\partial\mu/\partial T)_p = -S_m$: la pendiente es más negativa cuanto más desordenada la fase (gas &gt; líquido &gt; sólido). A T baja el sólido tiene el menor μ (fase estable); a T alta el gas. Donde las rectas se cruzan están $T_f$ y $T_e$. $(\partial\mu/\partial p)_T = V_m$.</p>
+
+  <h3>Diagrama de fases</h3>
+  <p>Regiones = fase estable; curvas = coexistencia de dos fases; punto triple = tres fases; <b>punto crítico</b> = fin de la curva líquido-vapor (arriba solo hay fluido supercrítico). CO₂: punto triple a 5,2 bar, por eso a 1 atm sublima (−78 °C) y no existe líquido; punto crítico 31 °C y 73 atm.</p>
+  <p><b>Presión de vapor</b>: la del vapor en equilibrio con el líquido; sube con T y casi no depende de la presión externa. Ebullición: $p_{vap} = p_{ext}$; normal a 1 atm. Por eso la curva $p_{vap}(T)$ también es $T_{eb}(p)$. Sustancias con fuerzas intermoleculares débiles (éter) tienen p<sub>vap</sub> alta y hierven antes. Durante un cambio de fase T no cambia: el calor se usa en separar partículas.</p>
+
+  <h3>Clapeyron y Clausius-Clapeyron</h3>
+  <p>Igualando $d\mu$ en las dos fases se obtiene la ecuación exacta de <b>Clapeyron</b>:</p>
+  <p class="eq">$\dfrac{dp}{dT} = \dfrac{\Delta S_{tr}}{\Delta V_{tr}} = \dfrac{\Delta H_{tr}}{T\Delta V_{tr}}$</p>
+  <p><b>Sólido-líquido</b>: ΔV chico, pendiente muy grande y casi vertical. Normalmente positiva; en el agua ΔV<sub>fus</sub> &lt; 0 (el hielo es menos denso) y la pendiente es negativa: la presión funde el hielo.</p>
+  <p><b>Líquido-vapor y sólido-vapor</b>: suponiendo gas ideal y $V_{gas} \gg V_{líq}$ sale <b>Clausius-Clapeyron</b>:</p>
+  <p class="eq">$\ln\dfrac{p_2}{p_1} = -\dfrac{\Delta H_{vap}}{R}\left(\dfrac1{T_2}-\dfrac1{T_1}\right)$</p>
+  <p>Aplicación: en la olla a presión (2 atm) el agua hierve a ~120 °C y la cocción se acelera mucho.</p>
+
+  <h3>Clasificación de Ehrenfest</h3>
+  <p><b>Primer orden</b>: la primera derivada de μ (S, V) es discontinua, hay ΔH ≠ 0 y ΔV ≠ 0 (fusión, vaporización, sublimación). <b>Segundo orden</b>: S y V continuos, salta la segunda derivada (Cp, compresibilidad). <b>Transición λ</b>: Cp tiende a infinito (helio superfluido, orden-desorden en aleaciones).</p>
+</section>
+
+<section class="unidad" id="u7">
+  <h2><span class="num">7</span> Mezclas</h2>
+  <p>El potencial químico de un componente en la mezcla es su <b>magnitud molar parcial</b> de G: cuánto aporta cada mol de i a la G total, que es $G = \sum n_i\mu_i$. Las magnitudes molares parciales no son independientes: <b>Gibbs-Duhem</b> $\sum n_i d\mu_i = 0$ (si sube μ de A, baja el de B); si conozco la actividad de uno en todo el rango, calculo la del otro.</p>
+
+  <h3>Tres sistemas ideales</h3>
+  <p><b>Gas ideal</b>: $\mu = \mu^\circ + RT\ln(p/p^\circ)$, con $p^\circ = 1$ bar. Se usa como referencia porque en el equilibrio líquido-vapor $\mu_{líq} = \mu_{vap}$.</p>
+  <p><b>Solución ideal</b>: todos los componentes cumplen <b>Raoult</b>, $p_i = x_ip_i^*$. Las interacciones A-B son iguales a A-A y B-B, así que $\Delta_{mix}H = 0$ y $\Delta_{mix}V = 0$; mezclar es espontáneo solo por entropía: $\Delta_{mix}G = nRT\sum x_i\ln x_i &lt; 0$. Potencial: $\mu_i = \mu_i^* + RT\ln x_i$ (convención I).</p>
+  <p><b>Solución idealmente diluida</b>: el solvente cumple Raoult y el soluto volátil cumple <b>Henry</b>, $p_B = K_Bx_B$ (K<sub>B</sub> depende de T y del solvente, no es la presión de vapor del puro). Potencial del soluto con convención II: $\mu^\circ_{(II)} = \mu^\circ + RT\ln K_B$.</p>
+
+  <h3>Propiedades coligativas</h3>
+  <p>Dependen de <b>cuántas</b> partículas de soluto hay, no de cuáles. Todas salen de lo mismo: el soluto (no volátil) baja el μ del solvente ($RT\ln x_A &lt; 0$), entonces baja su presión de vapor ($\Delta p = x_Bp_A^*$). Consecuencias:</p>
+  <ul>
+    <li><b>Ascenso ebulloscópico</b> $\Delta T_e = K_em$: hace falta más T para que $p_{vap}$ llegue a la externa.</li>
+    <li><b>Descenso crioscópico</b> $\Delta T_f = K_fm$: el líquido es más estable, congela a menor T.</li>
+    <li><b>Presión osmótica</b> $\pi = cRT$ (van't Hoff): presión que hay que aplicar a la solución para frenar el paso de solvente por una membrana semipermeable. Si se aplica más, se invierte el flujo (ósmosis inversa, para purificar agua).</li>
+  </ul>
+  <p>$K_e$ y $K_f$ son <b>del solvente</b> ($K = RT^{*2}M_A/\Delta H$). Se usa molalidad porque no depende de T. Valen para soluciones diluidas de solutos no volátiles. Aplicaciones: masas molares, grados de disociación o asociación, atmósferas de humedad controlada, anticongelantes.</p>
+
+  <h3>Sistemas reales: actividad</h3>
+  <p>Se mantiene la forma de la ecuación cambiando x por la <b>actividad</b> (la "concentración efectiva"): $\mu_i = \mu_i^* + RT\ln a_i$, $a_i = \gamma_ix_i$. Ej: el agua que hidrata iones de sal "deja de actuar como agua", su actividad es menor que su fracción molar.</p>
+  <p><b>Sistema racional</b> (solvente, referencia líquido puro): $a = p/p^*$, γ → 1 cuando x → 1. <b>Sistema práctico</b> (soluto, referencia Henry): $a = p/K$, γ → 1 cuando x → 0. Para solutos diluidos también se usan escalas de molalidad o molaridad.</p>
+  <p><b>Estado estándar bioquímico</b> (ΔG°′): pH 7, 37 °C, fuerza iónica 0,25; se usan concentraciones analíticas y se fija $a_{H^+} = 1$ a pH 7.</p>
+</section>
+
+<section class="unidad" id="u8">
+  <h2><span class="num">8</span> Cinética química</h2>
+  <p>La termodinámica dice si un proceso puede ocurrir; la cinética dice <b>qué tan rápido</b>. Descripción fenomenológica (ecuación experimental de velocidad) y molecular (mecanismo, teorías).</p>
+
+  <h3>Velocidad y ley de velocidad</h3>
+  <p>Para $aA + bB \to cC + dD$: $v = -\frac1a\frac{d[A]}{dt} = \frac1c\frac{d[C]}{dt}$ (siempre positiva). Se sigue midiendo concentraciones por métodos químicos (sacar muestra y frenar, reacciones lentas) o físicos (presión, absorción UV-vis, IR, RMN, polarimetría; en tiempo real).</p>
+  <p class="eq">$v = k[A]^\alpha[B]^\beta\cdots$</p>
+  <p>Los <b>órdenes</b> α, β son <b>experimentales</b>: no salen de la estequiometría (pueden ser fraccionarios o cero). k depende de T (no de la composición). Unidades de k: $\mathrm{M^{1-n}\,s^{-1}}$.</p>
+
+  <h3>Leyes integradas</h3>
+  <p>Orden 0: [A] baja linealmente. Orden 1: $\ln[A] = \ln[A]_0 - kt$, decaimiento exponencial y $t_{1/2} = \ln2/k$ <b>independiente de [A]₀</b> (radiactividad, sacarosa, H₂O₂). Orden 2: $1/[A] = 1/[A]_0 + kt$ y $t_{1/2} = 1/k[A]_0$ (más concentrado, más rápido). Para saber el orden con datos [A] vs t: probar qué gráfico da recta.</p>
+
+  <h3>Cómo se determina el orden</h3>
+  <p><b>Velocidades iniciales</b>: se varía una sola concentración y se compara: si al duplicar [A] la velocidad se duplica, orden 1; si se cuadruplica, orden 2; si no cambia, orden 0. <b>Aislamiento</b>: todos en exceso menos uno; queda una ley de pseudo-orden $v = k'[A]^\alpha$ con $k' = k[B]^\beta_{exceso}$.</p>
+
+  <h3>Temperatura: Arrhenius</h3>
+  <p class="eq">$k = Ae^{-E_a/RT} \qquad \ln k = \ln A - \dfrac{E_a}{R}\dfrac1T$</p>
+  <p>ln k vs 1/T es una recta de pendiente $-E_a/R$. A mayor $E_a$, más sensible es k a la temperatura. En rangos amplios puede no ser lineal.</p>
+
+  <h3>Mecanismos</h3>
+  <p>Reacción <b>simple (elemental)</b>: un solo evento molecular; su orden coincide con la <b>molecularidad</b> (uni-, bi-, termolecular). Reacción <b>compleja</b>: varias etapas elementales = mecanismo, con intermediarios (se forman y se consumen) y catalizadores (se consumen y se regeneran). Un mecanismo válido debe sumar la ecuación global, predecir la ley de velocidad observada y su dependencia con T.</p>
+  <p>Consecutivas $A \to B \to C$: A decae exponencialmente, B pasa por un máximo, C crece. Aproximaciones: <b>estado estacionario</b> ($d[I]/dt \approx 0$ para el intermediario) y <b>pre-equilibrio</b> (la primera etapa reversible es rápida: $[B] = K_1[A]$).</p>
+
+  <h3>Teorías</h3>
+  <p><b>Colisiones de esferas duras</b>: velocidad = (choques por segundo) × (fracción con energía ≥ E<sub>a</sub>, $e^{-E_a/RT}$). Explica por qué sube con la concentración y con T. Limitación: las moléculas no son esferas y la <b>orientación</b> importa. <b>Estado de transición</b> (Eyring): los reactivos están en equilibrio con un complejo activado inestable en el máximo de energía; $k = \frac{k_BT}{h}e^{\Delta S^\ddagger/R}e^{-\Delta H^\ddagger/RT}$.</p>
+
+  <h3>Catálisis y enzimas</h3>
+  <p>El catalizador abre un camino con <b>menor E<sub>a</sub></b>; no cambia ΔG ni K, solo llega antes al equilibrio. Homogénea (misma fase) o heterogénea (en superficie, con adsorción). Enzimas: proteínas muy específicas y eficientes (la catalasa descompone 10⁷ H₂O₂ por segundo); modelo llave-cerradura y ajuste inducido.</p>
+  <p><b>Michaelis-Menten</b>: $E + S \rightleftharpoons ES \to E + P$ con estado estacionario para ES:</p>
+  <p class="eq">$v = \dfrac{k_{cat}[E]_0[S]}{K_M + [S]}$</p>
+  <p>A [S] baja, v crece casi lineal; a [S] alta se satura en $v_{max}$. $K_M$ es la [S] a la que $v = v_{max}/2$ (menor K<sub>M</sub>, más afinidad). Lineweaver-Burk (1/v vs 1/[S]) da una recta: pendiente $K_M/v_{max}$, ordenada $1/v_{max}$. Inhibición <b>competitiva</b>: el inhibidor ocupa el sitio activo, sube K<sub>M</sub> aparente y v<sub>max</sub> no cambia (se revierte con más sustrato). <b>No competitiva</b>: se une a otro sitio, baja v<sub>max</sub> y K<sub>M</sub> no cambia.</p>
+</section>
+
+<section class="unidad" id="u9">
+  <h2><span class="num">9</span> Adsorción y sistemas dispersos</h2>
+
+  <h3>Adsorción</h3>
+  <p>Ocurre en la <b>interfase</b> entre fases. <b>Adsorción</b>: el adsorbato queda en la superficie del adsorbente. <b>Absorción</b>: penetra en el volumen. Como cuesta distinguirlas, se llaman juntas <b>sorción</b>. La causa es que la superficie tiene fuerzas no compensadas y adsorbiendo baja su energía libre. Depende de T, de la presión parcial del gas y del área (los sólidos porosos o divididos adsorben mucho más).</p>
+  <p>Termodinámica: es espontánea (ΔG &lt; 0) y ordena el gas sobre la superficie (ΔS &lt; 0), entonces <b>ΔH &lt; 0</b>: siempre exotérmica. Por eso al subir T baja la cantidad adsorbida (θ disminuye).</p>
+  <table class="comp">
+    <tr><th></th><th>Fisisorción</th><th>Quimisorción</th></tr>
+    <tr><td>Fuerzas</td><td>Van der Waals, débiles, largo alcance</td><td>Enlace químico, fuertes, corto alcance</td></tr>
+    <tr><td>ΔH</td><td>Chico (similar a condensación)</td><td>Grande (similar a una reacción)</td></tr>
+    <tr><td>Capas</td><td>Multicapa</td><td>Monocapa</td></tr>
+    <tr><td>Especificidad</td><td>Baja</td><td>Alta</td></tr>
+    <tr><td>Reversible</td><td>Sí</td><td>No (o difícil)</td></tr>
+    <tr><td>Velocidad a T baja</td><td>Rápida</td><td>Despreciable (tiene E<sub>a</sub>)</td></tr>
+  </table>
+  <p>La fisisorción tiene ΔH menor porque solo intervienen interacciones débiles; en la quimisorción se forman enlaces, que liberan mucha más energía.</p>
+  <p><b>Isotermas</b> (cantidad adsorbida vs p a T constante). <b>Langmuir</b> (tipo I): sitios equivalentes, una molécula por sitio, monocapa, sin interacción entre adsorbidas. Velocidad de adsorción $k_a p(1-\theta)$, de desorción $k_d\theta$; igualando, $\theta = Kp/(1+Kp)$. Graficando p/V vs p se obtienen K y V<sub>m</sub>. <b>BET</b> (tipo II): multicapa, extensión de Langmuir; ajusta para $a_w &lt; 0{,}4$. <b>GAB</b>: corrige BET con un parámetro K &lt; 1 para las capas superiores y ajusta hasta $a_w \approx 0{,}8$.</p>
+
+  <h3>Agua en alimentos</h3>
+  <p><b>Actividad de agua</b> $a_w = p/p^* = HR\%/100$: mide el agua disponible, no la cantidad total. <b>Agua libre</b>: retenida físicamente, con propiedades de agua pura. <b>Agua ligada</b>: interactúa con solutos y biopolímeros; movilidad restringida, no congela (hasta ~−40 °C), no se elimina por secado, no sirve como solvente. <b>Humedad de monocapa</b>: cada grupo polar tiene una molécula de agua; es el punto de máxima estabilidad (por encima, el agua actúa como solvente y aceleran el deterioro y la reacción de Maillard, que se frena a a<sub>w</sub> baja). <b>Histéresis</b>: la curva de desorción queda por encima de la de adsorción (a igual a<sub>w</sub>, más humedad al secar) por capilaridad y cambios de estructura. Medición: gravimétrica (equilibrar con sales saturadas de a<sub>w</sub> conocida) o higrómetro.</p>
+
+  <h3>Sistemas dispersos</h3>
+  <p>Dos fases no miscibles, una finamente dividida (fase dispersa) en la otra (dispersante). Al dividir aumenta la relación área/volumen y pesan los fenómenos de superficie. <b>Tensión superficial</b>: tendencia del líquido a minimizar su área (J/m²).</p>
+  <p>Clasificación: por <b>estado físico</b> (aerosol l/g o s/g, espuma g/l, emulsión l/l, suspensión o sol s/l, espuma sólida g/s, gel l/s, aleación s/s); por <b>estructura</b> (incoherentes: suspensiones, emulsiones; coherentes: red tridimensional, geles); por <b>tamaño</b> (groseras &gt; 1 µm; coloidales entre 1 nm y 1 µm).</p>
+  <p>Estabilidad: mayor con alto grado de dispersión y tamaño homogéneo, mayor viscosidad y carga eléctrica (doble capa que repele); menor al subir T. Coloides: efecto Tyndall, movimiento browniano, carga. <b>DLVO</b>: suma de atracción de Van der Waals y repulsión eléctrica; si las partículas superan la barrera caen al mínimo de atracción y coagulan (irreversible).</p>
+  <p><b>Liófobos/hidrófobos</b>: poca afinidad con el medio; no cambian viscosidad; muy sensibles a electrolitos (pocos estabilizan, muchos coagulan); se protegen con coloides protectores o tensioactivos. <b>Liófilos/hidrófilos</b>: gran afinidad; espesan; poco sensibles a electrolitos salvo en exceso; alcohol o acetona los deshidratan y desestabilizan; si pierden agua forman geles. <b>Coacervación</b>: neutralizar cargas de dos coloides opuestos (gelatina pH &lt; 5 con goma arábiga), sirve para microencapsular. <b>De asociación</b>: moléculas anfifílicas forman micelas espontáneamente por encima de la <b>concentración micelar crítica (CMC)</b>; la CMC baja con electrolitos; en solventes no polares, micelas inversas; aplicación: solubilización micelar de fármacos y aceites.</p>
+  <p><b>Geles</b>: red tridimensional continua que retiene líquido. Se forman por enfriamiento (gelatina), evaporación, agregado de solventes o de electrolitos en exceso, o cambio de pH (Carbomer). <b>Imbibición</b>: el gel absorbe líquido y se hincha. <b>Sinéresis</b>: expulsa líquido y se contrae, sin volver al estado original (el pan que se pone duro).</p>
+</section>
+
+<section class="unidad" id="u10">
+  <h2><span class="num">10</span> Introducción a biorreactores</h2>
+  <p>Un <b>biorreactor</b> es un recipiente que mantiene las condiciones (T, pH, O₂, agitación, nutrientes) para que microorganismos o enzimas transformen un sustrato en producto o biomasa. Tipos: tanque agitado (el más usado), airlift, columna de burbujas, lecho fijo o fluidizado, membrana, fotobiorreactor. Por operación: <b>batch</b> (discontinuo), <b>fed-batch</b> (se alimenta sin sacar), <b>continuo</b> (CSTR o quimiostato; tubular o de flujo pistón).</p>
+  <p>Todo diseño parte del <b>balance de materia</b>: entrada − salida + generación − consumo = acumulación. Se plantea para biomasa (X), sustrato (S) y producto (P).</p>
+  <p><b>Monod</b> (crecimiento microbiano) $\mu = \mu_{max}S/(K_S + S)$ tiene la misma forma que <b>Michaelis-Menten</b> (enzimas) $v = v_{max}S/(K_M + S)$: Monod es empírica para células y MM se deduce de un mecanismo enzimático. El consumo de sustrato se liga al crecimiento con el rendimiento $Y_{X/S}$.</p>
+  <p><b>Batch</b>: no hay entrada ni salida, todo es acumulación: $dX/dt = \mu X$, $dS/dt = -\mu X/Y$. <b>CSTR</b>: mezcla perfecta (lo que sale tiene la composición del interior) y estado estacionario; para biomasa $D = \mu$, con lo que $S = K_SD/(\mu_{max} - D)$ y $X = Y(S_0 - S)$. Si D supera la velocidad máxima de crecimiento, la biomasa se "lava". <b>Tubular</b>: sin mezcla axial, cada porción avanza como un pequeño batch; el tiempo de residencia τ = V/F reemplaza al tiempo. Para una misma conversión con cinética de saturación, el tubular necesita menos volumen que el CSTR, que opera siempre a la concentración de salida (la más baja).</p>
+</section>

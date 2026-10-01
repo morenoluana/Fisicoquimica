@@ -1,0 +1,97 @@
+<title>Fisicoquímica</title>
+<meta name="description" content="Resumen, hoja de fórmulas, ejercicios resueltos y preguntas de Fisicoquímica (UADE, Alderete).">
+<style>{{CSS}}</style>
+
+<div class="cabecera">
+  <div class="dentro">
+    <span class="eyebrow">UADE · Biotecnología · Prof. Juan M. Alderete</span>
+    <h1>Fisicoquímica<span class="eq-titulo">ΔG = ΔH − TΔS</span></h1>
+  </div>
+</div>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="dentro">
+    <a href="#inicio">Inicio</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#formulas">Fórmulas</a>
+    <a href="#ejercicios">Ejercicios</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#simulacros">Simulacros</a>
+  </div>
+</nav>
+
+<main>
+  <section class="seccion" id="inicio">
+    <div class="inicio-grid">
+      <div>
+        <h2 style="font-size:28px;margin-bottom:14px">Cómo usar esto para el examen</h2>
+        <ol class="pasos">
+          <li><div><b>Leé el resumen de una unidad</b><p>Diez unidades, de gases reales a biorreactores. Lo azul es lo que conviene saber de memoria; lo rojo, los errores típicos.</p></div></li>
+          <li><div><b>Hacé los ejercicios de esa unidad sin mirar</b><p>Tapá la resolución, resolvé y compará. Tildá "Lo resolví" cuando te salga sola.</p></div></li>
+          <li><div><b>Repasá con la hoja de fórmulas</b><p>Es la misma que vas a llevar impresa: practicá usándola, así sabés dónde está cada cosa.</p></div></li>
+          <li><div><b>Contestá las preguntas de teoría en voz alta</b><p>Las preguntas de cada guía, con respuesta corta. Marcá las que ya sabés.</p></div></li>
+          <li><div><b>Mandame simulacros y exámenes viejos</b><p>Los analizo y te digo en qué temas enfocarte.</p></div></li>
+        </ol>
+      </div>
+      <div style="display:grid;gap:18px">
+        <div class="aviso">
+          <h3>Tu avance</h3>
+          <div class="scroll">
+            <table class="tabla-progreso" id="progreso">
+              <thead><tr><th>Unidad</th><th>Ejercicios</th><th>Preguntas</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="aviso">
+          <h3>Ojo con las respuestas de la guía</h3>
+          <p>Verifiqué todos los ejercicios. En <b id="n-dif">varios</b> el resultado de la guía no coincide con el cálculo (errores de tipeo, unidades o un factor 2). Están marcados en rojo con el valor de la guía al lado.</p>
+          <p><a href="#ejercicios" data-filtro="dif">Ver solo esos ejercicios</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="resumen" hidden>
+    <h2>Resumen</h2>
+    <p class="bajada">Armado con tus teóricos, los powers de la cátedra y las preguntas de cada guía.</p>
+    <ul class="indice">{{INDICE_RESUMEN}}</ul>
+    {{RESUMEN}}
+  </section>
+
+  <section class="seccion" id="formulas" hidden>
+    <h2>Hoja de fórmulas</h2>
+    <p class="bajada">La versión para imprimir entra en dos carillas A4 (archivo <b>hoja-de-formulas.pdf</b> del repositorio). Acá la misma información, más grande.</p>
+    <div class="hoja">{{FORMULAS}}</div>
+  </section>
+
+  <section class="seccion" id="ejercicios" hidden>
+    <h2>Ejercicios de las guías</h2>
+    <p class="bajada">Todos resueltos y verificados. <span class="chip ok">coincide</span> con la guía · <span class="chip dif">difiere</span> de la guía (nuestro valor es el correcto) · <span class="chip nd">sin dato</span> en la guía.</p>
+    <div class="filtros" role="group" aria-label="Filtrar ejercicios">
+      <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+      <button type="button" data-f="pendientes" aria-pressed="false">Sin resolver</button>
+      <button type="button" data-f="dif" aria-pressed="false">Difieren de la guía</button>
+    </div>
+    <ul class="indice">{{INDICE_EJ}}</ul>
+    {{EJERCICIOS}}
+  </section>
+
+  <section class="seccion" id="preguntas" hidden>
+    <h2>Preguntas de teoría</h2>
+    <p class="bajada">Las "preguntas básicas" de cada guía. Pensá la respuesta antes de abrirla.</p>
+    {{PREGUNTAS}}
+  </section>
+
+  <section class="seccion" id="simulacros" hidden>
+    <h2>Simulacros y exámenes</h2>
+    <div class="vacio">
+      <h3>Todavía no hay simulacros cargados</h3>
+      <p>Cuando me mandes exámenes o simulacros del profesor, los resuelvo, los agrego acá y te armo una lista de temas por frecuencia para que sepas dónde enfocarte.</p>
+      <p>Mandalos como PDF o foto en el chat.</p>
+    </div>
+  </section>
+</main>
+<footer>Verificado numéricamente con scripts/verificar.py · Constantes y tablas de Atkins.</footer>
+
+<script>{{JS}}</script>

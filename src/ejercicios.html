@@ -1,0 +1,606 @@
+<!-- Ejercicios de las guías 2024 (Alderete), resueltos y verificados numéricamente (scripts/verificar.py).
+     data-estado: ok = coincide con la guía · dif = nuestro resultado difiere de la guía · nd = la guía no da resultado o falta un dato -->
+
+<section class="unidad-ej" id="ej1" data-u="1">
+<h2><span class="num">1</span> Gases reales</h2>
+
+<article class="ej" id="g1-1" data-estado="ok">
+  <h4>I · Expansión isotérmica</h4>
+  <p class="enun">Gas ideal, expansión isotérmica que aumenta V en 2,2 dm³. Final: p = 378 mmHg, V = 4,65 dm³. ¿p inicial en mmHg y atm?</p>
+  <p class="rta"><b>717 mmHg = 0,944 atm</b></p>
+  <details><summary>Resolución</summary>
+    <p>$V_i = 4{,}65 - 2{,}2 = 2{,}45\ \mathrm{dm^3}$. Boyle: $p_i = \dfrac{p_fV_f}{V_i} = \dfrac{378 \cdot 4{,}65}{2{,}45} = 717{,}4\ \mathrm{mmHg}$; $717{,}4/760 = 0{,}944\ \mathrm{atm}$.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-2" data-estado="ok">
+  <h4>II · Calentamiento a p constante</h4>
+  <p class="enun">Gas ideal a 340 K se calienta a p constante hasta que V aumenta 18 %. ¿T final?</p>
+  <p class="rta"><b>401,2 K</b></p>
+  <details><summary>Resolución</summary><p>Charles: $T_f = T_i\dfrac{V_f}{V_i} = 340 \cdot 1{,}18 = 401{,}2\ \mathrm{K}$.</p></details>
+</article>
+
+<article class="ej" id="g1-3" data-estado="dif">
+  <h4>III · Presión del neón</h4>
+  <p class="enun">225 mg de Ne en 3,00 dm³ a 122 K. Calcular p con gas ideal.</p>
+  <p class="rta"><b>3,77 kPa</b> <span class="guia">Guía: 3,47 kPa</span></p>
+  <details><summary>Resolución</summary>
+    <p>$n = 0{,}225/20{,}18 = 0{,}01115\ \mathrm{mol}$. $p = \dfrac{nRT}{V} = \dfrac{0{,}01115\cdot0{,}08206\cdot122}{3{,}00} = 0{,}0372\ \mathrm{atm} = 3{,}77\ \mathrm{kPa}$.</p>
+    <p class="ojo">El 3,47 de la guía parece un error de tipeo (el resultado de Atkins para este problema es 3,76 kPa).</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-4" data-estado="dif">
+  <h4>IV · Mezcla CH₄ + Ar + Ne</h4>
+  <p class="enun">320 mg CH₄, 175 mg Ar, 225 mg Ne; p<sub>Ne</sub> = 66,5 mmHg a 300 K. a) V; b) p<sub>Ar</sub>; c) p total.</p>
+  <p class="rta"><b>a) 3,14 dm³ · b) 3,48 kPa · c) 28,2 kPa</b> <span class="guia">Guía: b) 3,15 kPa</span></p>
+  <details><summary>Resolución</summary>
+    <p>Moles: CH₄ 0,01995; Ar 0,00438; Ne 0,01115; total 0,03549 mol.</p>
+    <p>a) Con el Ne solo: $V = \dfrac{n_{Ne}RT}{p_{Ne}} = \dfrac{0{,}01115\cdot8{,}314\cdot300}{8866\ \mathrm{Pa}} = 3{,}14\cdot10^{-3}\ \mathrm{m^3}$ (66,5 mmHg = 8866 Pa).</p>
+    <p>b) $p_{Ar} = \dfrac{n_{Ar}RT}{V} = 3{,}48\ \mathrm{kPa}$. c) $p_T = \dfrac{n_TRT}{V} = 28{,}2\ \mathrm{kPa}$ (o $p_{Ne}/x_{Ne}$).</p>
+    <p class="ojo">Comprobación: $x_{Ar} = 0{,}1234$ y $0{,}1234\cdot28{,}2 = 3{,}48$. El 3,15 de la guía no cierra con su propio total.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-5" data-estado="ok">
+  <h4>V · Masa molar por densidad</h4>
+  <p class="enun">ρ = 1,23 g/dm³ a 300 K y 150 mmHg. ¿Masa molar?</p>
+  <p class="rta"><b>≈ 153 g/mol</b> <span class="guia">Guía: 151,3</span></p>
+  <details><summary>Resolución</summary><p>$M = \dfrac{\rho RT}{p} = \dfrac{1{,}23\cdot0{,}08206\cdot300}{150/760} = 153\ \mathrm{g/mol}$. La diferencia con la guía es por redondeo de R y p.</p></details>
+</article>
+
+<article class="ej" id="g1-6" data-estado="ok">
+  <h4>VI · Factor de compresión</h4>
+  <p class="enun">A 250 K y 15 atm, V<sub>m</sub> es 12 % menor que el ideal. a) Z; b) V<sub>m</sub>; ¿atracción o repulsión?</p>
+  <p class="rta"><b>Z = 0,88 · V<sub>m</sub> = 1,20 L/mol · dominan las atracciones</b></p>
+  <details><summary>Resolución</summary>
+    <p>$Z = V_m/V_m^{id} = 0{,}88$. $V_m^{id} = RT/p = 0{,}08206\cdot250/15 = 1{,}368$ L/mol → $V_m = 0{,}88\cdot1{,}368 = 1{,}20$ L/mol. Z &lt; 1 → atracciones.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-7" data-estado="dif">
+  <h4>VII · Volumen y segundo virial</h4>
+  <p class="enun">A 300 K y 2 atm, Z = 0,86. a) V de 8,2 mmol; b) B aproximado.</p>
+  <p class="rta"><b>a) 86,8 cm³ · b) B ≈ −1,5 L/mol</b> <span class="guia">Guía: b) −0,1 L/mol</span></p>
+  <details><summary>Resolución</summary>
+    <p>a) $V = Z\dfrac{nRT}{p} = 0{,}86\cdot\dfrac{0{,}0082\cdot0{,}08206\cdot300}{2} = 0{,}0868\ \mathrm{L}$.</p>
+    <p>b) Truncando el virial: $Z = 1 + B/V_m$ → $B = (Z-1)V_m$. $V_m = ZRT/p = 10{,}59$ L/mol → $B = -0{,}14\cdot10{,}59 = -1{,}48$ L/mol.</p>
+    <p class="ojo">Atkins da −1,5 dm³/mol para este problema. Si en el examen te piden B, usá este camino.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-8" data-estado="nd">
+  <h4>VIII · O₂ y CO₂ en un biorreactor (VdW)</h4>
+  <p class="enun">Biorreactor de 5 L a 37 °C y 1 atm: calcular con Van der Waals los volúmenes de O₂ y CO₂ producidos.</p>
+  <p class="rta"><b>Falta un dato (los moles)</b> <span class="guia">Guía: O₂ ≈ 0,5 L; CO₂ ≈ 5,2 L</span></p>
+  <details><summary>Cómo se plantea</summary>
+    <p>El enunciado no da cuántos moles se producen, así que no se puede llegar al número de la guía. El método: con n conocido, resolvé VdW para V. Arrancá con $V_0 = nRT/p$ e iterá $V = \dfrac{nRT}{p + an^2/V^2} + nb$ hasta que no cambie. Datos VdW: O₂ a = 1,364 L²atm/mol², b = 0,0318 L/mol; CO₂ a = 3,640, b = 0,0427.</p>
+    <p>A 1 atm y 310 K los dos gases están lejos del punto crítico: VdW da casi lo mismo que el ideal (diferencia &lt; 1 %).</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-9" data-estado="dif">
+  <h4>IX · CO₂ de la fermentación (VdW)</h4>
+  <p class="enun">Tanque de 10 m³ a 30 °C y 1 atm; se consumen 200 mol de glucosa. Volumen real de CO₂ con VdW.</p>
+  <p class="rta"><b>≈ 9,9 m³ (9 909 L)</b> <span class="guia">Guía: 10,5 L</span></p>
+  <details><summary>Resolución</summary>
+    <p>$\text{C}_6\text{H}_{12}\text{O}_6 \to 2\,\text{C}_2\text{H}_5\text{OH} + 2\,\text{CO}_2$ → 400 mol CO₂.</p>
+    <p>Ideal: $V = 400\cdot0{,}08206\cdot303{,}15/1 = 9950$ L. VdW (a = 3,640, b = 0,0427) iterando: 9909 L.</p>
+    <p class="ojo">El "10,5 L" de la guía no es posible para 400 mol a 1 atm; probablemente quisieron poner ≈ 10 m³.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-10" data-estado="dif">
+  <h4>X · Metano de una vaca</h4>
+  <p class="enun">50 L/día de CH₄ a 37 °C y 1 atm; 1 mol CH₄ cada 500 mol de alimento. ¿Moles de alimento?</p>
+  <p class="rta"><b>≈ 1,97 mol CH₄ → ≈ 983 mol de alimento</b> <span class="guia">Guía: 1,116 mol</span></p>
+  <details><summary>Resolución</summary>
+    <p>$n_{CH_4} = pV/RT = 50/(0{,}08206\cdot310{,}15) = 1{,}965$ mol (con VdW, 1,968 mol: a 1 atm es casi ideal).</p>
+    <p>Alimento: $500\cdot1{,}97 = 983$ mol. El valor de la guía no sale con estos datos.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-11" data-estado="dif">
+  <h4>XI · O₂ en cultivo de algas</h4>
+  <p class="enun">25 °C, 3 atm. a) ¿Ideal o real (constantes críticas)? b) V de 50 mol con VdW; c) comparar con ideal.</p>
+  <p class="rta"><b>a) casi ideal · b) 406,6 L · c) ideal 407,8 L</b> <span class="guia">Guía: b) 46,2 L</span></p>
+  <details><summary>Resolución</summary>
+    <p>a) O₂: T<sub>c</sub> = 154,6 K, p<sub>c</sub> = 49,8 atm. $T_r = 1{,}93$, $p_r = 0{,}06$ → lejos del punto crítico, Z ≈ 1.</p>
+    <p>b) VdW con a = 1,364, b = 0,0318, n = 50: $V \approx 406{,}6$ L. c) $V_{id} = 50\cdot0{,}08206\cdot298{,}15/3 = 407{,}8$ L. Diferencia 0,3 %.</p>
+    <p class="ojo">Con $p_r \approx 0{,}06$ es imposible que VdW dé 46 L (10 veces menos que el ideal). El 46,2 de la guía está mal.</p>
+  </details>
+</article>
+
+<article class="ej" id="g1-12" data-estado="dif">
+  <h4>XII · CH₄ en fermentación anaeróbica</h4>
+  <p class="enun">100 mol CH₄ a 30 °C y 5 atm. a) ¿Ideal o real? b) V con VdW; c) comparar con ideal.</p>
+  <p class="rta"><b>a) casi ideal · b) 492,6 L · c) ideal 497,5 L</b> <span class="guia">Guía: b) 31,5 L; c) 493,5 L</span></p>
+  <details><summary>Resolución</summary>
+    <p>a) CH₄: T<sub>c</sub> = 190,6 K, p<sub>c</sub> = 45,4 atm → $T_r = 1{,}59$, $p_r = 0{,}11$: comportamiento casi ideal (Z ≈ 0,99).</p>
+    <p>b) VdW (a = 2,283, b = 0,0428): 492,6 L. c) Ideal: 497,5 L. El de VdW es un poco menor porque dominan las atracciones.</p>
+  </details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej2" data-u="2">
+<h2><span class="num">2</span> Primera ley · Calorimetría</h2>
+
+<article class="ej" id="p1-1" data-estado="ok">
+  <h4>I · Compresión isotérmica reversible</h4>
+  <p class="enun">52,0 mmol de gas ideal a 260 K; V se reduce a un tercio. w, w sobre el sistema y q.</p>
+  <p class="rta"><b>w = +123,5 J (sobre el sistema) · q = −123,5 J · ΔU = 0</b></p>
+  <details><summary>Resolución</summary>
+    <p>$w = -nRT\ln\dfrac{V_f}{V_i} = -0{,}052\cdot8{,}314\cdot260\cdot\ln\tfrac13 = +123{,}5\ \mathrm{J}$. El trabajo hecho <i>por</i> el sistema es −123,5 J. Isotérmico ideal → ΔU = 0 → $q = -w = -123{,}5$ J (libera calor).</p>
+  </details>
+</article>
+
+<article class="ej" id="p1-2" data-estado="ok">
+  <h4>II · Expansión irreversible vs reversible</h4>
+  <p class="enun">4,50 g CH₄, 12,7 dm³, 310 K. Expansión isotérmica contra 200 mmHg hasta ΔV = 3,3 dm³. w, q, ΔU; y reversible.</p>
+  <p class="rta"><b>Irrev.: w = −88 J, q = +88 J · Rev.: w = −167 J, q = +167 J · ΔU = 0</b></p>
+  <details><summary>Resolución</summary>
+    <p>Irreversible: $w = -p_{ex}\Delta V = -(26\,664\ \mathrm{Pa})(3{,}3\cdot10^{-3}\ \mathrm{m^3}) = -88$ J.</p>
+    <p>Reversible: $n = 0{,}2805$ mol; $w = -nRT\ln\dfrac{16{,}0}{12{,}7} = -167$ J. Ideal isotérmico: ΔU = 0, q = −w.</p>
+    <p class="nota">El reversible entrega más trabajo: es el máximo posible en una expansión.</p>
+  </details>
+</article>
+
+<article class="ej" id="p1-3" data-estado="dif">
+  <h4>III · Kr con virial</h4>
+  <p class="enun">B(Kr, 373 K) = −28,7 cm³/mol. 70 mmol se expanden reversible e isotérmicamente de 5,25 a 6,79 dm³; ΔU = +83,5 J. w, q, ΔH.</p>
+  <p class="rta"><b>w = −55,8 J · q = +139 J · ΔH ≈ 83,5 J</b> <span class="guia">Guía: w = −37,0; q = 120; ΔH = 118 J</span></p>
+  <details><summary>Resolución</summary>
+    <p>Con $p = \dfrac{nRT}{V}\left(1 + \dfrac{nB}{V}\right)$: $w = -nRT\left[\ln\dfrac{V_f}{V_i} + nB\left(\dfrac1{V_i}-\dfrac1{V_f}\right)\right]$.</p>
+    <p>$nRT = 217{,}1$ J; $\ln(6{,}79/5{,}25) = 0{,}2572$; $nB = -2{,}01\cdot10^{-3}$ dm³; $(1/5{,}25 - 1/6{,}79) = 0{,}0432$ dm⁻³. $w = -217{,}1\,(0{,}2572 - 0{,}0000868) = -55{,}8$ J.</p>
+    <p>$q = \Delta U - w = 83{,}5 + 55{,}8 = 139$ J. $\Delta H = \Delta U + \Delta(pV)$, con $pV = nRT(1 + nB/V)$: $\Delta(pV) = nRT\,nB(1/V_f - 1/V_i) \approx 0{,}02$ J → ΔH ≈ 83,5 J.</p>
+    <p class="ojo">El enunciado dice cm³ pero con 70 mmol tienen que ser dm³. Los números de la guía no salen de este planteo; Atkins resuelve igual que acá.</p>
+  </details>
+</article>
+
+<article class="ej" id="p1-4" data-estado="ok">
+  <h4>IV · CO₂ a volumen fijo (VdW)</h4>
+  <p class="enun">3 mol CO₂ en 20,0 dm³ fijos absorben 4,70 kJ y pasan de 298 a 350 K. w, ΔU, ΔH.</p>
+  <p class="rta"><b>w = 0 · ΔU = q = 4,70 kJ · ΔH ≈ 6,0 kJ</b></p>
+  <details><summary>Resolución</summary>
+    <p>V constante → w = 0 → ΔU = q = 4,70 kJ.</p>
+    <p>$\Delta H = \Delta U + V\Delta p$. De VdW a V constante: $\Delta p = \dfrac{nR\Delta T}{V - nb} = \dfrac{3\cdot0{,}08206\cdot52}{20 - 3\cdot0{,}0427} = 0{,}644$ atm (el término de a se cancela). $V\Delta p = 12{,}9$ L·atm = 1,31 kJ → ΔH = 6,0 kJ.</p>
+  </details>
+</article>
+
+<article class="ej" id="p1-5" data-estado="ok">
+  <h4>V · Compresión adiabática reversible</h4>
+  <p class="enun">3 mol gas ideal, 200 K y 2,00 atm, compresión adiabática reversible hasta 250 K. C<sub>V,m</sub> = 27,5 J/K·mol. q, w, ΔU, ΔH, V<sub>f</sub>, p<sub>f</sub>.</p>
+  <p class="rta"><b>q = 0 · w = ΔU = 4,13 kJ · ΔH = 5,37 kJ · V<sub>f</sub> = 11,8 L · p<sub>f</sub> = 5,3·10⁵ Pa</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\Delta U = nC_{V,m}\Delta T = 3\cdot27{,}5\cdot50 = 4125$ J = w. $\Delta H = n(C_{V,m}+R)\Delta T = 5372$ J.</p>
+    <p>$V_i = nRT/p = 24{,}6$ L. $V_f = V_i(T_i/T_f)^{C_{V,m}/R} = 24{,}6\cdot0{,}8^{3{,}31} = 11{,}8$ L. $p_f = nRT_f/V_f = 5{,}30\cdot10^5$ Pa.</p>
+  </details>
+</article>
+
+<article class="ej" id="p1-6" data-estado="ok">
+  <h4>VI · ΔH del N₂ con Cp(T)</h4>
+  <p class="enun">Calentar N₂ de 25 a 100 °C con $C_{p,m} = a + bT + c/T^2$.</p>
+  <p class="rta"><b>2,20 kJ/mol</b></p>
+  <details><summary>Resolución</summary>
+    <p>N₂ (Atkins): a = 28,58; b = 3,77·10⁻³; c = −0,50·10⁵.</p>
+    <p>$\Delta H = a(75) + \tfrac b2(373{,}15^2 - 298{,}15^2) - c\left(\tfrac1{373{,}15} - \tfrac1{298{,}15}\right) = 2143 + 95 - 34 = 2205$ J/mol.</p>
+  </details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej3" data-u="3">
+<h2><span class="num">3</span> Termoquímica</h2>
+<p class="nota">Valores de tabla usados (Atkins, kJ/mol): KCl −436,75 · NaOH(s) −425,61 · CO₂ −393,51 · H₂O(l) −285,83 · NO 90,25 · Ag⁺(ac) 105,58 · Cu²⁺(ac) 64,77 · Cl⁻(ac) −167,16. Con tu tabla puede variar un poco.</p>
+
+<article class="ej" id="t1-1" data-estado="dif">
+  <h4>I · ΔfH° de KClO₃, NaHCO₃ y NOCl</h4>
+  <p class="enun">2KClO₃ → 2KCl + 3O₂ (−89,4 kJ); NaOH + CO₂ → NaHCO₃ (−127,5 kJ); 2NOCl → 2NO + Cl₂ (+75,5 kJ).</p>
+  <p class="rta"><b>−392,1 · −946,6 · +52,5 kJ/mol</b> <span class="guia">Guía: NaHCO₃ −932,2</span></p>
+  <details><summary>Resolución</summary>
+    <p>KClO₃: $-89{,}4 = 2(-436{,}75) - 2x$ → $x = -392{,}1$.</p>
+    <p>NaHCO₃: $-127{,}5 = x - (-425{,}61) - (-393{,}51)$ → $x = -946{,}6$ (la guía usa otra tabla).</p>
+    <p>NOCl: $75{,}5 = 2(90{,}25) - 2x$ → $x = +52{,}5$.</p>
+  </details>
+</article>
+
+<article class="ej" id="t1-2" data-estado="ok">
+  <h4>II · Combustión del etilbenceno</h4>
+  <p class="enun">ΔfH°(C₈H₁₀, l) = −12,5 kJ/mol. ΔcH°.</p>
+  <p class="rta"><b>−4565 kJ/mol</b></p>
+  <details><summary>Resolución</summary><p>$\text{C}_8\text{H}_{10} + \tfrac{21}2\text{O}_2 \to 8\text{CO}_2 + 5\text{H}_2\text{O(l)}$: $8(-393{,}51) + 5(-285{,}83) - (-12{,}5) = -4565$ kJ/mol.</p></details>
+</article>
+
+<article class="ej" id="t1-3" data-estado="dif">
+  <h4>III · Hidrogenación del 1-hexeno</h4>
+  <p class="enun">ΔcH°(1-hexeno, l) = −4003 kJ/mol. ΔH° de hidrogenación.</p>
+  <p class="rta"><b>−126 kJ/mol</b> <span class="guia">Guía: −271,56</span></p>
+  <details><summary>Resolución</summary>
+    <p>$\text{C}_6\text{H}_{12} + \text{H}_2 \to \text{C}_6\text{H}_{14}$. Con combustiones (reactivos − productos): $\Delta H = \Delta_cH(\text{hexeno}) + \Delta_cH(\text{H}_2) - \Delta_cH(\text{hexano}) = -4003 - 285{,}83 + 4163 = -126$ kJ/mol.</p>
+    <p class="nota">ΔcH°(hexano) = −4163 y ΔcH°(H₂) = ΔfH°(H₂O,l). Una hidrogenación de un C=C ronda −120 a −130 kJ/mol: −126 es lo esperable.</p>
+  </details>
+</article>
+
+<article class="ej" id="t1-4" data-estado="ok">
+  <h4>IV · ΔfU° del acetato de metilo</h4>
+  <p class="enun">ΔfH°(CH₃COOCH₃, l) = −442 kJ/mol. ΔfU°.</p>
+  <p class="rta"><b>−432 kJ/mol</b> <span class="guia">Guía: −430</span></p>
+  <details><summary>Resolución</summary><p>$3\text{C(s)} + 3\text{H}_2\text{(g)} + \text{O}_2\text{(g)} \to \text{C}_3\text{H}_6\text{O}_2\text{(l)}$: $\Delta n_g = -4$. $\Delta U = \Delta H - \Delta n_gRT = -442 + 4\cdot2{,}479 = -432$ kJ/mol.</p></details>
+</article>
+
+<article class="ej" id="t1-5" data-estado="ok">
+  <h4>V · ΔfH° del etano a 350 K (Kirchhoff)</h4>
+  <p class="enun">$C_{p,m}(\text{C}_2\text{H}_6) = 14{,}73 + 0{,}1272\,T$ J/K·mol. ΔfH° a 350 K.</p>
+  <p class="rta"><b>−87,1 kJ/mol</b></p>
+  <details><summary>Resolución</summary>
+    <p>$2\text{C(gr)} + 3\text{H}_2 \to \text{C}_2\text{H}_6$. ΔfH°(298) = −84,68. Cp: C(gr) 8,53, H₂ 28,82.</p>
+    <p>$\int_{298}^{350}\Delta C_p dT = \int(14{,}73 + 0{,}1272T)dT - (2\cdot8{,}53 + 3\cdot28{,}82)(51{,}85) = 2901 - 5368 = -2466$ J.</p>
+    <p>$\Delta_fH^\circ(350) = -84{,}68 - 2{,}47 = -87{,}1$ kJ/mol.</p>
+  </details>
+</article>
+
+<article class="ej" id="t1-6" data-estado="ok">
+  <h4>VI · Enfriar con CH₄ líquido</h4>
+  <p class="enun">CH₄(l) se evapora a 111,66 K y 1 atm. ¿Qué V de CH₄(g) extrae 32,5 kJ?</p>
+  <p class="rta"><b>3,64·10⁻² m³</b></p>
+  <details><summary>Resolución</summary><p>ΔvapH(CH₄) = 8,18 kJ/mol → n = 3,97 mol. $V = nRT/p = 3{,}97\cdot8{,}314\cdot111{,}66/101\,325 = 0{,}0364$ m³.</p></details>
+</article>
+
+<article class="ej" id="t1-7" data-estado="ok">
+  <h4>VII · 2Ag⁺ + Cu → Cu²⁺ + 2Ag</h4>
+  <p class="rta"><b>−146 kJ</b></p>
+  <details><summary>Resolución</summary><p>$64{,}77 - 2(105{,}58) = -146{,}4$ kJ (Cu y Ag sólidos: 0).</p></details>
+</article>
+
+<article class="ej" id="t1-8" data-estado="ok">
+  <h4>VIII · Disolución de AgCl</h4>
+  <p class="enun">ΔfH°(AgCl, s) = −127,0 kJ/mol. ΔsolH°.</p>
+  <p class="rta"><b>+65,5 kJ/mol</b></p>
+  <details><summary>Resolución</summary><p>$\text{AgCl(s)} \to \text{Ag}^+ + \text{Cl}^-$: $105{,}58 - 167{,}16 + 127{,}07 = +65{,}5$ kJ/mol.</p></details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej4" data-u="4">
+<h2><span class="num">4</span> Segunda ley</h2>
+
+<article class="ej" id="s1-1" data-estado="ok">
+  <h4>I · ΔS° de reacción</h4>
+  <p class="enun">a) N₂ + O₂ → 2NO; b) 3H₂ + N₂ → 2NH₃.</p>
+  <p class="rta"><b>a) +24,9 J/K · b) −198,7 J/K</b></p>
+  <details><summary>Resolución</summary>
+    <p>a) $2(210{,}7) - 191{,}5 - 205 = 24{,}9$. b) $2(192{,}3) - 3(130{,}6) - 191{,}5 = -198{,}7$. En b) bajan los moles de gas (4 → 2), por eso ΔS &lt; 0.</p>
+  </details>
+</article>
+
+<article class="ej" id="s1-2" data-estado="ok">
+  <h4>II · ¿Es espontánea 2H₂O₂ → 2H₂O + O₂?</h4>
+  <p class="rta"><b>ΔG° = −233,4 kJ → espontánea</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\Delta H^\circ = 2(-285{,}8) - 2(-187{,}8) = -196{,}0$ kJ. $\Delta S^\circ = 2(69{,}9) + 205{,}0 - 2(109{,}6) = +125{,}6$ J/K.</p>
+    <p>$\Delta G^\circ = -196{,}0 - 298{,}15\cdot0{,}1256 = -233{,}4$ kJ. ΔH−, ΔS+ → espontánea a toda T.</p>
+  </details>
+</article>
+
+<article class="ej" id="s1-3" data-estado="ok">
+  <h4>III · Glucosa: calor y trabajo</h4>
+  <p class="enun">Oxidación de glucosa: ΔU = −2810 kJ/mol, ΔS = +182,4 J/K·mol. ¿Calor? ¿Trabajo máximo?</p>
+  <p class="rta"><b>q = −2810 kJ/mol · w<sub>max</sub>: ΔA = −2864 kJ/mol</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \to 6\text{CO}_2 + 6\text{H}_2\text{O(l)}$: Δn<sub>g</sub> = 0, entonces $q_V = q_p = \Delta U = -2810$ kJ.</p>
+    <p>$\Delta A = \Delta U - T\Delta S = -2810 - 298{,}15\cdot0{,}1824 = -2864$ kJ.</p>
+    <p class="nota">Interpretación: |ΔA| &gt; |ΔU| porque como ΔS &gt; 0 el sistema puede tomar calor del entorno y convertirlo en trabajo además de su propia energía.</p>
+  </details>
+</article>
+
+<article class="ej" id="s1-4" data-estado="ok">
+  <h4>IV · Combustión de metano</h4>
+  <p class="enun">ΔS° = −140,3 J/K·mol. Trabajo máximo y calor.</p>
+  <p class="rta"><b>q<sub>p</sub> = −890 · q<sub>V</sub> = −885 · w<sub>max</sub> = |ΔA| = 843 kJ/mol</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\text{CH}_4 + 2\text{O}_2 \to \text{CO}_2 + 2\text{H}_2\text{O(l)}$: ΔH° = −890,3 kJ = q<sub>p</sub>. Δn<sub>g</sub> = −2 → $\Delta U = -890{,}3 + 2\cdot2{,}479 = -885{,}3$ kJ = q<sub>V</sub>.</p>
+    <p>$\Delta A = \Delta U - T\Delta S = -885{,}3 + 298{,}15\cdot0{,}1403 = -843{,}5$ kJ. (ΔG = −848 kJ sería el trabajo útil a p constante.)</p>
+  </details>
+</article>
+
+<article class="ej" id="s1-5" data-estado="ok">
+  <h4>V · N₂O₄ → 2NO₂</h4>
+  <p class="enun">ΔS = +4,8 J/K. ΔG°.</p>
+  <p class="rta"><b>+55,8 kJ</b></p>
+  <details><summary>Resolución</summary><p>$\Delta H^\circ = 2(33{,}18) - 9{,}16 = 57{,}2$ kJ. $\Delta G^\circ = 57{,}2 - 298{,}15\cdot0{,}0048 = 55{,}8$ kJ.</p>
+  <p class="nota">El ΔS real de tabla es +175,8 J/K (ΔG° ≈ +4,8 kJ). Parece que en el enunciado se cruzaron los números; resolvé con el dato que te dan.</p></details>
+</article>
+
+<article class="ej" id="s1-6" data-estado="ok">
+  <h4>VI · Energía disponible de la glucosa a 37 °C</h4>
+  <p class="rta"><b>ΔG ≈ −2865 kJ/mol</b></p>
+  <details><summary>Resolución</summary><p>$\Delta G = \Delta H - T\Delta S = -2808 - 310{,}15\cdot0{,}1824 = -2865$ kJ (ΔH ≈ ΔU porque Δn<sub>g</sub> = 0). El signo negativo indica que es energía que el sistema puede entregar como trabajo útil (no expansivo: muscular, nervioso).</p></details>
+</article>
+
+<article class="ej" id="s1-7" data-estado="ok">
+  <h4>VII · CO + ½O₂ → CO₂</h4>
+  <p class="rta"><b>ΔrG° = −257,2 kJ/mol</b></p>
+  <details><summary>Resolución</summary><p>$-394{,}36 - (-137{,}17) = -257{,}2$ kJ/mol.</p></details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej5" data-u="5">
+<h2><span class="num">5</span> Equilibrio</h2>
+
+<article class="ej" id="q1-1" data-estado="ok">
+  <h4>I · K de la síntesis de NH₃ a 298 K</h4>
+  <p class="enun">ΔfG°(NH₃) = −16,5 kJ/mol.</p>
+  <p class="rta"><b>K ≈ 5,8·10⁵</b></p>
+  <details><summary>Resolución</summary><p>$\Delta_rG^\circ = 2(-16{,}45) = -32{,}9$ kJ. $K = e^{32\,900/(8{,}314\cdot298)} = 5{,}8\cdot10^5$.</p></details>
+</article>
+
+<article class="ej" id="q1-2" data-estado="dif">
+  <h4>II · La misma K a 500 K</h4>
+  <p class="enun">ΔfH°(NH₃) = −46,1 kJ/mol.</p>
+  <p class="rta"><b>K ≈ 0,17</b> <span class="guia">Guía: 3,35·10²</span></p>
+  <details><summary>Resolución</summary>
+    <p>Para la reacción como está escrita, $\Delta_rH^\circ = 2(-46{,}1) = -92{,}2$ kJ.</p>
+    <p>$\ln\dfrac{K_2}{K_1} = \dfrac{92\,200}{8{,}314}\left(\dfrac1{500} - \dfrac1{298}\right) = -15{,}0$ → $K_2 = 5{,}8\cdot10^5\cdot e^{-15{,}0} = 0{,}17$.</p>
+    <p class="ojo">La guía da ≈ 3·10² porque usa −46,1 sin multiplicar por 2. Exotérmica → K baja al subir T, en los dos casos.</p>
+  </details>
+</article>
+
+<article class="ej" id="q1-3" data-estado="nd">
+  <h4>III · K<sub>c</sub> y K<sub>p</sub> con tablas</h4>
+  <p class="rta"><b>Ver tabla (la guía no da resultados)</b></p>
+  <details><summary>Resolución</summary>
+    <table class="datos">
+      <tr><th>Reacción</th><th>ΔrG° (kJ)</th><th>K<sub>p</sub></th><th>Δn<sub>g</sub></th></tr>
+      <tr><td>a) HCl + NH₃ → NH₄Cl(s)</td><td>−91,1</td><td>9·10¹⁵</td><td>−2</td></tr>
+      <tr><td>b) 2Al₂O₃ + 3Si → 3SiO₂ + 4Al</td><td>+594,7</td><td>6·10⁻¹⁰⁵</td><td>0</td></tr>
+      <tr><td>c) Fe + H₂S → FeS + H₂</td><td>−66,8</td><td>5·10¹¹</td><td>0</td></tr>
+      <tr><td>d) FeS₂ + 2H₂ → Fe + 2H₂S</td><td>+99,8</td><td>3·10⁻¹⁸</td><td>0</td></tr>
+      <tr><td>e) 2H₂O₂(l) + H₂S(ac) → H₂SO₄(ac) + 2H₂</td><td>−476,0</td><td>2·10⁸³</td><td>+2</td></tr>
+    </table>
+    <p>$K_c = K_p(RT)^{-\Delta n_g}$. Si Δn<sub>g</sub> = 0, K<sub>c</sub> = K<sub>p</sub>. En a): $K_c = 9\cdot10^{15}\cdot(0{,}08206\cdot298)^2 = 5{,}5\cdot10^{18}$. Los sólidos no entran en K.</p>
+  </details>
+</article>
+
+<article class="ej" id="q1-4" data-estado="dif">
+  <h4>IV · Isomerización A ⇌ B</h4>
+  <p class="enun">K(503 K) = 0,0106; 7,5 g A + 14,0 g B (M = 154) en 5 dm³. x<sub>A</sub> en equilibrio.</p>
+  <p class="rta"><b>x<sub>A</sub> = 0,990</b> <span class="guia">Guía: 0,904</span></p>
+  <details><summary>Resolución</summary>
+    <p>$\Delta n_g = 0$ → $K = x_B/x_A$ y no dependen de V ni de las masas iniciales. $x_A = \dfrac1{1+K} = 0{,}990$.</p>
+    <p class="nota">Las masas sirven para ver hacia dónde va: Q inicial = 14/7,5 = 1,87 ≫ K, así que B se convierte en A.</p>
+  </details>
+</article>
+
+<article class="ej" id="q1-5" data-estado="nd">
+  <h4>V · G6P ⇌ F6P</h4>
+  <p class="enun">ΔG° = +1,67 kJ/mol, [G6P] = 1,5 mM, [F6P] = 0,5 mM. ¿Equilibrio?</p>
+  <p class="rta"><b>No: ΔG = −1,16 kJ/mol → avanza hacia F6P</b></p>
+  <details><summary>Resolución</summary>
+    <p>$Q = 0{,}5/1{,}5 = 0{,}333$. A 37 °C: $\Delta G = 1670 + 8{,}314\cdot310\cdot\ln0{,}333 = -1163$ J/mol. K = 0,52 &gt; Q → no está en equilibrio y se forma F6P.</p>
+  </details>
+</article>
+
+<article class="ej" id="q1-6" data-estado="nd">
+  <h4>VI · Fermentación con [EtOH] y [CO₂] bajas</h4>
+  <p class="enun">ΔG° = −239,9 kJ/mol; glucosa 1 M, etanol 0,01 M, CO₂ 0,1 M.</p>
+  <p class="rta"><b>ΔG = −274,1 kJ/mol · ΔE ≈ 0,71 V (con n = 4)</b></p>
+  <details><summary>Resolución</summary>
+    <p>$Q = \dfrac{(0{,}01)^2(0{,}1)^2}{1} = 10^{-6}$. $\Delta G = -239{,}9 + 2{,}479\ln10^{-6} = -274{,}1$ kJ/mol.</p>
+    <p>$\Delta E = -\Delta G/nF$. La guía no da n; en la fermentación se transfieren 4 e⁻ por glucosa (2 NADH que reducen 2 acetaldehídos): $\Delta E = 274\,100/(4\cdot96\,485) = 0{,}71$ V.</p>
+  </details>
+</article>
+
+<article class="ej" id="q1-7" data-estado="nd">
+  <h4>VII · Fotólisis del agua</h4>
+  <p class="enun">2H₂O → 2H₂ + O₂, ΔG° = 237,13 kJ/mol; [H₂] = 0,02 M, [O₂] = 0,05 M.</p>
+  <p class="rta"><b>E° = −1,23 V · K ≈ 10⁻⁸³ · E = −1,16 V</b></p>
+  <details><summary>Resolución</summary>
+    <p>237,13 kJ es por mol de H₂O; para la reacción escrita $\Delta_rG^\circ = 474{,}3$ kJ y n = 4 e⁻.</p>
+    <p>$E^\circ = -\Delta G^\circ/nF = -1{,}229$ V. $K = e^{-474\,260/(8{,}314\cdot298)} \approx 8\cdot10^{-84}$.</p>
+    <p>$Q = (0{,}02)^2(0{,}05) = 2\cdot10^{-5}$. Nernst: $E = -1{,}229 - \dfrac{0{,}02569}{4}\ln(2\cdot10^{-5}) = -1{,}16$ V. Sigue siendo no espontánea: necesita la energía de la luz.</p>
+  </details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej6" data-u="6">
+<h2><span class="num">6</span> Cambio de fases</h2>
+
+<article class="ej" id="f1-1" data-estado="ok">
+  <h4>I · Curva hielo-vapor de −10 a +5 °C</h4>
+  <p class="rta"><b>0,0026 · 0,0040 · 0,0061 · 0,0091 bar</b></p>
+  <details><summary>Resolución</summary>
+    <p>$\Delta H_{sub} = \Delta H_{fus} + \Delta H_{vap} = 51{,}06$ kJ/mol. Referencia: punto triple (273,16 K; 611 Pa). $p = 611\,\exp\left[-\dfrac{51\,060}{8{,}314}\left(\dfrac1T - \dfrac1{273{,}16}\right)\right]$.</p>
+    <p>Discrepancias con la experimental: ΔH<sub>sub</sub> varía con T, el vapor no es exactamente ideal, y arriba de 0 °C el hielo es metaestable.</p>
+  </details>
+</article>
+
+<article class="ej" id="f1-2" data-estado="nd">
+  <h4>II · Diagrama de fases del CO₂</h4>
+  <p class="rta"><b>Sólido-líquido: dp/dT ≈ +14 bar/K (casi vertical, inclinada a la derecha)</b></p>
+  <details><summary>Cómo se arma</summary>
+    <p>Marcá el punto triple (−57 °C; 5,2 bar) y el crítico (31 °C; 74 bar). Líquido-vapor: une ambos (Clausius-Clapeyron con ΔH<sub>vap</sub> = ΔH<sub>sub</sub> − ΔH<sub>fus</sub> = 16,9 kJ/mol). Sólido-vapor: baja desde el punto triple con ΔH<sub>sub</sub> = 25,2 kJ/mol (corta 1 atm cerca de −78 °C).</p>
+    <p>Sólido-líquido (Clapeyron): $\Delta V_m = 44\left(\frac1{0{,}78} - \frac1{1{,}53}\right) = 27{,}7$ cm³/mol (las densidades son g/cm³). $dp/dT = \dfrac{8300}{216\cdot27{,}7\cdot10^{-6}} = 1{,}39\cdot10^6$ Pa/K. Positiva porque el sólido es más denso.</p>
+  </details>
+</article>
+
+<article class="ej" id="f1-3" data-estado="ok">
+  <h4>III · Olla a presión (200 kPa)</h4>
+  <p class="rta"><b>T ≈ 394 K (≈ 121 °C)</b></p>
+  <details><summary>Resolución</summary><p>$\Delta H = 2{,}26\cdot10^6\cdot0{,}018 = 40{,}7$ kJ/mol. $\dfrac1T = \dfrac1{373{,}15} - \dfrac{8{,}314\ln2}{40\,714}$ → T = 394 K.</p></details>
+</article>
+
+<article class="ej" id="f1-4" data-estado="ok">
+  <h4>IV · N₂ líquido a 30 Torr</h4>
+  <p class="enun">T<sub>eb</sub> normal = −195,8 °C; p<sub>vap</sub>(−200,9 °C) = 400 Torr.</p>
+  <p class="rta"><b>57,1 K</b></p>
+  <details><summary>Resolución</summary>
+    <p>Primero ΔH con los dos puntos (77,35 K, 760 Torr) y (72,25 K, 400 Torr): $\Delta H = \dfrac{R\ln(760/400)}{1/72{,}25 - 1/77{,}35} = 5{,}85$ kJ/mol.</p>
+    <p>Después: $\dfrac1T = \dfrac1{77{,}35} + \dfrac{R}{\Delta H}\ln\dfrac{760}{30}$ → T = 57,1 K.</p>
+  </details>
+</article>
+
+<article class="ej" id="f1-5" data-estado="dif">
+  <h4>V · Sustancia con punto triple (0,74 atm; 330 K)</h4>
+  <p class="enun">Crítico (1,25 atm; 400 K), fusión normal 333 K. T<sub>eb</sub> normal y ¿qué ocupa más, sólido o líquido?</p>
+  <p class="rta"><b>T<sub>eb</sub> ≈ 367 K · V<sub>sólido</sub> &lt; V<sub>líquido</sub></b> <span class="guia">Guía: 366 (gráfico) y 344 K (cálculo)</span></p>
+  <details><summary>Resolución</summary>
+    <p>La curva líquido-vapor va del punto triple al crítico: $\dfrac{\Delta H}{R} = \dfrac{\ln(1{,}25/0{,}74)}{1/330 - 1/400} = 989$ K. Para p = 1 atm: $\dfrac1T = \dfrac1{330} - \dfrac{\ln(1/0{,}74)}{989}$ → T = 367 K.</p>
+    <p>c) La fusión normal (1 atm, 333 K) está a mayor T que el punto triple (0,74 atm, 330 K): la curva sólido-líquido tiene pendiente positiva → ΔV<sub>fus</sub> &gt; 0 → el sólido ocupa menos (es más denso).</p>
+    <p class="ojo">Con Clausius-Clapeyron da 367 K, igual al gráfico; el 344 de la guía no sale de estos datos.</p>
+  </details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej7" data-u="7">
+<h2><span class="num">7</span> Mezclas</h2>
+
+<article class="ej" id="m1-1" data-estado="ok">
+  <h4>I · Mezcla de H₂ y N₂ a distinta presión</h4>
+  <p class="enun">3 mol H₂ a 1 atm y 1 mol N₂ a 3 atm, 25 °C; se quita la separación. ΔmixG.</p>
+  <p class="rta"><b>−6,5 kJ</b></p>
+  <details><summary>Resolución</summary>
+    <p>Volúmenes: H₂ $3RT/1$, N₂ $RT/3$ → V total = $\tfrac{10}3RT$, p final = $4RT/V = 1{,}2$ atm. Parciales: $p_{H_2} = 0{,}9$, $p_{N_2} = 0{,}3$ atm.</p>
+    <p>$\Delta G = RT\left[3\ln\dfrac{0{,}9}{1} + 1\ln\dfrac{0{,}3}{3}\right] = 2479\cdot(-2{,}619) = -6{,}5$ kJ.</p>
+  </details>
+</article>
+
+<article class="ej" id="m1-2" data-estado="dif">
+  <h4>II · Ley de Henry HCl en GeCl₄</h4>
+  <p class="rta"><b>K ≈ 6,4·10³ kPa</b> <span class="guia">Guía: 6,41·10⁻³ kPa (exponente mal)</span></p>
+  <details><summary>Resolución</summary><p>p/x = 6400; 6408; 6411 kPa: es constante → cumple Henry. K = 6,41·10³ kPa (es la pendiente de p vs x).</p></details>
+</article>
+
+<article class="ej" id="m1-3" data-estado="ok">
+  <h4>III · Metilbenceno (A) + butanona (B)</h4>
+  <p class="rta"><b>K<sub>A</sub> ≈ 14–16 kPa · K<sub>B</sub> ≈ 47,0 kPa</b></p>
+  <details><summary>Resolución</summary>
+    <p>$p_A = y_AP$, $p_B = (1-y_A)P$. Ojo: el y<sub>A</sub> de x = 0,098 es 0,0410 (en la guía está mal tipeado).</p>
+    <p>Henry = pendiente a dilución infinita. A diluido (x<sub>A</sub> = 0,098): $p_A/x_A = 1{,}40/0{,}098 = 14{,}3$ kPa; extrapolando a x → 0 la guía obtiene 15,6. B diluido (x<sub>A</sub> = 0,9105, x<sub>B</sub> = 0,0895): $p_B/x_B = 4{,}21/0{,}0895 = 47{,}0$ kPa.</p>
+  </details>
+</article>
+
+<article class="ej" id="m1-4" data-estado="nd">
+  <h4>IV · ΔmixG de 2 mol A + 3 mol B ideales</h4>
+  <p class="rta"><b>−8,34 kJ → espontánea</b></p>
+  <details><summary>Resolución</summary><p>$\Delta_{mix}G = nRT(x_A\ln x_A + x_B\ln x_B) = 5\cdot8{,}314\cdot298(0{,}4\ln0{,}4 + 0{,}6\ln0{,}6) = -8{,}34$ kJ. Las presiones de vapor no hacen falta.</p></details>
+</article>
+
+<article class="ej" id="m1-5" data-estado="nd">
+  <h4>V · Δμ del solvente (x<sub>soluto</sub> = 0,020)</h4>
+  <p class="rta"><b>Δμ = −50,4 J/mol → espontáneo</b></p>
+  <details><summary>Resolución</summary><p>$\Delta\mu = RT\ln x_A = 8{,}314\cdot300\ln0{,}98 = -50{,}4$ J/mol. La p de vapor del solvente baja a 0,98·500 = 490 mmHg.</p></details>
+</article>
+
+<article class="ej" id="m1-6" data-estado="nd">
+  <h4>VI · 0,5 mol A + 0,5 mol B gases ideales</h4>
+  <p class="rta"><b>−1,72 kJ → espontánea</b></p>
+  <details><summary>Resolución</summary><p>$\Delta G = nRT\sum x\ln x = 1\cdot8{,}314\cdot298\ln0{,}5 = -1717$ J.</p></details>
+</article>
+
+<article class="ej" id="m1-7" data-estado="nd">
+  <h4>VII · 0,01 mol soluto + 0,99 mol solvente</h4>
+  <p class="rta"><b>−139 J → espontánea</b></p>
+  <details><summary>Resolución</summary><p>$\Delta G = RT(0{,}01\ln0{,}01 + 0{,}99\ln0{,}99) = -139$ J.</p></details>
+</article>
+
+<article class="ej" id="m1-8" data-estado="ok">
+  <h4>VIII · Actividad del metilbenceno</h4>
+  <p class="rta"><b>a<sub>A</sub> = p<sub>A</sub>/p<sub>A</sub>*, γ<sub>A</sub> = a<sub>A</sub>/x<sub>A</sub> (γ ≈ 1,0–1,17)</b></p>
+  <details><summary>Resolución</summary>
+    <table class="datos">
+      <tr><th>x<sub>A</sub></th><th>p<sub>A</sub> (kPa)</th><th>a<sub>A</sub></th><th>γ<sub>A</sub></th></tr>
+      <tr><td>0,098</td><td>1,40</td><td>0,114</td><td>1,16</td></tr>
+      <tr><td>0,2476</td><td>3,57</td><td>0,290</td><td>1,17</td></tr>
+      <tr><td>0,5194</td><td>7,00</td><td>0,569</td><td>1,10</td></tr>
+      <tr><td>0,8019</td><td>10,1</td><td>0,822</td><td>1,03</td></tr>
+      <tr><td>0,9105</td><td>11,3</td><td>0,918</td><td>1,01</td></tr>
+    </table>
+    <p>Con p<sub>A</sub>* = 12,295 kPa. γ &gt; 1: desviación positiva de Raoult. γ → 1 cuando x<sub>A</sub> → 1.</p>
+  </details>
+</article>
+
+<article class="ej" id="m1-9" data-estado="ok">
+  <h4>IX · Masa molar por crioscopía en CCl₄</h4>
+  <p class="enun">100 g de compuesto en 750 g de CCl₄ bajan T<sub>f</sub> 10,5 K.</p>
+  <p class="rta"><b>381 g/mol</b></p>
+  <details><summary>Resolución</summary><p>K<sub>f</sub>(CCl₄) = 30 K·kg/mol. $m = 10{,}5/30 = 0{,}35$ mol/kg → n = 0,2625 mol → M = 100/0,2625 = 381 g/mol.</p></details>
+</article>
+
+<article class="ej" id="m1-10" data-estado="ok">
+  <h4>X · De presión osmótica a punto de congelación</h4>
+  <p class="enun">π = 120 kPa a 300 K, K<sub>f</sub> = 1,86.</p>
+  <p class="rta"><b>273,06 K</b></p>
+  <details><summary>Resolución</summary><p>$c = \pi/RT = 120\,000/(8{,}314\cdot300) = 48{,}1$ mol/m³ = 0,0481 M ≈ 0,0481 mol/kg (diluida). $\Delta T = 1{,}86\cdot0{,}0481 = 0{,}089$ K → 273,06 K.</p></details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej8" data-u="8">
+<h2><span class="num">8</span> Cinética</h2>
+
+<article class="ej" id="c1-1" data-estado="ok">
+  <h4>1 · t½ del N₂O₅</h4>
+  <p class="rta"><b>1042 s</b></p>
+  <details><summary>Resolución</summary><p>$t_{1/2} = \ln2/k = 0{,}693/6{,}65\cdot10^{-4} = 1042$ s.</p></details>
+</article>
+
+<article class="ej" id="c1-2" data-estado="ok">
+  <h4>2 · 2NO + Br₂ (velocidades iniciales)</h4>
+  <p class="rta"><b>v = k[NO]²[Br₂] · k = 1,2·10⁴ M⁻²s⁻¹</b></p>
+  <details><summary>Resolución</summary>
+    <p>Exp 1→2: [Br₂] ×2, v ×2 → orden 1 en Br₂. Exp 1→3: [NO] ×2, v ×4 → orden 2 en NO (confirmá con 1→4: ×3 da ×9).</p>
+    <p>$k = 12/(0{,}1^2\cdot0{,}1) = 1{,}2\cdot10^4$.</p>
+  </details>
+</article>
+
+<article class="ej" id="c1-3" data-estado="ok">
+  <h4>3 · (CH₃)₃CBr + OH⁻</h4>
+  <p class="rta"><b>v = k[(CH₃)₃CBr] · k = 0,01 s⁻¹</b></p>
+  <details><summary>Resolución</summary><p>Duplicar el bromuro duplica v (orden 1); cambiar [OH⁻] no cambia v (orden 0). k = 0,001/0,10. Es una S<sub>N</sub>1: la etapa lenta solo involucra al bromuro.</p></details>
+</article>
+
+<article class="ej" id="c1-4" data-estado="ok">
+  <h4>4 · Descomposición del H₂O₂</h4>
+  <p class="rta"><b>a) 0,0909 M · b) 2,12·10⁻⁵ M/min</b></p>
+  <details><summary>Resolución</summary><p>$k = 0{,}693/654 = 1{,}06\cdot10^{-3}$ min⁻¹. a) $[A] = 0{,}1\,e^{-k\cdot90} = 0{,}0909$ M. b) $v_0 = k[A]_0 = 1{,}06\cdot10^{-3}\cdot0{,}02$.</p></details>
+</article>
+
+<article class="ej" id="c1-5" data-estado="nd">
+  <h4>5 · 2N₂O₅ → 4NO₂ + O₂ hasta p total = 2 atm</h4>
+  <p class="rta"><b>t ≈ 263 h</b> <span class="guia">Guía: "REVISAR"</span></p>
+  <details><summary>Resolución</summary>
+    <p>Por cada 2 de N₂O₅ que reaccionan aparecen 5 de gas (+3). Si se consume x de presión de N₂O₅: $P = 1 + 1{,}5x$. Para P = 2 → x = 0,667 → $p_{N_2O_5} = 0{,}333$ atm.</p>
+    <p>Con $v = -\tfrac12\tfrac{d[\text{N}_2\text{O}_5]}{dt} = k[\text{N}_2\text{O}_5]$: $\ln\dfrac{1}{0{,}333} = 2kt$ → $t = \dfrac{\ln3}{2\cdot2{,}09\cdot10^{-3}} = 263$ h.</p>
+    <p class="ojo">Si se toma k directamente como $-d[\text{N}_2\text{O}_5]/dt = k[\text{N}_2\text{O}_5]$, da 526 h. Aclará en el examen qué definición usás.</p>
+  </details>
+</article>
+
+<article class="ej" id="c1-6" data-estado="ok">
+  <h4>6 · E<sub>a</sub> y A del propeno</h4>
+  <p class="rta"><b>E<sub>a</sub> = 84,6 kJ/mol · A = 1,3·10⁵ s⁻¹</b></p>
+  <details><summary>Resolución</summary><p>$E_a = \dfrac{R\ln(k_2/k_1)}{1/T_1 - 1/T_2} = \dfrac{8{,}314\ln4813}{1/300 - 1/400} = 84{,}6$ kJ/mol. $A = k_1e^{E_a/RT_1} = 1{,}29\cdot10^5$ s⁻¹.</p></details>
+</article>
+
+<article class="ej" id="c1-7" data-estado="ok">
+  <h4>7 · Orden del NO₂ con datos [A] vs t</h4>
+  <p class="rta"><b>Orden 2 · k ≈ 0,54 M⁻¹s⁻¹</b></p>
+  <details><summary>Resolución</summary><p>1/[A] = 100; 126,6; 153,8; 208,3; 263,2 → pendientes 0,532; 0,538; 0,542; 0,544: constante → orden 2. En cambio ln([A]₀/[A])/t baja de 0,0047 a 0,0032: no es orden 1.</p></details>
+</article>
+
+<article class="ej" id="c1-8" data-estado="ok">
+  <h4>8 · T para t½ = 10 h</h4>
+  <p class="rta"><b>492 K</b></p>
+  <details><summary>Resolución</summary><p>k = 0,0693 h⁻¹. $T = \dfrac{E_a}{R\ln(A/k)} = \dfrac{103\,930}{8{,}314\ln(7{,}472\cdot10^9/0{,}0693)} = 492$ K.</p></details>
+</article>
+
+<article class="ej" id="c1-9" data-estado="ok">
+  <h4>9 · Descomposición del HI</h4>
+  <p class="rta"><b>a) 2.º orden · b) 0,170 y 2,38 M⁻¹min⁻¹ · c) 35,5 kcal/mol · d) 472 min</b></p>
+  <details><summary>Resolución</summary>
+    <p>a) A cada T, $t_{1/2}[A]_0$ es constante (5,9 y 5,84): orden 2. b) $k = 1/(t_{1/2}[A]_0)$.</p>
+    <p>c) $E_a = \dfrac{1{,}987\ln(2{,}38/0{,}170)}{1/700{,}15 - 1/781{,}15} = 35\,450$ cal/mol. d) 80 % → [A] = 0,01 M: $t = (1/0{,}01 - 1/0{,}05)/0{,}170 = 472$ min.</p>
+  </details>
+</article>
+</section>
+
+<section class="unidad-ej" id="ej9" data-u="9">
+<h2><span class="num">9</span> Adsorción · 10 Biorreactores</h2>
+<p class="nota">Estas dos guías son solo cuestionarios: las respuestas están en la sección Preguntas.</p>
+</section>

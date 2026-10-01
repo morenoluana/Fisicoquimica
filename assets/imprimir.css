@@ -1,0 +1,51 @@
+/* Versiones para imprimir (A4). Se usan en hoja-de-formulas.html y resumen-imprimir.html.
+   Siempre en claro: es papel. */
+:root { color-scheme: light; --papel: #fff; --hoja: #fff; --tinta: #111; --suave: #4a5260; --linea: #c9ced6; --acento: #1f3aa6; --acento-suave: #eef1fc; --rojo: #a52a14; --verde: #2b7349; --ambar: #8a5500; --cuadro: transparent; }
+:root[data-theme="dark"], :root:not([data-theme="light"]) { --papel: #fff; --hoja: #fff; --tinta: #111; --suave: #4a5260; --linea: #c9ced6; --acento: #1f3aa6; --acento-suave: #eef1fc; --rojo: #a52a14; color-scheme: light; }
+body { background: #fff; color: var(--tinta); margin: 0; }
+
+/* ---------- Hoja de fórmulas: 2 carillas A4, 3 columnas ---------- */
+body.hoja-formulas { font: 8pt/1.36 var(--cond); }
+@page { size: A4; margin: 6mm 6.5mm 6mm; }
+.hoja-formulas header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.2pt solid var(--tinta); padding-bottom: 1.2mm; margin-bottom: 1.8mm; }
+.hoja-formulas header h1 { font: 700 11pt/1 var(--cond); letter-spacing: .02em; }
+.hoja-formulas header span { font: 400 6.5pt/1 var(--mono); color: var(--suave); }
+.hoja-formulas .hoja { columns: 3; column-gap: 3.2mm; column-rule: 0.4pt solid var(--linea); }
+.hoja-formulas .bloque { border: 0; border-radius: 0; padding: 0; margin: 0 0 2.2mm; background: none; break-inside: auto; }
+.hoja-formulas .bloque h3 { font: 700 8.8pt/1.1 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--acento); padding: .6mm 1.4mm; margin: 0 0 1mm; break-after: avoid; }
+.hoja-formulas .bloque p { font-size: 8pt; line-height: 1.36; margin: 0 0 .9mm; break-inside: avoid; }
+.hoja-formulas .bloque .ojo, .hoja-formulas .bloque .nota { font-size: 7.3pt; }
+.hoja-formulas .ojo { color: var(--rojo); }
+.hoja-formulas .bloque p.ojo { border-left: 1.2pt solid var(--rojo); padding-left: 1.2mm; }
+.hoja-formulas .bloque p.ojo::before { content: "Ojo: "; font-weight: 700; }
+.hoja-formulas .nota { color: var(--suave); }
+.hoja-formulas .katex { font-size: 1em; }
+.hoja-formulas .katex .mfrac .frac-line { border-bottom-width: .5pt; }
+.hoja-formulas table.mini { width: 100%; border-collapse: collapse; font-size: 7.7pt; margin: .4mm 0 1mm; break-inside: avoid; }
+.hoja-formulas table.mini th, .hoja-formulas table.mini td { border-bottom: .4pt solid var(--linea); padding: .25mm .8mm; text-align: left; }
+.hoja-formulas table.mini th { font-weight: 700; color: var(--suave); }
+
+/* ---------- Resumen para imprimir ---------- */
+body.resumen-imp { font: 9.6pt/1.45 var(--sans); }
+.resumen-imp header.portada { border-bottom: 1.5pt solid var(--tinta); margin-bottom: 5mm; padding-bottom: 2mm; }
+.resumen-imp header.portada h1 { font: 700 22pt/1.05 var(--cond); }
+.resumen-imp header.portada p { margin: 1mm 0 0; color: var(--suave); font: 8pt/1.3 var(--mono); }
+.resumen-imp .unidad { border: 0; border-radius: 0; padding: 0; margin: 0 0 5mm; background: none; }
+.resumen-imp .unidad + .unidad { break-before: page; }
+.resumen-imp .unidad h2 { font: 700 15pt/1.1 var(--cond); display: flex; gap: 3mm; align-items: baseline; border-bottom: .6pt solid var(--linea); padding-bottom: 1.5mm; margin-bottom: 2.5mm; }
+.resumen-imp .num { font: 600 9pt/1 var(--mono); color: var(--acento); border: 1pt solid currentColor; border-radius: 1.5mm; padding: .8mm 1.4mm; }
+.resumen-imp .unidad h3 { font: 700 10.5pt/1.2 var(--cond); color: var(--acento); margin: 3.5mm 0 1mm; break-after: avoid; }
+.resumen-imp .unidad p, .resumen-imp .unidad ul { margin: 0 0 2mm; orphans: 3; widows: 3; }
+.resumen-imp .unidad ul { padding-left: 5mm; }
+.resumen-imp .eq { text-align: center; background: var(--acento-suave); padding: 1.6mm 2mm; margin: 2mm 0; border-radius: 1.5mm; break-inside: avoid; }
+.resumen-imp .clave { border-left: 1.5pt solid var(--acento); padding-left: 2.5mm; font-weight: 500; }
+.resumen-imp p.ojo { color: var(--rojo); border-left: 1.5pt solid var(--rojo); padding-left: 2.5mm; }
+.resumen-imp table.comp { width: 100%; border-collapse: collapse; font-size: 8.6pt; margin: 1.5mm 0 3mm; break-inside: avoid; }
+.resumen-imp table.comp th, .resumen-imp table.comp td { border-bottom: .5pt solid var(--linea); padding: .8mm 1.5mm; text-align: left; vertical-align: top; }
+.resumen-imp table.comp th { color: var(--suave); }
+.hoja-formulas .bloque.recetas h3 { background: var(--tinta); }
+.hoja-formulas .bloque.notas h3 { background: none; color: var(--suave); border-bottom: .6pt solid var(--suave); }
+.hoja-formulas .renglones { height: 62mm; background-image: linear-gradient(var(--linea) .4pt, transparent .4pt); background-size: 100% 6mm; }
+.hoja-formulas .bloque.notas { display: block; }
+.hoja-formulas .bloque.recetas { break-inside: avoid; }
+.hoja-formulas .renglones { background-image: linear-gradient(to bottom, transparent calc(6mm - .5pt), #b9bfc8 calc(6mm - .5pt)); }
