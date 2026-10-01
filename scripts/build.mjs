@@ -57,4 +57,41 @@ if (process.env.ARTIFACT) writeFileSync(process.env.ARTIFACT, web);
 const cssImp = cssBase + leer("assets/imprimir.css");
 writeFileSync(path.join(raiz, "hoja-de-formulas.html"), llenar(leer("src/hoja.html"), { CSS: cssImp, FORMULAS: formulas }));
 writeFileSync(path.join(raiz, "resumen.html"), llenar(leer("src/resumen-imprimir.html"), { CSS: cssImp, RESUMEN: resumen }));
-console.log("OK: index.html, hoja-de-formulas.html, resumen.html");
+
+// ---------- Modelos de examen (PDF): consignas + resoluciones ----------
+// Respuesta de cada ejercicio/pregunta por id, para completar las que solo remiten a otro ("igual al ...").
+const respuestas = {};
+for (const html of [ejercicios, simulacros]) {
+  for (const [, id, cuerpo] of html.matchAll(/<article class="ej" id="([\w-]+)"[^>]*>([\s\S]*?)<\/article>/g)) {
+    const rta = (cuerpo.match(/<p class="rta">[\s\S]*?<\/p>/) || [""])[0];
+    const det = (cuerpo.match(/<details[^>]*>([\s\S]*?)<\/details>/) || ["", ""])[1].replace(/<summary>[\s\S]*?<\/summary>/, "");
+    respuestas[id] = { rta, det, tieneDet: !!det };
+  }
+}
+for (const [, id, cuerpo] of preguntas.matchAll(/<details class="pr" id="([\w-]+)">([\s\S]*?)<\/details>/g)) {
+  respuestas[id] = { rta: "", det: cuerpo.replace(/<summary>[\s\S]*?<\/summary>/, ""), tieneDet: true };
+}
+const completar = (articulo) => {
+  if (/<details/.test(articulo)) return articulo.replace(/<details(?![^>]*open)/g, "<details open");
+  const refs = [...articulo.matchAll(/href="#([\w-]+)"/g)].map((m) => respuestas[m[1]]).filter(Boolean);
+  const extra = refs.map((r) => `<div class="ref">${r.tieneDet ? r.det : r.rta}</div>`).join("");
+  return articulo.replace(/<\/article>$/, extra + "</article>");
+};
+const tipoDe = (t) => /previo/i.test(t) ? "previo" : /Final/.test(t) ? "final" : /Parcial|Recuperatorio/.test(t) ? "parcial" : "otro";
+const enunciadosSrc = leer("src/modelos-enunciados.html");
+const modelos = [...enunciadosSrc.matchAll(/<section class="modelo" data-res="([\w-]+)" data-n="(\d+)">\s*<header><span class="tipo">([^<]+)<\/span><h2>([^<]+)<\/h2><\/header>([\s\S]*?)<\/section>/g)];
+const cabecera = (n, tipo, titulo) => `<header><span class="n">${n}</span><h2>${titulo}</h2><span class="tipo">${tipo}</span></header>`;
+const enunciadosHtml = modelos.map(([, res, n, tipo, titulo, cuerpo]) =>
+  `<section class="modelo" data-tipo="${tipoDe(tipo)}">${cabecera(n, tipo, titulo)}${cuerpo}</section>`).join("\n");
+const resolucionesHtml = modelos.map(([, res, n, tipo, titulo]) => {
+  const sec = simulacros.match(new RegExp(`<section class="examen" id="${res}">([\\s\\S]*?)<\\/section>`));
+  if (!sec) throw new Error("Falta la resolución de " + res);
+  const cuerpo = sec[1].replace(/^\s*<h3>[\s\S]*?<\/h3>/, "")
+    .replace(/<article class="ej"[\s\S]*?<\/article>/g, completar);
+  return `<section class="modelo resolucion" data-tipo="${tipoDe(tipo)}">${cabecera(n, tipo, "Resolución · " + titulo)}${cuerpo}</section>`;
+}).join("\n");
+const indiceModelos = modelos.map(([, , n, tipo, titulo]) => `<tr><td>${n}</td><td>${titulo}</td><td>${tipo}</td></tr>`).join("");
+writeFileSync(path.join(raiz, "modelos-de-examen.html"), llenar(leer("src/modelos.html"), {
+  CSS: cssImp, N: String(modelos.length), INDICE: indiceModelos, ENUNCIADOS: mate(enunciadosHtml), RESOLUCIONES: resolucionesHtml,
+}));
+console.log("OK: index.html, hoja-de-formulas.html, resumen.html, modelos-de-examen.html");

@@ -7,6 +7,7 @@ Material para preparar el examen de Fisicoquímica (UADE, prof. Juan M. Alderete
 | `index.html` | Web de estudio: resumen, hoja de fórmulas, ejercicios resueltos, preguntas de teoría y avance. Abrila en el navegador (funciona sin internet). |
 | `hoja-de-formulas.pdf` | La hoja para llevar al examen: 2 carillas A4, fórmulas + comentarios cortos + espacio para notas. |
 | `resumen.pdf` | Resumen completo por unidad (1 a 10), para leer o pasar a GoodNotes. |
+| `modelos-de-examen.pdf` | Los 11 modelos de examen: primero todas las consignas, al final todas las resoluciones. |
 
 ## Unidades
 

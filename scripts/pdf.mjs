@@ -12,7 +12,7 @@ const raiz = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 
 const exe = process.env.CHROMIUM_PATH || (existsSync("/opt/pw-browsers/chromium") ? "/opt/pw-browsers/chromium" : undefined);
 const browser = await chromium.launch(exe ? { executablePath: exe } : {});
-for (const nombre of ["hoja-de-formulas", "resumen"]) {
+for (const nombre of ["hoja-de-formulas", "resumen", "modelos-de-examen"]) {
   const page = await browser.newPage();
   await page.goto(pathToFileURL(path.join(raiz, nombre + ".html")).href, { waitUntil: "load" });
   await page.evaluate(() => document.fonts.ready);
