@@ -35,10 +35,13 @@
     h.replaceWith(cab);
     const izq = document.createElement("div");
     izq.style.cssText = "display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;min-width:0";
-    const chip = document.createElement("span");
-    chip.className = "chip " + ej.dataset.estado;
-    chip.textContent = ETIQUETA[ej.dataset.estado];
-    izq.append(h, chip);
+    izq.append(h);
+    if (ej.dataset.estado) {
+      const chip = document.createElement("span");
+      chip.className = "chip " + ej.dataset.estado;
+      chip.textContent = ETIQUETA[ej.dataset.estado];
+      izq.append(chip);
+    }
     const lbl = document.createElement("label");
     lbl.className = "hecho";
     const cb = document.createElement("input");
@@ -46,6 +49,7 @@
     cb.checked = leer("fq-ej-" + ej.id);
     cb.addEventListener("change", () => { guardar("fq-ej-" + ej.id, cb.checked); aplicarFiltro(); });
     lbl.append(cb, document.createTextNode("Lo resolví"));
+    if (!ej.querySelector("details")) lbl.hidden = true; // solo un link a otra resolución
     cab.append(izq, lbl);
   });
 
@@ -68,7 +72,7 @@
   let filtro = "todos";
   function aplicarFiltro() {
     document.querySelectorAll(".filtros button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.f === filtro)));
-    document.querySelectorAll(".ej").forEach((ej) => {
+    document.querySelectorAll("#ejercicios .ej").forEach((ej) => {
       const hecho = ej.querySelector(".hecho input").checked;
       ej.hidden = (filtro === "dif" && ej.dataset.estado !== "dif") || (filtro === "pendientes" && hecho);
     });

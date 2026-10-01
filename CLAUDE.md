@@ -7,4 +7,4 @@ Material de estudio de Luana para Fisicoquímica (UADE, prof. Alderete). Todo en
 - Fuentes y KaTeX van embebidos (`assets/fuentes`, `assets/katex`): no usar CDNs, el PDF se genera sin internet.
 - `hoja-de-formulas.pdf` tiene que entrar en 2 carillas A4: revisar con `pdfinfo` después de cambiar `src/formulas.html`.
 - Ejercicios: cada resultado se verifica en `scripts/verificar.py`. `data-estado="dif"` cuando la guía da otro valor (mostrar el de la guía en `.guia`).
-- Simulacros/exámenes que mande Luana: resolverlos, agregarlos a la sección Simulacros de `src/web.html` y resumir qué temas se repiten.
+- Simulacros/exámenes que mande Luana: resolverlos en `src/simulacros.html` y actualizar la tabla "Qué se repite".

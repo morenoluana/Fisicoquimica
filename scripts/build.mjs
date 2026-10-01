@@ -29,6 +29,7 @@ const resumen = mate(leer("src/resumen.html"));
 const formulas = mate(leer("src/formulas.html"));
 const ejercicios = mate(leer("src/ejercicios.html"));
 const preguntas = mate(leer("src/preguntas.html"));
+const simulacros = mate(leer("src/simulacros.html"));
 
 const titulos = [...leer("src/resumen.html").matchAll(/<section class="unidad" id="u(\d+)">\s*<h2><span class="num">\d+<\/span> ([^<]+)<\/h2>/g)];
 const indiceRes = titulos.map(([, n, t]) => `<li><a href="#u${n}"><b>${n}</b>${t}</a></li>`).join("");
@@ -39,7 +40,7 @@ const llenar = (plantilla, datos) => plantilla.replace(/\{\{(\w+)\}\}/g, (_, k) 
 const cssBase = fuentes + katexCss + leer("assets/estilo.css");
 
 const web = llenar(leer("src/web.html"), {
-  CSS: cssBase, JS: leer("src/web.js"), RESUMEN: resumen, FORMULAS: formulas, EJERCICIOS: ejercicios, PREGUNTAS: preguntas,
+  CSS: cssBase, JS: leer("src/web.js"), RESUMEN: resumen, FORMULAS: formulas, EJERCICIOS: ejercicios, PREGUNTAS: preguntas, SIMULACROS: simulacros,
   INDICE_RESUMEN: indiceRes, INDICE_EJ: indiceEj,
 });
 // index.html: documento completo para abrir en el navegador o GitHub Pages

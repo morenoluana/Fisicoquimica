@@ -162,3 +162,10 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 .bloque.notas { display: none; }
+
+/* ---------- Simulacros ---------- */
+#repite { margin-bottom: 28px; }
+#repite table.datos { max-width: none; }
+.examen { margin-bottom: 30px; }
+.examen > h3 { font-size: 22px; margin: 0 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--acento); }
+.examen .ej { border-left-color: var(--acento); }
