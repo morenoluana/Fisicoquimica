@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head><meta charset="utf-8"><title>Fisicoquímica · todo el material</title>
+<style>{{CSS}} @page { size: A4; margin: 15mm 16mm 15mm; }</style></head>
+<body class="completo-imp resumen-imp modelos-imp">
+<section class="portada-modelos">
+  <p class="eyebrow">UADE · Fisicoquímica · Prof. Juan M. Alderete</p>
+  <h1>Fisicoquímica<br>todo el material</h1>
+  <p class="bajada-port">Lo mismo que la web de estudio, en un solo archivo para leer o pasar a GoodNotes.</p>
+  <table class="indice-modelos">
+    <tr><th>#</th><th>Parte</th><th>Qué tiene</th></tr>
+    <tr><td>1</td><td>Lo que tenés que saber posta</td><td>Cómo reconocer qué te piden, teoría que toman literal, errores típicos</td></tr>
+    <tr><td>2</td><td>Qué se repite</td><td>Estructura fija del final previo y temas que más se toman</td></tr>
+    <tr><td>3</td><td>Resumen</td><td>Las 10 unidades, con gráficos</td></tr>
+    <tr><td>4</td><td>Hoja de fórmulas</td><td>Versión grande (la de 2 carillas está en hoja-de-formulas.pdf)</td></tr>
+    <tr><td>5</td><td>Preguntas de teoría</td><td>Las preguntas de cada guía, con respuesta</td></tr>
+    <tr><td>6</td><td>Ejercicios de las guías</td><td>Resueltos y verificados; en rojo, el valor de la guía cuando no coincide</td></tr>
+    <tr><td>7</td><td>Modelos de examen</td><td>{{N}} modelos: consignas y, al final, resoluciones</td></tr>
+  </table>
+</section>
+
+<div class="parte"><span>Parte 1</span><h1>Lo que tenés que saber posta</h1></div>
+<div class="bloque-parte">{{CLAVE}}</div>
+
+<div class="parte"><span>Parte 2</span><h1>Qué se repite</h1></div>
+<div class="bloque-parte repite-imp">{{REPITE}}</div>
+
+<div class="parte"><span>Parte 3</span><h1>Resumen</h1></div>
+{{RESUMEN}}
+
+<div class="parte"><span>Parte 4</span><h1>Hoja de fórmulas</h1></div>
+<div class="formulas-grande"><div class="hoja">{{FORMULAS}}</div></div>
+
+<div class="parte"><span>Parte 5</span><h1>Preguntas de teoría</h1></div>
+<div class="preguntas-imp">{{PREGUNTAS}}</div>
+
+<div class="parte"><span>Parte 6</span><h1>Ejercicios de las guías</h1></div>
+<div class="ejercicios-imp resolucion">{{EJERCICIOS}}</div>
+
+<div class="parte"><span>Parte 7</span><h1>Modelos de examen</h1><p class="sub-parte">{{N}} modelos · consignas primero, resoluciones al final</p></div>
+<table class="indice-modelos indice-suelto">
+  <tr><th>#</th><th>Modelo</th><th>Tipo</th></tr>
+  {{INDICE}}
+</table>
+{{ENUNCIADOS}}
+<div class="parte"><span>Parte 7 · continuación</span><h1>Resoluciones de los modelos</h1></div>
+{{RESOLUCIONES}}
+</body></html>

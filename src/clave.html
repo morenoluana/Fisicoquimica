@@ -1,0 +1,91 @@
+<!-- "Lo que tenés que saber posta": criterios de decisión, teoría que se toma literal y trampas.
+     Sale del análisis de los 11 modelos. Se usa en la web (sección Lo clave) y en fisicoquimica-completo.pdf. -->
+
+<section class="unidad clave-sec" data-u="5">
+  <h2><span class="num">1</span> Reconocer qué te piden</h2>
+  <p class="nota">La hoja de fórmulas te da las ecuaciones; esto es cuál usar y cuándo.</p>
+
+  <h3>Mezclas (casi todos los finales y previos)</h3>
+  <ul>
+    <li><b>¿Ideal o idealmente diluida?</b> Calculá p/x de cada componente. Si los dos dan su p* puro, es <b>ideal</b> (los dos cumplen Raoult). Si el solvente da su p* y el soluto da una constante distinta de su p*, es <b>idealmente diluida</b> (el soluto cumple Henry).</li>
+    <li>Fracciones en el vapor: siempre $y_i = p_i/P$.</li>
+    <li>Molalidad: moles de soluto por <b>kg de solvente</b>, no de solución. Con % m/m, separá primero la masa de soluto de la de solvente.</li>
+  </ul>
+
+  <h3>Gas real / primera ley</h3>
+  <ul>
+    <li>Primero preguntate qué es constante. <b>V constante</b> (rígido): w = 0 y q = ΔU. <b>p constante</b>: q = ΔH. <b>Aislado o adiabático</b>: q = 0. <b>Isotérmico con gas ideal</b>: ΔU = ΔH = 0.</li>
+    <li>Con Van der Waals a V constante, el término de <i>a</i> se cancela en Δp, y $\Delta H = \Delta U + V\Delta p$.</li>
+    <li>Si te piden la T final con Van der Waals y cambia el volumen: $\Delta U = nC_{V}\Delta T - an^2\left(\tfrac1{V_f} - \tfrac1{V_i}\right)$.</li>
+  </ul>
+
+  <h3>Termoquímica</h3>
+  <ul>
+    <li>Por energías de enlace: rotos − formados. Contá <b>solo los enlaces que cambian</b>.</li>
+    <li>Si sale agua <b>líquida</b>, restá 44 kJ por mol de agua (los enlaces dan valores para gas).</li>
+    <li>$\Delta U = \Delta H - \Delta n_{gas}RT$. Contá solo los moles de gas.</li>
+    <li>Kirchhoff: en ΔC<sub>p</sub> entran <b>todos</b>, también O₂, H₂ y C.</li>
+  </ul>
+
+  <h3>Espontaneidad</h3>
+  <ul>
+    <li>Pasá ΔS de J/K a <b>kJ/K</b> antes de restar.</li>
+    <li>Temperatura de inversión: $T = \Delta H/\Delta S$. Solo existe si ΔH y ΔS tienen el <b>mismo signo</b>.</li>
+    <li>Trabajo máximo = $\Delta A = \Delta U - T\Delta S$. Trabajo útil o eléctrico = ΔG.</li>
+  </ul>
+
+  <h3>Cinética</h3>
+  <ul>
+    <li>"Reacción elemental con un solo reactivo" → orden 1. Justificalo: en una reacción elemental, el orden coincide con la molecularidad.</li>
+    <li>Con dos concentraciones: $k = \ln(C_0/C)/t$; tiempo hasta otra: $t = \ln(C_0/C_f)/k$. El % m/m sirve como concentración si la densidad es constante.</li>
+    <li>Orden con datos [A] vs t: probá ln[A] y 1/[A]; el que da pendiente constante es el orden.</li>
+    <li>Orden con t½: si t½ no cambia con [A]₀ → orden 1; si t½·[A]₀ es constante → orden 2.</li>
+    <li>Deducir t½ de un orden raro (salió dos veces): integrá $d[A]/[A]^n$ y reemplazá $[A] = [A]_0/2$. Practicalo una vez a mano.</li>
+  </ul>
+
+  <h3>Cambio de fases (salió en 4 exámenes)</h3>
+  <ul>
+    <li><b>El tema más tomado:</b> te dan el punto triple y la fusión normal. Si T<sub>fusión normal</sub> &gt; T<sub>punto triple</sub>: pendiente positiva, ΔV &gt; 0, el <b>sólido ocupa menos</b>. Si T<sub>fusión normal</sub> &lt; T<sub>punto triple</sub>: pendiente negativa, como el agua, el <b>sólido ocupa más</b>.</li>
+    <li>Líquido–vapor y sólido–vapor: Clausius-Clapeyron. Sólido–líquido: Clapeyron.</li>
+    <li>El punto triple está sobre las tres curvas: usalo como punto de referencia (T₁, p₁) para cualquiera de ellas.</li>
+  </ul>
+</section>
+
+<section class="unidad clave-sec" data-u="7">
+  <h2><span class="num">2</span> Teoría que toman casi literal</h2>
+  <ul>
+    <li><b>Sistema racional vs práctico:</b> los dos son para sistemas reales y usan actividad. Racional: referencia líquido puro (Raoult, γ → 1 cuando x → 1), para el solvente. Práctico: referencia solución diluida (Henry, γ → 1 cuando x → 0), para el soluto.</li>
+    <li><b>μ de un disolvente real:</b> $\mu = \mu^* + RT\ln a$; $a = p/p^*$; $\gamma = a/x$.</li>
+    <li><b>Diamante vs grafito:</b> ΔfH° = 0 solo para la forma más estable del elemento, que es el grafito. El diamante no lo es (+1,9 kJ/mol).</li>
+    <li><b>¿Cuándo coinciden coeficientes estequiométricos y órdenes?</b> Solo en reacciones elementales.</li>
+    <li><b>K y temperatura (van't Hoff):</b> endotérmica, K sube con T; exotérmica, K baja.</li>
+    <li><b>Ecuación fundamental:</b> $dG = Vdp - SdT + \sum\mu_i dn_i$. Lo nuevo que incorpora es la composición.</li>
+    <li><b>Coeficientes del virial:</b> B &lt; 0 dominan las atracciones, B &gt; 0 las repulsiones; a la temperatura de Boyle, B = 0.</li>
+    <li><b>Van der Waals:</b> <i>a</i> corrige las atracciones y <i>b</i> el volumen excluido. En el multiple choice lo dan al revés.</li>
+    <li><b>ΔU = 0 cuando ΔT = 0:</b> solo en un gas ideal.</li>
+    <li><b>Olla a presión:</b> con más presión el agua hierve a mayor T, y por Arrhenius la cocción va más rápido.</li>
+    <li><b>Bonus:</b> agua ligada (no congela, no se seca, no es solvente) y humedad de monocapa (punto de máxima estabilidad). Contestá el bonus solo si estás segura: si está mal no suma.</li>
+  </ul>
+</section>
+
+<section class="unidad clave-sec" data-u="3">
+  <h2><span class="num">3</span> Errores que cuestan puntos</h2>
+  <ul>
+    <li>T siempre en <b>kelvin</b>.</li>
+    <li>R con las unidades de los otros datos: 8,314 J con Pa y m³; 0,08206 con atm y L.</li>
+    <li>dm³ → m³: × 10⁻³. atm → Pa: × 101 325.</li>
+    <li>Signo del trabajo: en expansión w &lt; 0, en compresión w &gt; 0.</li>
+    <li>Van't Hoff con Δ<sub>r</sub>H de la reacción (con sus coeficientes), no con Δ<sub>f</sub>H.</li>
+    <li><b>Escribí cada suposición</b> ("supongo reversible", "supongo orden 1"). Los enunciados a veces son ambiguos y el profesor evalúa la interpretación.</li>
+  </ul>
+</section>
+
+<section class="unidad clave-sec" data-u="8">
+  <h2><span class="num">4</span> Cómo usar el tiempo</h2>
+  <ol>
+    <li>Hacé el <b>previo de junio 2026</b> en 3 horas, con la hoja y las tablas. Después corregilo con las resoluciones.</li>
+    <li>Hacé el <b>final de noviembre 2024</b> y el <b>recuperatorio 2023</b>: entre los dos cubren casi todos los temas que se repiten.</li>
+    <li>Lo que te salga mal, buscalo en la sección 1 y rehacelo.</li>
+    <li>Hacé los demás modelos en el tiempo que te quede.</li>
+  </ol>
+</section>

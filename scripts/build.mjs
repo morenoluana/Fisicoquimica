@@ -32,6 +32,7 @@ const formulas = mate(leer("src/formulas.html"));
 const ejercicios = mate(leer("src/ejercicios.html"));
 const preguntas = mate(leer("src/preguntas.html"));
 const simulacros = mate(leer("src/simulacros.html"));
+const clave = mate(leer("src/clave.html"));
 
 const titulos = [...leer("src/resumen.html").matchAll(/<section class="unidad" id="u(\d+)">\s*<h2><span class="num">\d+<\/span> ([^<]+)<\/h2>/g)];
 const chips = titulos.map(([, n, t]) => `<li data-u="${n}"><a href="#u${n}"><b>${n}</b>${t}</a></li>`).join("");
@@ -43,7 +44,7 @@ const llenar = (plantilla, datos) => plantilla.replace(/\{\{(\w+)\}\}/g, (_, k) 
 const cssBase = fuentes + katexCss + leer("assets/estilo.css");
 
 const web = llenar(leer("src/web.html"), {
-  CSS: cssBase, JS: leer("src/web.js"), RESUMEN: resumen, FORMULAS: formulas, EJERCICIOS: ejercicios, PREGUNTAS: preguntas, SIMULACROS: simulacros,
+  CSS: cssBase, JS: leer("src/web.js"), RESUMEN: resumen, FORMULAS: formulas, EJERCICIOS: ejercicios, PREGUNTAS: preguntas, SIMULACROS: simulacros, CLAVE: clave,
   INDICE_RESUMEN: indiceRes, CHIPS: chips, INDICE_EJ: indiceEj,
 });
 // index.html: documento completo para abrir en el navegador o GitHub Pages
@@ -94,4 +95,14 @@ const indiceModelos = modelos.map(([, , n, tipo, titulo]) => `<tr><td>${n}</td><
 writeFileSync(path.join(raiz, "modelos-de-examen.html"), llenar(leer("src/modelos.html"), {
   CSS: cssImp, N: String(modelos.length), INDICE: indiceModelos, ENUNCIADOS: mate(enunciadosHtml), RESOLUCIONES: resolucionesHtml,
 }));
-console.log("OK: index.html, hoja-de-formulas.html, resumen.html, modelos-de-examen.html");
+
+// ---------- Todo en un PDF (fisicoquimica-completo.pdf) ----------
+const abrir = (html) => html.replace(/<details(?![^>]*open)/g, "<details open");
+const iniSim = simulacros.indexOf('<div class="aviso" id="previo">');
+const finSim = simulacros.indexOf('<section class="examen"');
+writeFileSync(path.join(raiz, "fisicoquimica-completo.html"), llenar(leer("src/completo.html"), {
+  CSS: cssImp, CLAVE: clave, REPITE: simulacros.slice(iniSim, finSim), RESUMEN: resumen, FORMULAS: formulas,
+  PREGUNTAS: abrir(preguntas), EJERCICIOS: abrir(ejercicios), N: String(modelos.length), INDICE: indiceModelos,
+  ENUNCIADOS: mate(enunciadosHtml), RESOLUCIONES: resolucionesHtml,
+}));
+console.log("OK: index.html, hoja-de-formulas.html, resumen.html, modelos-de-examen.html, fisicoquimica-completo.html");

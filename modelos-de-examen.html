@@ -480,6 +480,35 @@ body.modelos-imp { font: 10pt/1.5 var(--sans); }
 .modelos-imp table.datos { border-collapse: collapse; font-size: 9pt; margin: 1.5mm 0 2.5mm; }
 .modelos-imp table.datos th, .modelos-imp table.datos td { border-bottom: .5pt solid var(--linea); padding: .8mm 2mm; text-align: left; }
 .modelos-imp .katex { font-size: 1.02em; }
+
+/* ---------- Todo el material en un PDF ---------- */
+.completo-imp .parte .sub-parte { font-size: 11pt; color: var(--suave); margin-top: 3mm; }
+.completo-imp .indice-suelto { break-before: page; }
+.completo-imp .bloque-parte .clave-sec { break-before: auto; margin-bottom: 7mm; }
+.completo-imp .clave-sec ul, .completo-imp .clave-sec ol { padding-left: 5mm; margin: 0 0 2mm; }
+.completo-imp .clave-sec li { margin-bottom: 1.4mm; }
+.completo-imp .clave-sec + .clave-sec { break-before: auto; }
+.completo-imp .repite-imp .aviso { border: 0; box-shadow: none; padding: 0; margin: 0 0 8mm; background: none; }
+.completo-imp .repite-imp .aviso h3 { font: 700 14pt/1.2 var(--cond); border-bottom: 2pt solid var(--acento); padding-bottom: 1.5mm; margin-bottom: 3mm; }
+.completo-imp .repite-imp table.datos { width: 100%; font-size: 8.8pt; }
+.completo-imp .repite-imp table.datos td, .completo-imp .repite-imp table.datos th { vertical-align: top; }
+.completo-imp .repite-imp a { color: inherit; text-decoration: none; }
+.completo-imp .formulas-grande .hoja { columns: 2; column-gap: 6mm; }
+.completo-imp .formulas-grande .bloque { break-inside: auto; box-shadow: none; padding: 3mm 3.5mm; margin-bottom: 4mm; border-radius: 2mm; font-size: 9pt; }
+.completo-imp .formulas-grande .bloque h3 { font: 700 10pt/1.2 var(--cond); text-transform: uppercase; color: var(--u); margin-bottom: 1.5mm; }
+.completo-imp .formulas-grande .bloque p { font-size: 9pt; margin: 0 0 1.4mm; break-inside: avoid; }
+.completo-imp .formulas-grande .bloque.notas { display: none; }
+.completo-imp .unidad-pr { margin-bottom: 7mm; }
+.completo-imp .unidad-pr > h2, .completo-imp .unidad-ej > h2 { font: 700 15pt/1.15 var(--cond); display: flex; gap: 3mm; align-items: baseline; border-bottom: 2pt solid var(--u); padding-bottom: 1.5mm; margin: 0 0 3mm; break-after: avoid; }
+.completo-imp .unidad-pr > h2 .num, .completo-imp .unidad-ej > h2 .num { color: #fff; background: var(--u); border: 0; border-radius: 1.5mm; padding: .8mm 1.6mm; font: 600 9pt/1 var(--mono); transform: none; }
+.completo-imp .preguntas-imp .pr { border: 0; border-left: 2pt solid var(--u); border-radius: 0; padding: 0 0 0 3mm; margin: 0 0 3.5mm; background: none; break-inside: avoid; }
+.completo-imp .preguntas-imp .pr summary { display: block; list-style: none; font: 600 10pt/1.35 var(--sans); color: var(--tinta); margin-bottom: 1mm; }
+.completo-imp .preguntas-imp .pr summary::-webkit-details-marker { display: none; }
+.completo-imp .preguntas-imp .pr p { font-size: 9.6pt; margin: 0 0 1mm; }
+.completo-imp .ejercicios-imp .unidad-ej { --m: var(--u); margin-bottom: 4mm; }
+.completo-imp .ejercicios-imp .unidad-ej + .unidad-ej { break-before: page; }
+.completo-imp .ejercicios-imp .guia { color: var(--rojo); font: 500 8.5pt var(--mono); background: none; padding: 0; margin-left: 2mm; }
+.completo-imp .ejercicios-imp .ej[data-estado="dif"] { border-left-color: var(--rojo); }
  @page { size: A4; margin: 15mm 16mm 15mm; }</style></head>
 <body class="modelos-imp">
 <section class="portada-modelos">

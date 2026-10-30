@@ -1,6 +1,6 @@
 (function () {
   const UNIDADES = ["Gases reales", "Primera ley", "Termoquímica", "Segunda ley", "Equilibrio", "Cambio de fases", "Mezclas", "Cinética", "Adsorción y dispersos", "Biorreactores"];
-  const SECCIONES = ["inicio", "resumen", "formulas", "ejercicios", "preguntas", "simulacros"];
+  const SECCIONES = ["inicio", "clave", "resumen", "formulas", "ejercicios", "preguntas", "simulacros"];
 
   const leer = (k) => { try { return localStorage.getItem(k) === "1"; } catch (e) { return false; } };
   const guardar = (k, v) => { try { v ? localStorage.setItem(k, "1") : localStorage.removeItem(k); } catch (e) {} };
