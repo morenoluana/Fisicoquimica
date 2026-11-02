@@ -233,3 +233,16 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 .fig .bien { fill: var(--verde); fill-opacity: .14; } .fig .mal { fill: var(--rojo); fill-opacity: .12; } .fig .depende { fill: var(--ambar); fill-opacity: .14; }
 .tabla-progreso td:first-child a::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--u); margin-right: 8px; }
 .tabla-progreso .barra i { background: var(--u); }
+
+/* ---------- Hoja de fórmulas v2 (web) ---------- */
+.bloque .f { border-top: 1px solid var(--linea); padding: 8px 0 9px; }
+.bloque h3 + .f { border-top: 0; padding-top: 2px; }
+.bloque .f > b { display: block; font: 600 12px/1.2 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: var(--u); margin-bottom: 4px; }
+.bloque .f > i { display: block; font-style: normal; font-size: 13px; line-height: 1.45; color: var(--suave); margin-top: 4px; }
+.bloque .f.ojo { background: color-mix(in srgb, var(--rojo) 8%, white); border-top: 0; border-left: 3px solid var(--rojo); border-radius: 0 6px 6px 0; padding: 8px 10px; margin: 4px 0; }
+.bloque .f.ojo > b { color: var(--rojo); }
+.bloque.recetas .f > b { color: var(--tinta); }
+.completo-imp .formulas-grande .bloque .f > b { font-size: 7.5pt; }
+.completo-imp .formulas-grande .bloque .f > i { font-size: 8pt; }
+.completo-imp .formulas-grande .bloque .f { break-inside: avoid; padding: 1.2mm 0; }
+.bloque .f .katex { display: inline-block; margin: 2px 0; }

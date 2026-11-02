@@ -371,6 +371,19 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 .fig .bien { fill: var(--verde); fill-opacity: .14; } .fig .mal { fill: var(--rojo); fill-opacity: .12; } .fig .depende { fill: var(--ambar); fill-opacity: .14; }
 .tabla-progreso td:first-child a::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--u); margin-right: 8px; }
 .tabla-progreso .barra i { background: var(--u); }
+
+/* ---------- Hoja de fórmulas v2 (web) ---------- */
+.bloque .f { border-top: 1px solid var(--linea); padding: 8px 0 9px; }
+.bloque h3 + .f { border-top: 0; padding-top: 2px; }
+.bloque .f > b { display: block; font: 600 12px/1.2 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: var(--u); margin-bottom: 4px; }
+.bloque .f > i { display: block; font-style: normal; font-size: 13px; line-height: 1.45; color: var(--suave); margin-top: 4px; }
+.bloque .f.ojo { background: color-mix(in srgb, var(--rojo) 8%, white); border-top: 0; border-left: 3px solid var(--rojo); border-radius: 0 6px 6px 0; padding: 8px 10px; margin: 4px 0; }
+.bloque .f.ojo > b { color: var(--rojo); }
+.bloque.recetas .f > b { color: var(--tinta); }
+.completo-imp .formulas-grande .bloque .f > b { font-size: 7.5pt; }
+.completo-imp .formulas-grande .bloque .f > i { font-size: 8pt; }
+.completo-imp .formulas-grande .bloque .f { break-inside: avoid; padding: 1.2mm 0; }
+.bloque .f .katex { display: inline-block; margin: 2px 0; }
 /* Versiones para imprimir (A4). Se usan en hoja-de-formulas.html y resumen-imprimir.html.
    Siempre en claro: es papel. */
 :root { color-scheme: light; --papel: #fff; --hoja: #fff; --tinta: #111; --suave: #4a5260; --linea: #c9ced6; --acento: #1f3aa6; --acento-suave: #eef1fc; --rojo: #a52a14; --verde: #2b7349; --ambar: #8a5500; --cuadro: transparent; }
@@ -378,7 +391,7 @@ footer { max-width: 1060px; margin: 0 auto; padding: 0 16px 40px; color: var(--s
 body { background: #fff; color: var(--tinta); margin: 0; }
 
 /* ---------- Hoja de fórmulas: 2 carillas A4, 3 columnas ---------- */
-body.hoja-formulas { font: 7.85pt/1.35 var(--cond); }
+body.hoja-formulas { font: 7.1pt/1.28 var(--cond); }
 @page { size: A4; margin: 6mm 6.5mm 6mm; }
 .hoja-formulas header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.2pt solid var(--tinta); padding-bottom: 1.2mm; margin-bottom: 1.8mm; }
 .hoja-formulas header h1 { font: 700 11pt/1 var(--cond); letter-spacing: .02em; }
@@ -386,7 +399,7 @@ body.hoja-formulas { font: 7.85pt/1.35 var(--cond); }
 .hoja-formulas .hoja { columns: 3; column-gap: 3.2mm; column-rule: 0.4pt solid var(--linea); }
 .hoja-formulas .bloque { border: 0; border-radius: 0; padding: 0; margin: 0 0 2.2mm; background: none; break-inside: auto; }
 .hoja-formulas .bloque h3 { font: 700 8.8pt/1.1 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--u); padding: .6mm 1.4mm; margin: 0 0 1mm; break-after: avoid; }
-.hoja-formulas .bloque p { font-size: 7.85pt; line-height: 1.35; margin: 0 0 .9mm; break-inside: avoid; }
+.hoja-formulas .bloque p { font-size: 7.1pt; line-height: 1.28; margin: 0 0 .9mm; break-inside: avoid; }
 .hoja-formulas .bloque .ojo, .hoja-formulas .bloque .nota { font-size: 7.3pt; }
 .hoja-formulas .ojo { color: var(--rojo); }
 .hoja-formulas .bloque p.ojo { border-left: 1.2pt solid var(--rojo); padding-left: 1.2mm; }
@@ -509,6 +522,25 @@ body.modelos-imp { font: 10pt/1.5 var(--sans); }
 .completo-imp .ejercicios-imp .unidad-ej + .unidad-ej { break-before: page; }
 .completo-imp .ejercicios-imp .guia { color: var(--rojo); font: 500 8.5pt var(--mono); background: none; padding: 0; margin-left: 2mm; }
 .completo-imp .ejercicios-imp .ej[data-estado="dif"] { border-left-color: var(--rojo); }
+
+/* ---------- Hoja de fórmulas v2: una fórmula por entrada ---------- */
+.hoja-formulas .bloque { border: .8pt solid var(--u); border-radius: 1.2mm; padding: 0 1.6mm .4mm; margin: 0 0 1.8mm; break-inside: auto; }
+.hoja-formulas .bloque h3 { margin: 0 -1.6mm 0; border-radius: .8mm .8mm 0 0; }
+.hoja-formulas .f { border-top: .5pt solid #d3d9e2; padding: .55mm 0 .6mm; break-inside: avoid; line-height: 1.3; }
+.hoja-formulas .bloque h3 + .f { border-top: 0; }
+.hoja-formulas .f > b { display: block; font: 700 6.3pt/1.15 var(--cond); text-transform: uppercase; letter-spacing: .045em; color: var(--u); margin-bottom: .35mm; }
+.hoja-formulas .f > i { display: block; font-style: normal; font-size: 6.5pt; line-height: 1.25; color: var(--suave); margin-top: .35mm; }
+.hoja-formulas .f.ojo { background: #fdeceb; border-top: 0; border-left: 1.6pt solid var(--rojo); padding: .8mm 1.2mm; margin: .6mm 0; color: #5b1a12; }
+.hoja-formulas .f.ojo > b { color: var(--rojo); }
+.hoja-formulas .bloque.recetas .f > b { color: var(--tinta); }
+.hoja-formulas table.mini { margin: .6mm 0 .8mm; }
+.hoja-formulas table.mini td { padding: .5mm .8mm; }
+.hoja-formulas .bloque.recetas { display: none; }
+.hoja-formulas .f .katex { display: inline-block; margin: .25mm 0; line-height: 1.2; }
+.hoja-formulas .katex { font-size: .96em; }
+.hoja-formulas .f { padding: .45mm 0 .5mm; }
+.hoja-formulas .f > b { margin-bottom: .2mm; }
+.hoja-formulas .f > i { margin-top: .2mm; }
  @page { size: A4; margin: 16mm 17mm 16mm; }</style></head>
 <body class="resumen-imp">
 <header class="portada"><h1>Fisicoquímica · Resumen</h1><p>UADE · Prof. Juan M. Alderete · Unidades 1 a 10</p></header>

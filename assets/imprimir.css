@@ -5,7 +5,7 @@
 body { background: #fff; color: var(--tinta); margin: 0; }
 
 /* ---------- Hoja de fórmulas: 2 carillas A4, 3 columnas ---------- */
-body.hoja-formulas { font: 7.85pt/1.35 var(--cond); }
+body.hoja-formulas { font: 7.1pt/1.28 var(--cond); }
 @page { size: A4; margin: 6mm 6.5mm 6mm; }
 .hoja-formulas header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.2pt solid var(--tinta); padding-bottom: 1.2mm; margin-bottom: 1.8mm; }
 .hoja-formulas header h1 { font: 700 11pt/1 var(--cond); letter-spacing: .02em; }
@@ -13,7 +13,7 @@ body.hoja-formulas { font: 7.85pt/1.35 var(--cond); }
 .hoja-formulas .hoja { columns: 3; column-gap: 3.2mm; column-rule: 0.4pt solid var(--linea); }
 .hoja-formulas .bloque { border: 0; border-radius: 0; padding: 0; margin: 0 0 2.2mm; background: none; break-inside: auto; }
 .hoja-formulas .bloque h3 { font: 700 8.8pt/1.1 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--u); padding: .6mm 1.4mm; margin: 0 0 1mm; break-after: avoid; }
-.hoja-formulas .bloque p { font-size: 7.85pt; line-height: 1.35; margin: 0 0 .9mm; break-inside: avoid; }
+.hoja-formulas .bloque p { font-size: 7.1pt; line-height: 1.28; margin: 0 0 .9mm; break-inside: avoid; }
 .hoja-formulas .bloque .ojo, .hoja-formulas .bloque .nota { font-size: 7.3pt; }
 .hoja-formulas .ojo { color: var(--rojo); }
 .hoja-formulas .bloque p.ojo { border-left: 1.2pt solid var(--rojo); padding-left: 1.2mm; }
@@ -136,3 +136,22 @@ body.modelos-imp { font: 10pt/1.5 var(--sans); }
 .completo-imp .ejercicios-imp .unidad-ej + .unidad-ej { break-before: page; }
 .completo-imp .ejercicios-imp .guia { color: var(--rojo); font: 500 8.5pt var(--mono); background: none; padding: 0; margin-left: 2mm; }
 .completo-imp .ejercicios-imp .ej[data-estado="dif"] { border-left-color: var(--rojo); }
+
+/* ---------- Hoja de fórmulas v2: una fórmula por entrada ---------- */
+.hoja-formulas .bloque { border: .8pt solid var(--u); border-radius: 1.2mm; padding: 0 1.6mm .4mm; margin: 0 0 1.8mm; break-inside: auto; }
+.hoja-formulas .bloque h3 { margin: 0 -1.6mm 0; border-radius: .8mm .8mm 0 0; }
+.hoja-formulas .f { border-top: .5pt solid #d3d9e2; padding: .55mm 0 .6mm; break-inside: avoid; line-height: 1.3; }
+.hoja-formulas .bloque h3 + .f { border-top: 0; }
+.hoja-formulas .f > b { display: block; font: 700 6.3pt/1.15 var(--cond); text-transform: uppercase; letter-spacing: .045em; color: var(--u); margin-bottom: .35mm; }
+.hoja-formulas .f > i { display: block; font-style: normal; font-size: 6.5pt; line-height: 1.25; color: var(--suave); margin-top: .35mm; }
+.hoja-formulas .f.ojo { background: #fdeceb; border-top: 0; border-left: 1.6pt solid var(--rojo); padding: .8mm 1.2mm; margin: .6mm 0; color: #5b1a12; }
+.hoja-formulas .f.ojo > b { color: var(--rojo); }
+.hoja-formulas .bloque.recetas .f > b { color: var(--tinta); }
+.hoja-formulas table.mini { margin: .6mm 0 .8mm; }
+.hoja-formulas table.mini td { padding: .5mm .8mm; }
+.hoja-formulas .bloque.recetas { display: none; }
+.hoja-formulas .f .katex { display: inline-block; margin: .25mm 0; line-height: 1.2; }
+.hoja-formulas .katex { font-size: .96em; }
+.hoja-formulas .f { padding: .45mm 0 .5mm; }
+.hoja-formulas .f > b { margin-bottom: .2mm; }
+.hoja-formulas .f > i { margin-top: .2mm; }
