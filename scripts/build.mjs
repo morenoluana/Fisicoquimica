@@ -56,7 +56,6 @@ writeFileSync(path.join(raiz, "index.html"),
 // Fragmento sin <html>/<head> para publicarlo como Artifact (el servicio agrega el esqueleto)
 if (process.env.ARTIFACT) writeFileSync(process.env.ARTIFACT, web);
 const cssImp = cssBase + leer("assets/imprimir.css");
-writeFileSync(path.join(raiz, "hoja-de-formulas.html"), llenar(leer("src/hoja.html"), { CSS: cssImp, FORMULAS: formulas }));
 writeFileSync(path.join(raiz, "resumen.html"), llenar(leer("src/resumen-imprimir.html"), { CSS: cssImp, RESUMEN: resumen }));
 
 // ---------- Modelos de examen (PDF): consignas + resoluciones ----------
@@ -94,6 +93,11 @@ const resolucionesHtml = modelos.map(([, res, n, tipo, titulo]) => {
 const indiceModelos = modelos.map(([, , n, tipo, titulo]) => `<tr><td>${n}</td><td>${titulo}</td><td>${tipo}</td></tr>`).join("");
 writeFileSync(path.join(raiz, "modelos-de-examen.html"), llenar(leer("src/modelos.html"), {
   CSS: cssImp, N: String(modelos.length), INDICE: indiceModelos, ENUNCIADOS: mate(enunciadosHtml), RESOLUCIONES: resolucionesHtml,
+}));
+
+// ---------- Hoja de ayuda para el final: A4 horizontal, 2 caras (hoja-de-formulas.pdf) ----------
+writeFileSync(path.join(raiz, "hoja-de-formulas.html"), llenar(leer("src/hoja-examen-plantilla.html"), {
+  CSS: fuentes + katexCss + leer("assets/hoja-examen.css"), CONTENIDO: mate(leer("src/hoja-examen.html")),
 }));
 
 // ---------- Todo en un PDF (fisicoquimica-completo.pdf) ----------

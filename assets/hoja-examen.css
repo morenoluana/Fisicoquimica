@@ -1,0 +1,114 @@
+/* Hoja de ayuda para el final: A4 horizontal, 2 caras, grilla de 4 columnas.
+   Jerarquía: franja de sección (color de unidad) → nombre de fórmula (versalita de color) →
+   ecuación principal (recuadro tenue) → despejes (→, con barra) → condiciones/unidades (gris).
+   Procedimientos: lista numerada en fondo ámbar. Advertencias: fondo rojo. Deducciones: pasos numerados. */
+:root {
+  color-scheme: light;
+  --tinta: #141a26; --suave: #4f5869; --linea: #d5dbe4; --fondo-eq: #f3f6fb;
+  --rojo: #b42318; --rojo-suave: #fdecea; --ambar: #8a5300; --ambar-suave: #fff5e0;
+  --u0: #334155; --u1: #0f766e; --u2: #c2410c; --u3: #b91c1c; --u4: #7c3aed; --u5: #1d4ed8;
+  --u6: #0369a1; --u7: #15803d; --u8: #be185d; --u9: #a16207; --u11: #1f2937;
+  --u: var(--u0);
+  --cond: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+[data-u="0"] { --u: var(--u0); } [data-u="1"] { --u: var(--u1); } [data-u="2"] { --u: var(--u2); }
+[data-u="3"] { --u: var(--u3); } [data-u="4"] { --u: var(--u4); } [data-u="5"] { --u: var(--u5); }
+[data-u="6"] { --u: var(--u6); } [data-u="7"] { --u: var(--u7); } [data-u="8"] { --u: var(--u8); }
+[data-u="9"] { --u: var(--u9); } [data-u="11"] { --u: var(--u11); }
+
+@page { size: A4 landscape; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; color: var(--tinta); }
+body { font: 6.85pt/1.22 var(--cond); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.pag { width: 297mm; height: 210mm; padding: 4mm 4.5mm 3.5mm; display: flex; flex-direction: column; gap: 2mm; overflow: hidden; break-after: page; }
+.pag:last-child { break-after: auto; }
+.cab { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.4pt solid var(--tinta); padding-bottom: .9mm; }
+.cab h1 { margin: 0; font: 700 10.5pt/1 var(--cond); letter-spacing: .01em; }
+.cab h1 span { font-weight: 400; color: var(--suave); }
+.cab p { margin: 0; font: 400 6.4pt/1 var(--mono); color: var(--suave); }
+.cols { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.6mm; }
+.col { min-width: 0; display: flex; flex-direction: column; gap: 1.4mm; overflow: hidden; }
+.col + .col { border-left: .4pt solid var(--linea); padding-left: 2.6mm; margin-left: -1.3mm; }
+
+/* Secciones */
+.sec { border: .7pt solid var(--u); border-radius: 1.4mm; }
+.sec > h2 { border-radius: .9mm .9mm 0 0; }
+.sec > h2 { margin: 0; display: flex; align-items: center; gap: 1.6mm; background: var(--u); color: #fff; font: 700 7.6pt/1 var(--cond); text-transform: uppercase; letter-spacing: .05em; padding: .8mm 1.6mm; }
+.sec > h2 i { font: 700 7pt/1 var(--mono); font-style: normal; background: #fff; color: var(--u); border-radius: .8mm; padding: .4mm 1mm; min-width: 3.6mm; text-align: center; }
+.sec > * + * { margin-left: 1.2mm; margin-right: 1.2mm; }
+.sec > :last-child { margin-bottom: 1.2mm; }
+
+/* Fórmulas */
+.f { border-top: .45pt solid var(--linea); padding: .5mm 0 .5mm; }
+.sec > h2 + .f, .sec > h2 + table, .sec > table + .f { border-top: 0; }
+.f > .n, .ded > .n { display: block; font: 700 6.1pt/1.15 var(--cond); text-transform: uppercase; letter-spacing: .05em; color: var(--u); margin-bottom: .4mm; }
+.eq { font-size: 7pt; line-height: 1.2; padding: .2mm 0; }
+.f.main .eq { background: var(--fondo-eq); border-left: 1.4pt solid var(--u); border-radius: 0 .8mm .8mm 0; padding: .35mm 1.1mm; margin: .15mm 0; }
+.dp { font-size: 6.6pt; line-height: 1.26; color: #1f2a3c; padding-left: 1.4mm; border-left: .8pt dotted var(--u); margin-top: .5mm; }
+.c { font-size: 6.3pt; line-height: 1.24; color: var(--suave); margin-top: .3mm; }
+.c b, .dp b { color: var(--tinta); }
+.nota { font-style: italic; }
+.katex { font-size: 1.07em; }
+.katex .mfrac .frac-line { border-bottom-width: .045em; }
+.eq .katex, .dp .katex { display: inline-block; vertical-align: middle; margin: .15mm 0; }
+
+/* Tablas */
+.tb { width: calc(100% - 2.4mm); border-collapse: collapse; font-size: 6.4pt; line-height: 1.2; margin-top: 1mm; margin-bottom: .6mm; font-variant-numeric: tabular-nums; }
+.tb th, .tb td { border-bottom: .4pt solid var(--linea); padding: .3mm .6mm; text-align: left; vertical-align: middle; }
+.tb th { background: color-mix(in srgb, var(--u) 10%, white); color: var(--tinta); font-weight: 700; font-size: 6.3pt; }
+.tb.conv th { width: 4mm; color: var(--u); background: none; font: 700 7pt var(--mono); }
+.tb.rr td:first-child { white-space: nowrap; width: 27mm; }
+.tb.proc4 td:first-child { font-weight: 600; }
+.tb.proc4 td, .tb.proc4 th { padding: .4mm .5mm; font-size: 6.3pt; }
+.tb.enl td { font: 500 6.3pt var(--mono); padding: .4mm .5mm; text-align: center; }
+.tb.enl th { font-weight: 600; }
+.tb.sig td:first-child { font-weight: 700; width: 6mm; }
+.tb.esp td:first-child, .tb.esp td:nth-child(2) { width: 6mm; text-align: center; font-weight: 700; }
+.tb.ord td, .tb.ord th { padding: .45mm .5mm; }
+.tb .katex { font-size: 1.05em; }
+
+/* Advertencias y procedimientos */
+.ojo { background: var(--rojo-suave); border-left: 1.6pt solid var(--rojo); border-radius: 0 1mm 1mm 0; padding: .7mm 1.2mm; margin-top: .8mm; margin-bottom: .5mm; font-size: 6.45pt; line-height: 1.25; color: #4a1610; }
+.ojo > b:first-child { display: block; color: var(--rojo); font: 700 6.1pt/1.1 var(--cond); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .3mm; }
+.proc { list-style: none; counter-reset: paso; background: var(--ambar-suave); border-radius: 1mm; padding: .7mm 1.2mm; margin-top: .8mm; margin-bottom: .5mm; font-size: 6.45pt; line-height: 1.25; }
+.proc li { counter-increment: paso; position: relative; padding-left: 3.6mm; margin: .25mm 0; }
+.proc li::before { content: counter(paso); position: absolute; left: 0; top: .2mm; width: 2.7mm; height: 2.7mm; border-radius: 50%; background: var(--ambar); color: #fff; font: 700 5.4pt/2.7mm var(--mono); text-align: center; }
+.proc li:first-child b { color: var(--ambar); text-transform: uppercase; font-size: 6.1pt; letter-spacing: .04em; }
+.f.tablas { background: #f6f7f9; border-radius: 1mm; padding: .9mm 1.2mm; margin-top: 1mm; border-top: 0; }
+
+/* Deducciones */
+.ded { border-top: .45pt solid var(--linea); padding: .5mm 0 .4mm; }
+.sec > h2 + .ded { border-top: 0; }
+.ded > .n { color: var(--tinta); }
+.ded ol { margin: 0; padding: 0; list-style: none; counter-reset: d; }
+.ded li { counter-increment: d; position: relative; padding-left: 3mm; font-size: 6.45pt; line-height: 1.24; margin: .15mm 0; }
+.ded li::before { content: counter(d); position: absolute; left: 0; top: .35mm; font: 700 5.6pt/1 var(--mono); color: var(--u4); }
+.ded .why { display: block; font-size: 6.1pt; color: var(--suave); font-style: italic; }
+.deds .katex { font-size: 1.02em; }
+.col > * { flex-shrink: 0; }
+
+/* ---- Flujo en 4 columnas por cara: las secciones pueden seguir en la columna siguiente,
+        pero una fórmula, tabla, procedimiento o deducción nunca se parte ---- */
+.flujo { flex: 1; min-height: 0; column-count: 4; column-gap: 2.6mm; column-rule: .4pt solid var(--linea); column-fill: auto; }
+.flujo > .sec { margin-bottom: 1.4mm; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.f, .ded, .proc, .ojo, .tb, .eq, .dp { break-inside: avoid; }
+.sec > h2 { break-after: avoid; }
+.corte { break-before: column; height: 0; }
+.ded .katex { font-size: 1.02em; }
+/* ajuste fino de espacios verticales (la letra queda igual) */
+.f { padding: .35mm 0 .38mm; }
+.flujo > .sec { margin-bottom: 1.1mm; }
+.sec > h2 { padding: .65mm 1.5mm; }
+.sec > :last-child { margin-bottom: .8mm; }
+.dp { line-height: 1.2; margin-top: .35mm; }
+.c { line-height: 1.18; margin-top: .2mm; }
+.eq { padding: .1mm 0; }
+.f.main .eq { padding: .25mm 1mm; }
+.f > .n, .ded > .n { margin-bottom: .25mm; }
+.proc, .ojo { margin-top: .6mm; margin-bottom: .4mm; padding: .55mm 1.1mm; }
+.ded { padding: .35mm 0 .3mm; }
+.ded li { margin: .1mm 0; }
+/* aire vertical para fracciones apiladas en líneas que se parten */
+.ded .katex .mfrac, .dp .katex .mfrac { display: inline-block; padding: .2mm 0; }
