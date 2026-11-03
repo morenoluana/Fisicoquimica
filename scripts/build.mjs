@@ -97,7 +97,12 @@ writeFileSync(path.join(raiz, "modelos-de-examen.html"), llenar(leer("src/modelo
 
 // ---------- Hoja de ayuda para el final: A4 horizontal, 2 caras (hoja-de-formulas.pdf) ----------
 writeFileSync(path.join(raiz, "hoja-de-formulas.html"), llenar(leer("src/hoja-examen-plantilla.html"), {
+  TITULO: "Hoja de ayuda · Fisicoquímica",
   CSS: fuentes + katexCss + leer("assets/hoja-examen.css"), CONTENIDO: mate(leer("src/hoja-examen.html")),
+}));
+writeFileSync(path.join(raiz, "hoja-de-ruta.html"), llenar(leer("src/hoja-examen-plantilla.html"), {
+  TITULO: "Hoja de ruta · Fisicoquímica",
+  CSS: fuentes + katexCss + leer("assets/hoja-examen.css") + leer("assets/hoja-ruta.css"), CONTENIDO: mate(leer("src/hoja-ruta.html")),
 }));
 
 // ---------- Todo en un PDF (fisicoquimica-completo.pdf) ----------

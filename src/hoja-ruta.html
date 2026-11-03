@@ -1,0 +1,346 @@
+<!-- Hoja de ruta (2.ª hoja para el final, A4 horizontal, 2 caras). Complementa src/hoja-examen.html:
+     cara 1 = reconocer qué piden y decidir; cara 2 = recetas de los modelos con valores de control,
+     teoría corta y lo que no entró en la hoja 1. Mismas clases que la hoja 1 + .dic, .ruta, .qa (assets/hoja-ruta.css). -->
+
+<!-- ======================= CARA 1 ======================= -->
+<div class="pag">
+<header class="cab"><h1>Fisicoquímica · Hoja de ruta · <span>Cara 1 · Leer el enunciado, reconocer el tema y decidir qué hacer</span></h1><p>Hoja 1 = fórmulas · Hoja 2 = qué hacer con ellas</p></header>
+<div class="flujo">
+
+<section class="sec" data-u="0">
+  <h2><i>0</i>Método para cualquier ejercicio</h2>
+  <ol class="proc">
+    <li><b>Leé todo una vez</b> sin calcular. Subrayá lo que <b>piden</b> (verbo + magnitud: "calcule w", "determine T").</li>
+    <li><b>Listá los datos con unidades</b> en columna. Marcá datos escondidos: "rígido", "aislado", "normal", "estándar", "elemental".</li>
+    <li><b>Reconocé el tema</b> con el diccionario de abajo: cada frase clave dice qué fórmula usar.</li>
+    <li><b>Escribí las hipótesis</b> (ideal/real, V o P cte, Cp cte, ΔH cte). Suman puntos aunque el número salga mal.</li>
+    <li><b>Pasá a unidades coherentes</b> antes de reemplazar: T en K, P y V con la R que corresponda, todo J o todo kJ.</li>
+    <li><b>Escribí la fórmula general, después el despeje, después los números.</b> Nunca números sueltos.</li>
+    <li><b>Controlá</b>: signo con sentido físico, orden de magnitud (tabla de la cara 2), unidades del resultado.</li>
+    <li><b>Respondé con una frase</b>: "ΔG° &lt; 0, la reacción es espontánea a 298 K".</li>
+  </ol>
+  <div class="ojo"><b>Estrategia de examen (180 min)</b> 5 ejercicios × 20 % → ~30 min c/u y 30 min para revisar. Empezá por el que te sale seguro. Si te trabás 5 min, escribí planteo + hipótesis y seguí. Ítems encadenados: si no te sale el a), inventá un valor razonable ("supongo n = 1 mol") y resolvé el b). Bonus: solo si estás segura (los incorrectos no suman).</div>
+</section>
+
+<section class="sec" data-u="1">
+  <h2><i>1</i>Diccionario · gases y procesos</h2>
+  <table class="tb dic">
+    <tr><th>Si el enunciado dice…</th><th>significa → hacé</th></tr>
+    <tr><td>"rígido", "volumen fijo", "recipiente cerrado de V dado"</td><td>V cte → <b>W = 0</b>, q = ΔU = nC<sub>v</sub>ΔT</td></tr>
+    <tr><td>"térmicamente aislado", "adiabático"</td><td><b>q = 0</b> → ΔU = W</td></tr>
+    <tr><td>"isobárico", "a P cte", "contra P<sub>ext</sub>"</td><td>W = −P<sub>ext</sub>ΔV · q<sub>P</sub> = ΔH</td></tr>
+    <tr><td>"isotérmico", "a T ambiente cte"</td><td>ΔT = 0 → gas ideal: ΔU = ΔH = 0, q = −W</td></tr>
+    <tr><td>"reversible", "cuasiestático"</td><td>P<sub>ext</sub> = P del gas → integrar (D3); W reversible = máximo</td></tr>
+    <tr><td>"expansión libre", "al vacío"</td><td>P<sub>ext</sub> = 0 → W = 0</td></tr>
+    <tr><td>"modelo de Van der Waals", "constantes similares a las del tolueno"</td><td>buscá a, b en tablas → VdW (hoja 1 §1)</td></tr>
+    <tr><td>"coeficiente B" o "B′"</td><td>virial: Z = 1 + B′P → n = PV/(ZRT)</td></tr>
+    <tr><td>"monoatómico", "Ne, He, Ar"</td><td>C<sub>v</sub> = 3/2 R, C<sub>p</sub> = 5/2 R · diatómico: 5/2 R y 7/2 R</td></tr>
+    <tr><td>"calcule T<sub>f</sub>" con q y C</td><td>despejá ΔT de q = nCΔT o de ΔU = nC<sub>v</sub>ΔT</td></tr>
+    <tr><td>"compare con el ideal" / "comente"</td><td>calculá P = nRT/V y decí: atracción (a) baja P, volumen (b) la sube</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="3">
+  <h2><i>2</i>Diccionario · termoquímica y espontaneidad</h2>
+  <table class="tb dic">
+    <tr><th>Si el enunciado dice…</th><th>significa → hacé</th></tr>
+    <tr><td>"calor a P cte", "calor puesto en juego"</td><td><b>q<sub>P</sub> = ΔH</b></td></tr>
+    <tr><td>"energía de reacción", "energía interna", "a V cte", "bomba calorimétrica"</td><td><b>ΔU = ΔH − Δn<sub>g</sub>RT</b> (solo moles de gas)</td></tr>
+    <tr><td>"entalpías de formación", "valores de tabla"</td><td>Hess: Σν ΔH<sub>f</sub>°(prod) − Σν ΔH<sub>f</sub>°(reac); elementos = 0</td></tr>
+    <tr><td>"entalpías <b>promedio</b> de enlace"</td><td>ΣE rotos − ΣE formados; dibujá las estructuras y contá enlaces</td></tr>
+    <tr><td>"combustión de…"</td><td>+ O<sub>2</sub> → CO<sub>2</sub>(g) + H<sub>2</sub>O(l) · balanceá por mol de combustible</td></tr>
+    <tr><td>"a 398 K", "a otra temperatura"</td><td>Kirchhoff: ΔH(T<sub>2</sub>) = ΔH(T<sub>1</sub>) + ΔC<sub>p</sub>ΔT</td></tr>
+    <tr><td>"C<sub>p</sub> no es constante"</td><td>C<sub>p</sub> = a + bT + c/T² → integrá (hoja 1)</td></tr>
+    <tr><td>"entropía estándar", "S° de tabla"</td><td>ΔS° = Σν S°(prod) − Σν S°(reac), en <b>J/K</b></td></tr>
+    <tr><td>"¿es espontánea?"</td><td>ΔG° = ΔH° − TΔS° (o con ΔG<sub>f</sub>°) → signo</td></tr>
+    <tr><td>"T de inversión", "T máxima / mínima para que sea espontánea"</td><td><b>T = ΔH/ΔS</b> (ΔH en J) · mirá los signos para saber si es máx o mín</td></tr>
+    <tr><td>"trabajo máximo"</td><td>W<sub>máx total</sub> = −ΔA = −(ΔG − Δn<sub>g</sub>RT); con ΔU: ΔA = ΔU − TΔS</td></tr>
+    <tr><td>"trabajo útil", "trabajo eléctrico posible"</td><td><b>W<sub>útil</sub> = −ΔG</b> (sin PV) · E° = −ΔG°/(nF)</td></tr>
+    <tr><td>"¿puede cambiar con T?"</td><td>tabla de signos ΔH/ΔS (hoja 1 §4)</td></tr>
+    <tr><td>"endotérmica o exotérmica, justifique"</td><td>signo de ΔH + "se rompen enlaces más fuertes que los que se forman" (o al revés)</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="5">
+  <h2><i>3</i>Diccionario · equilibrio</h2>
+  <table class="tb dic">
+    <tr><th>Si el enunciado dice…</th><th>significa → hacé</th></tr>
+    <tr><td>"termina cuando P<sub>A</sub> es 1/3 de P<sub>B</sub>"</td><td>eso es el equilibrio → K<sub>p</sub> = P<sub>B</sub>/P<sub>A</sub> = 3 (con exponentes)</td></tr>
+    <tr><td>"el manómetro pasó de x a y"</td><td>ΔP lo aporta el gas producido → n = ΔP·V/(RT)</td></tr>
+    <tr><td>"sólido → gas"</td><td>el sólido no entra en K: K = P<sub>gas</sub><sup>ν</sup> (en atm o bar)</td></tr>
+    <tr><td>"presión parcial necesaria para que sea espontánea"</td><td>ΔG = ΔG° + RT ln Q &lt; 0 ⇔ Q &lt; K → despejá P</td></tr>
+    <tr><td>"ΔG° a partir de K" o al revés</td><td>ΔG° = −RT ln K (J/mol, T en K)</td></tr>
+    <tr><td>"K a otra temperatura", "¿cómo varía K con T?"</td><td>Van't Hoff · endo: T↑ → K↑ · exo: T↑ → K↓</td></tr>
+    <tr><td>"n moles de electrones", "potencial estándar"</td><td>E° = −ΔG°/(nF) = (RT/nF) ln K</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="6">
+  <h2><i>4</i>Diccionario · fases y mezclas</h2>
+  <table class="tb dic">
+    <tr><th>Si el enunciado dice…</th><th>significa → hacé</th></tr>
+    <tr><td>"punto de ebullición <b>normal</b>"</td><td>P = 1 atm (agua: 373,15 K) · "estándar" = 1 bar</td></tr>
+    <tr><td>"olla a presión a 200 kPa", "T de ebullición a otra P"</td><td>Clausius-Clapeyron con (101,325 kPa; 373,15 K) y ΔH<sub>vap</sub> → despejá T<sub>2</sub></td></tr>
+    <tr><td>"P de sublimación", "a T cte bajar P hasta…"</td><td>Clausius con ΔH<sub>sub</sub> desde el punto triple</td></tr>
+    <tr><td>"punto triple, crítico, fusión normal", "¿V sólido o líquido mayor?"</td><td>Clapeyron sólido–líquido: signo de la pendiente dP/dT = ΔH<sub>fus</sub>/(TΔV)</td></tr>
+    <tr><td>"densidad del sólido y del líquido"</td><td>ΔV<sub>m</sub> = M(1/ρ<sub>líq</sub> − 1/ρ<sub>sól</sub>) en m³/mol</td></tr>
+    <tr><td>"presión de vapor de la mezcla", "fracciones en el vapor"</td><td>Raoult: X<sub>A</sub> = (P<sub>T</sub> − P<sub>B</sub>*)/(P<sub>A</sub>* − P<sub>B</sub>*), y<sub>i</sub> = P<sub>i</sub>/P<sub>T</sub></td></tr>
+    <tr><td>tabla de P parciales vs X</td><td>clasificar: ideal / idealmente diluida / real (árbol §B)</td></tr>
+    <tr><td>"solución ideal"</td><td>todos siguen Raoult en todo el rango</td></tr>
+    <tr><td>"soluto no volátil", "% m/m", "kg de solución"</td><td>coligativas con <b>molalidad</b> (mol soluto/kg solvente)</td></tr>
+    <tr><td>"presión osmótica" → "punto de congelación"</td><td>c = π/RT (mol/m³) ≈ molalidad en agua diluida → ΔT<sub>F</sub> = K<sub>F</sub>·m</td></tr>
+    <tr><td>"potencial químico del disolvente real"</td><td>μ = μ* + RT ln a, a = γX (racional)</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="8">
+  <h2><i>5</i>Diccionario · cinética</h2>
+  <table class="tb dic">
+    <tr><th>Si el enunciado dice…</th><th>significa → hacé</th></tr>
+    <tr><td>"reacción <b>elemental</b>"</td><td>orden = coeficiente (molecularidad) · un solo reactivo → orden 1</td></tr>
+    <tr><td>"t½ = cte para distintas [A]<sub>0</sub>"</td><td>orden 1 · si t½ ∝ 1/[A]<sub>0</sub> → orden 2 · si t½ ∝ [A]<sub>0</sub> → orden 0</td></tr>
+    <tr><td>tabla de [A] vs t</td><td>probá: [A], ln[A], 1/[A] vs t: la recta da el orden; pendiente → k</td></tr>
+    <tr><td>dos concentraciones y un tiempo (9 → 7 en t<sub>1</sub>)</td><td>orden 1: k = ln(C<sub>0</sub>/C)/t</td></tr>
+    <tr><td>"% m/m que baja", "densidad constante"</td><td>el % es proporcional a C: usalo directo en ln(C<sub>0</sub>/C)</td></tr>
+    <tr><td>"cae al 20 % del inicial"</td><td>C/C<sub>0</sub> = 0,20 → t = ln(5)/k</td></tr>
+    <tr><td>"E<sub>a</sub> y A, ¿a qué T el t½ es…?"</td><td>k = ln2/t½ → T = E<sub>a</sub>/(R ln(A/k)) (mismas unidades de tiempo en A y k)</td></tr>
+    <tr><td>k (o t½) a dos temperaturas</td><td>E<sub>a</sub> = R ln(k<sub>2</sub>/k<sub>1</sub>)/(1/T<sub>1</sub> − 1/T<sub>2</sub>) · "en cal/mol" → R = 1,987</td></tr>
+    <tr><td>"aumento de T del 10 %, sin cálculos"</td><td>k crece exponencialmente (Arrhenius) → reacción más rápida, menor t½</td></tr>
+    <tr><td>"deduzca t½ de orden n"</td><td>D1 de la hoja 1: integrar, poner [A] = [A]<sub>0</sub>/2</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="11">
+  <h2><i>A</i>Árbol · ¿qué proceso es? (gas)</h2>
+  <div class="f"><div class="dp">
+    <b>¿V cte?</b> → W = 0, ΔU = q = nC<sub>v</sub>ΔT · ideal: ΔH = nC<sub>p</sub>ΔT · VdW: ΔH = ΔU + VΔP, P<sub>f</sub> con VdW<br>
+    <b>¿q = 0?</b> → ¿reversible? <b>sí</b>: $T_f = T_i\left(\frac{V_i}{V_f}\right)^{R/C_v}$, W = nC<sub>v</sub>ΔT · <b>no</b> (contra P<sub>ext</sub>): $nC_v(T_f - T_i) = -P_{ext}(V_f - V_i)$ → despejá T<sub>f</sub><br>
+    <b>¿T cte?</b> → ideal: ΔU = ΔH = 0 · reversible: W = −nRT ln(V<sub>f</sub>/V<sub>i</sub>) · contra P<sub>ext</sub>: W = −P<sub>ext</sub>ΔV<br>
+    <b>¿P cte?</b> → W = −PΔV, q = ΔH = nC<sub>p</sub>ΔT, ΔU = nC<sub>v</sub>ΔT
+  </div></div>
+  <div class="f"><b class="n">¿Qué ecuación de estado?</b><div class="c">dice "ideal" o P baja → PV = nRT · da a, b o "tolueno" → VdW · da B o B′ → virial · no dice nada y pide "comparar" → hacé las dos</div></div>
+</section>
+
+<section class="sec" data-u="7">
+  <h2><i>B</i>Árbol · ¿qué tipo de solución?</h2>
+  <ol class="proc">
+    <li><b>Solvente vs Raoult</b>: calculá X<sub>A</sub>·P<sub>A</sub>* y comparalo con P<sub>A</sub> medida.</li>
+    <li><b>Soluto</b>: calculá P<sub>B</sub>/X<sub>B</sub> en cada punto. ¿Es igual a P<sub>B</sub>*? → Raoult. ¿Es constante pero ≠ P<sub>B</sub>*? → Henry (ese valor es K<sub>H</sub>).</li>
+    <li><b>Los dos cumplen Raoult</b> → ideal · <b>solvente Raoult + soluto Henry</b> → idealmente diluida · <b>ninguno</b> → real (usá actividades).</li>
+    <li>Escribí μ: ideal y solvente → μ* + RT ln X · soluto Henry → μ° + RT ln X con estado de referencia de Henry · real → con γ.</li>
+  </ol>
+  <div class="c">Desvío chico (&lt; 1–2 %) → decí "se aproxima a…, estrictamente es real". Desvío +: P mayor que Raoult (repulsión A–B); −: menor (atracción A–B).</div>
+</section>
+
+<section class="sec" data-u="0">
+  <h2><i>D</i>Caso integrador (formato del previo)</h2>
+  <ol class="proc">
+    <li><b>Cada etapa es un tema</b>: extracción / destilación → mezclas, Raoult, coligativas · operación térmica, reactor → 1.ª ley con gas real · síntesis → termoquímica + espontaneidad · almacenamiento, degradación → cinética · luz, electrones, "termina cuando" → equilibrio y E°.</li>
+    <li>Los datos de una etapa se usan en esa etapa, salvo que diga "del punto anterior". Sobran datos: es normal.</li>
+    <li>Si falta un dato (C<sub>p</sub>, S°, a, b, ΔH<sub>f</sub>°), está en tus tablas. Si no, declaralo como supuesto y seguí.</li>
+    <li>Cada pregunta vale 20 %: resolvelas en el orden que te convenga, no en el del enunciado.</li>
+  </ol>
+  <div class="f"><b class="n">Datos que no te van a dar</b><div class="c">agua: ΔH<sub>vap</sub> = 40,7 kJ/mol (373 K) · ΔH<sub>fus</sub> = 6,01 kJ/mol · K<sub>F</sub> = 1,86 · K<sub>b</sub> = 0,512 K·kg/mol · ρ = 1 g/mL · C<sub>p</sub>(l) = 75,3 J/(mol·K) · "normal" = 1 atm · "estándar" = 1 bar, 298,15 K · "ambiente" = 298 K · aire 21 % O<sub>2</sub></div></div>
+</section>
+
+<section class="sec" data-u="4">
+  <h2><i>E</i>Qué pide cada verbo</h2>
+  <table class="tb dic">
+    <tr><td>"Calcule", "determine"</td><td>fórmula → despeje → número <b>con unidades</b></td></tr>
+    <tr><td>"Justifique"</td><td>fórmula o criterio + signo + frase causal ("porque ΔV<sub>fus</sub> &lt; 0…")</td></tr>
+    <tr><td>"Compare"</td><td>los dos valores + cuál es mayor + por qué (en 1 línea)</td></tr>
+    <tr><td>"Comente", "explique sin cálculos"</td><td>1–2 líneas con la ley que lo explica (Arrhenius, Le Chatelier, VdW)</td></tr>
+    <tr><td>"Plantee", "¿cómo se expresaría?"</td><td>ecuaciones con símbolos; no hace falta el número</td></tr>
+    <tr><td>"Deduzca"</td><td>desde la definición, sin saltar pasos (D1–D14 de la hoja 1)</td></tr>
+    <tr><td>"Formule un caso"</td><td>reacción química concreta + datos + resolución (caso listo en la cara 2)</td></tr>
+    <tr><td>"Indique hipótesis"</td><td>ideal/real, C<sub>p</sub> cte, ΔH y ΔS ctes, V cte, reversible</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="3">
+  <h2><i>C</i>Árbol · ¿cómo saco ΔH de reacción?</h2>
+  <div class="f"><div class="dp">
+    ¿dan ΔH de otras reacciones? → <b>Hess</b> (sumá/invertí/multiplicá) · ¿hay ΔH<sub>f</sub>° de todos en tabla? → <b>formación</b> · ¿lo pide "por enlaces" o es una molécula rara? → <b>enlaces</b> (todo gas: si sale H<sub>2</sub>O(l), restá 44 kJ por mol de agua) · ¿piden "de solución" o "disolución"? → iones(aq) − sólido · ¿a otra T? → después Kirchhoff
+  </div></div>
+</section>
+
+</div>
+</div>
+
+<!-- ======================= CARA 2 ======================= -->
+<div class="pag">
+<header class="cab"><h1>Fisicoquímica · Hoja de ruta · <span>Cara 2 · Recetas de los modelos, teoría corta y lo que no entró en la hoja 1</span></h1><p>✓ = resultado del modelo, para controlar</p></header>
+<div class="flujo">
+
+<section class="sec" data-u="7">
+  <h2><i>R1</i>Mezcla binaria del previo (sale siempre)</h2>
+  <ol class="ruta">
+    <li><b>Masas</b>: kg solución × % m/m = soluto; resto = solvente. Pasá a moles con M.</li>
+    <li><b>Molalidad</b> m = n<sub>st</sub>/kg<sub>solvente</sub> · <b>X</b> = n<sub>i</sub>/n<sub>T</sub> en el líquido.</li>
+    <li><b>Vapor</b>: P<sub>T</sub> = ΣP<sub>i</sub> → y<sub>i</sub> = P<sub>i</sub>/P<sub>T</sub>. Si dan P* y P<sub>T</sub>: X<sub>A</sub> = (P<sub>T</sub> − P<sub>B</sub>*)/(P<sub>A</sub>* − P<sub>B</sub>*).</li>
+    <li><b>Clasificar</b> con el árbol B. Justificá con números (X·P* vs P medida; P/X constante).</li>
+    <li>Si piden ebullición: ΔT<sub>b</sub> = K<sub>b</sub>·m → T<sub>b</sub> = T<sub>b</sub>* + ΔT<sub>b</sub>.</li>
+  </ol>
+  <div class="ctl">✓ Luminurina: m = 0,414 mol/kg · X<sub>L</sub> = 0,042 · y<sub>EB</sub> = 0,971 · idealmente diluida · hexano–octano: X<sub>hex</sub> = 0,211 · dic-22: X<sub>A</sub> = 0,972, y<sub>A</sub> = 0,949</div>
+</section>
+
+<section class="sec" data-u="1">
+  <h2><i>R2</i>Gas real en recipiente rígido / virial</h2>
+  <ol class="ruta">
+    <li>Rígido → W = 0 → q = ΔU. Hipótesis: C<sub>v</sub> cte; en VdW el término a no cambia porque V es cte.</li>
+    <li>ΔU = nC<sub>v</sub>ΔT (C<sub>v</sub> = C<sub>p</sub> − R de tabla).</li>
+    <li>V inicial: con VdW iterando (o ideal si la P es baja). P<sub>f</sub> = nRT<sub>f</sub>/(V − nb) − an²/V².</li>
+    <li>ΔH = ΔU + VΔP (VdW) · comparar con P<sub>f,ideal</sub> = P<sub>i</sub>T<sub>f</sub>/T<sub>i</sub>.</li>
+    <li>Virial: n = PV/(RT(1 + B′P)) → masa = nM. B′ y P en unidades inversas (atm⁻¹ con atm).</li>
+  </ol>
+  <div class="ctl">✓ EB 1,5 mol 298→380 K: W = 0, q = ΔU ≈ +14,8 kJ, P<sub>f</sub> ≈ 1,29 bar (ideal 1,32)</div>
+</section>
+
+<section class="sec" data-u="2">
+  <h2><i>R3</i>Adiabático y calorímetro</h2>
+  <ol class="ruta">
+    <li><b>Adiabático reversible</b>: n = PV/RT → T<sub>f</sub> = T<sub>i</sub>(V<sub>i</sub>/V<sub>f</sub>)<sup>R/Cv</sup> → W = ΔU = nC<sub>v</sub>ΔT (W &lt; 0 si se expande).</li>
+    <li><b>Adiabático contra P<sub>ext</sub></b> (H<sub>2</sub>S): W = −P<sub>ext</sub>ΔV → ΔU = W → ΔT → con VdW sumá el término a.</li>
+    <li><b>Calorímetro</b>: Σq = 0. Escribí un término por tramo: calentar sólido + fundir (+mL<sub>f</sub>) + calentar líquido; condensar (−mL<sub>v</sub>) + enfriar. Incógnita = masa → despejá.</li>
+  </ol>
+  <div class="ctl">✓ Neón 12→14 L: T<sub>f</sub> = 269 K, W ≈ −534 J · H<sub>2</sub>S: W = +112 J, ΔH = 0, T<sub>f</sub> ≈ 296 K · hielo + vapor: ≈ 41,5 g de vapor</div>
+</section>
+
+<section class="sec" data-u="3">
+  <h2><i>R4</i>Termoquímica completa + espontaneidad</h2>
+  <ol class="ruta">
+    <li>Balanceá y marcá estados. <b>ΔH°</b> por enlaces o por formación.</li>
+    <li><b>ΔU° = ΔH° − Δn<sub>g</sub>RT</b> (RT = 2,479 kJ/mol a 298 K).</li>
+    <li><b>ΔH(T)</b> = ΔH° + ΔC<sub>p</sub>(T − 298) con ΔC<sub>p</sub> = ΣνC<sub>p</sub>(prod) − ΣνC<sub>p</sub>(reac).</li>
+    <li><b>ΔS°</b> de tabla (J/K) → <b>ΔG° = ΔH° − TΔS°</b> con ΔS en <b>kJ</b>/K.</li>
+    <li><b>T inversión = ΔH°/ΔS°</b>. ¿Existe? Solo si ΔH y ΔS tienen el mismo signo.</li>
+    <li><b>W útil máx = −ΔG°</b> · W máx total = −ΔA = −(ΔU − TΔS) · calor = q<sub>P</sub> = ΔH.</li>
+  </ol>
+  <div class="ctl">✓ Luminurina: ΔH° ≈ −230, ΔU° ≈ −228, ΔH(398) ≈ −224 kJ/mol · ΔS° = −52,7 J/K · ΔG° ≈ −214 kJ/mol · T<sub>inv</sub> ≈ 4360 K · N≡N = 942 kJ/mol · P<sub>4</sub>O<sub>10</sub>: ΔH° = 147,3, ΔU° = 177,0 kJ · HClO<sub>4</sub>: ΔH ≈ −90, ΔU ≈ −95 kJ/mol · butano: ΔU = −2868 kJ/mol · CO<sub>2</sub> 25→500 °C: ≈ 21,5 kJ/mol</div>
+</section>
+
+<section class="sec" data-u="6">
+  <h2><i>R5</i>Fases: Clapeyron y Clausius</h2>
+  <ol class="ruta">
+    <li><b>¿V sólido o líquido?</b>: con los datos, ¿la curva s–l va hacia T mayor o menor al subir P? Si P<sub>triple</sub> &lt; 1 atm y T<sub>fusión normal</sub> &lt; T<sub>triple</sub> → pendiente negativa → ΔV<sub>fus</sub> &lt; 0 → <b>sólido ocupa más</b> (como el agua).</li>
+    <li><b>ΔH<sub>fus</sub></b> = ΔV(P<sub>2</sub> − P<sub>1</sub>)/ln(T<sub>2</sub>/T<sub>1</sub>) con dos puntos de la curva (triple y fusión normal). ΔV en m³/mol, P en Pa.</li>
+    <li><b>Olla / ebullición a otra P</b>: 1/T<sub>2</sub> = 1/T<sub>1</sub> − (R/ΔH<sub>vap</sub>) ln(P<sub>2</sub>/P<sub>1</sub>) con (101,325 kPa; 373,15 K), ΔH<sub>vap</sub> = 40,7 kJ/mol.</li>
+    <li><b>Explicar la olla</b>: P mayor → T de ebullición mayor → k mayor (Arrhenius) → cocina más rápido.</li>
+  </ol>
+  <div class="ctl">✓ olla 200 kPa ≈ 394 K (121 °C) · 120 kPa ≈ 378 K · sólido vs líquido (T<sub>f</sub> 300 &lt; T<sub>t</sub> 330 K): sólido ocupa más · Urquidato: sublimación ≈ 27,6 Pa</div>
+</section>
+
+<section class="sec" data-u="7">
+  <h2><i>R6</i>Coligativas</h2>
+  <ol class="ruta">
+    <li>De % m/m: masa soluto y solvente → m = n<sub>st</sub>/kg<sub>ste</sub> → ΔT = K·m.</li>
+    <li>De π: c = π/(RT) con π en Pa → mol/m³ → ÷1000 = mol/L ≈ mol/kg (agua, diluida) → ΔT<sub>F</sub>.</li>
+    <li>Masa molar: M = K·masa<sub>st</sub>/(ΔT·kg<sub>ste</sub>). Electrolitos: × i.</li>
+  </ol>
+  <div class="ctl">✓ π = 120 kPa a 300 K: c = 48,1 mol/m³ → ΔT<sub>F</sub> = 0,089 K → T<sub>F</sub> = 273,06 K</div>
+</section>
+
+<section class="sec" data-u="8">
+  <h2><i>R7</i>Cinética</h2>
+  <ol class="ruta">
+    <li><b>Orden</b>: elemental → coeficiente · t½ vs [A]<sub>0</sub> · tabla → ln[A] y 1/[A] vs t.</li>
+    <li><b>k</b>: orden 1 k = ln(C<sub>0</sub>/C)/t = ln2/t½ · orden 2 k = 1/(t½[A]<sub>0</sub>).</li>
+    <li><b>Tiempo hasta C</b>: t = ln(C<sub>0</sub>/C)/k. Atajo con dos datos: $t_C = t_1\,\frac{\ln(C_0/C)}{\ln(C_0/C_1)}$ (sin calcular k).</li>
+    <li><b>Varias vidas medias</b>: C = C<sub>0</sub>(½)<sup>N</sup> → ¼ = 2 t½, ⅛ = 3 t½.</li>
+    <li><b>E<sub>a</sub></b> con k a dos T; <b>T</b> con E<sub>a</sub> y A: T = E<sub>a</sub>/(R ln(A/k)).</li>
+  </ol>
+  <div class="ctl">✓ HI: 2.º orden, k = 0,170 y 2,38 M⁻¹min⁻¹, E<sub>a</sub> ≈ 35,5 kcal/mol · H<sub>2</sub>O<sub>2</sub>: orden 1, k ≈ 7,5·10⁻⁴ s⁻¹ · t½ = 10 h → T ≈ 492 K · 9→7→5: t<sub>5</sub> = 2,34·t<sub>1</sub> · Luminurina 8→5,6 % en 12 d: k = 0,0297 d⁻¹, t½ = 23,3 d, al 20 %: 54 d · Urquidato: 2 t½ = 60 min</div>
+</section>
+
+<section class="sec" data-u="5">
+  <h2><i>R8</i>Equilibrio con manómetro (sólido → gas)</h2>
+  <ol class="ruta">
+    <li>ΔP del manómetro = presión del gas producido (si arrancó sin él).</li>
+    <li>n = ΔP·V/(RT) en el espacio de cabeza.</li>
+    <li>K = P<sub>gas</sub><sup>ν</sup> en atm → ΔG° = −RT ln K.</li>
+    <li>Espontánea si Q &lt; K → P<sub>gas</sub> &lt; P<sub>eq</sub>.</li>
+  </ol>
+  <div class="ctl">✓ Educiol: P = 0,342 atm, n = 0,070 mol, ΔG° ≈ +5,3 kJ/mol · Urquidato: K = 3, ΔG° = −2,72 kJ/mol, E° ≈ +9,4 mV</div>
+</section>
+
+<section class="sec" data-u="3">
+  <h2><i>R9</i>"Formule un caso de Kirchhoff" (listo)</h2>
+  <ol class="ruta">
+    <li><b>Caso</b>: ΔH de N<sub>2</sub>(g) + 3H<sub>2</sub>(g) → 2NH<sub>3</sub>(g) a 500 K.</li>
+    <li>ΔH°<sub>298</sub> = 2·ΔH<sub>f</sub>°(NH<sub>3</sub>) = 2(−46,11) = −92,2 kJ.</li>
+    <li>ΔC<sub>p</sub> = 2(35,06) − 29,13 − 3(28,82) = −45,5 J/K (C<sub>p</sub> ctes, de tabla).</li>
+    <li>ΔH<sub>500</sub> = −92,2 + (−0,0455)(500 − 298) = <b>−101,4 kJ</b>.</li>
+  </ol>
+  <div class="c">Hipótesis: C<sub>p</sub> constantes, sin cambios de fase entre 298 y 500 K. Con C<sub>p</sub>(T): integrá ΔC<sub>p</sub>(T)dT.</div>
+</section>
+
+<section class="sec" data-u="4">
+  <h2><i>R10</i>Cómo encarar un "deduzca"</h2>
+  <ol class="ruta">
+    <li>Escribí la <b>definición o ley de partida</b> (ley de velocidad, G = H − TS, μ<sup>α</sup> = μ<sup>β</sup>).</li>
+    <li>Pasá a forma diferencial y <b>separá variables</b>.</li>
+    <li><b>Integrá con límites</b> (t = 0 → t, [A]<sub>0</sub> → [A]).</li>
+    <li>Aplicá la <b>condición particular</b> (t½: [A] = [A]<sub>0</sub>/2; equilibrio: ΔG = 0).</li>
+    <li>Recuadrá el resultado y escribí cuándo vale (orden n ≠ 1, ΔH cte, gas ideal…).</li>
+  </ol>
+</section>
+
+<section class="sec" data-u="4">
+  <h2><i>T</i>Teoría corta que toman (respuesta modelo)</h2>
+  <dl class="qa">
+    <dt>Racional vs práctico</dt><dd>Racional: referencia líquido puro (Raoult), a = P/P*, γ → 1 si X → 1; para el solvente. Práctico: referencia Henry, a = P/K<sub>H</sub>, γ → 1 si X → 0; para el soluto. Los dos se usan para describir sistemas <b>reales</b> (γ mide el desvío del ideal).</dd>
+    <dt>μ de un disolvente real</dt><dd>μ = μ* + RT ln a, a = γX. Actividad = "concentración efectiva"; γ = coeficiente de actividad = a/X (1 en el ideal).</dd>
+    <dt>Coeficientes del virial</dt><dd>B mide interacciones entre pares de moléculas, C entre tríos. B &lt; 0 dominan atracciones, B &gt; 0 repulsiones; en la T de Boyle B = 0.</dd>
+    <dt>VdW (múltiple choice)</dt><dd>a/V<sub>m</sub>² = <b>atracciones</b>; (V<sub>m</sub> − b) = <b>repulsiones</b> (volumen excluido). La opción "a = repulsión, b = atracción" es falsa.</dd>
+    <dt>ΔU = 0 cuando ΔT = 0</dt><dd>Solo para <b>gases ideales</b> (U depende solo de T). En gases reales hay término de interacciones.</dd>
+    <dt>Utilidad de Kirchhoff</dt><dd>Calcular ΔH de reacción a una T distinta de la de tabla (298 K) usando ΔC<sub>p</sub>. Caso resuelto: R9.</dd>
+    <dt>Diamante vs grafito</dt><dd>ΔH<sub>f</sub>° = 0 solo para el elemento en su forma <b>más estable</b> a 1 bar y 298 K (grafito). El diamante es otra forma alotrópica, menos estable: ΔH<sub>f</sub>° = +1,9 kJ/mol.</dd>
+    <dt>¿Cuándo orden = coeficiente?</dt><dd>Solo en reacciones <b>elementales</b> (ocurren en un paso; orden = molecularidad). En general el orden es experimental.</dd>
+    <dt>Ec. fundamental</dt><dd>dG = −SdT + VdP + Σμ<sub>i</sub>dn<sub>i</sub>: incorpora la <b>composición</b> (n<sub>i</sub>) mediante el potencial químico.</dd>
+    <dt>K vs T</dt><dd>Van't Hoff: d ln K/dT = ΔH°/(RT²). Endotérmica: K sube con T; exotérmica: K baja.</dd>
+    <dt>Agua ligada</dt><dd>Interactúa con solutos y biopolímeros; movilidad restringida, no congela (hasta ≈ −40 °C), no se elimina por secado, no actúa como solvente.</dd>
+    <dt>Humedad de monocapa</dt><dd>Una molécula de agua por cada grupo polar; punto de máxima estabilidad del alimento (por encima, el agua es solvente y aceleran el deterioro y Maillard).</dd>
+    <dt>Geles: formación</dt><dd>Red 3D que retiene líquido. Se forman por enfriamiento (gelatina), evaporación, agregado de solventes o de electrolitos en exceso, cambio de pH. Imbibición: absorbe y se hincha; sinéresis: expulsa líquido.</dd>
+    <dt>Coloides hidrófilos vs hidrófobos</dt><dd>Hidrófilos: afinidad con el agua, aumentan viscosidad, poco sensibles a electrolitos (salvo en exceso), al perder agua forman geles. Hidrófobos: poca afinidad, no cambian viscosidad, muy sensibles a electrolitos (coagulan); se protegen con coloides protectores o tensioactivos.</dd>
+  </dl>
+</section>
+
+<section class="sec" data-u="9">
+  <h2><i>+</i>Lo que no entró en la hoja 1</h2>
+  <div class="f"><b class="n">Adsorción (isotermas)</b><div class="dp">Langmuir (monocapa, sitios iguales, sin interacción): $\theta = \dfrac{KP}{1 + KP}$ · lineal: $\dfrac{P}{V} = \dfrac{1}{K V_m} + \dfrac{P}{V_m}$ → recta P/V vs P: pendiente 1/V<sub>m</sub>, ordenada 1/(KV<sub>m</sub>)</div><div class="c">BET: multicapa, a<sub>w</sub> &lt; 0,4 · GAB: hasta a<sub>w</sub> ≈ 0,8 · fisisorción (VdW, multicapa, reversible, ΔH chico) vs quimisorción (enlace, monocapa, específica, ΔH grande) · histéresis: desorción por encima de adsorción</div></div>
+  <div class="f"><b class="n">Mecanismos (por si preguntan)</b><div class="dp">Michaelis-Menten: $v = \dfrac{V_{máx}[S]}{K_M + [S]}$</div><div class="c">Etapa lenta = determinante de la velocidad · estado estacionario: d[intermediario]/dt ≈ 0 · K<sub>M</sub> = [S] a v = V<sub>máx</sub>/2 · catalizador: baja E<sub>a</sub>, no cambia K ni ΔG</div></div>
+  <div class="f"><b class="n">Trabajo isotérmico reversible con virial</b><div class="dp">$W = -nRT\ln\dfrac{V_f}{V_i} + n^2RTB\left(\dfrac1{V_f} - \dfrac1{V_i}\right)$</div></div>
+  <div class="f"><b class="n">K<sub>c</sub> y K<sub>p</sub></b><div class="dp">$K_c = \dfrac{\prod [prod]^{\nu}}{\prod [reac]^{\nu}}$ (mol/L) · $K_p = K_c(RT)^{\Delta n_g}$ con R = 0,08206 · Δn<sub>g</sub> = 0 → K<sub>p</sub> = K<sub>c</sub></div></div>
+  <table class="tb mag">
+    <tr><th colspan="4">Unidades SI de las magnitudes</th></tr>
+    <tr><td>P</td><td>Pa = N/m²</td><td>S, C<sub>p</sub></td><td>J/K · molar J/(mol·K)</td></tr>
+    <tr><td>U, H, G, q, W</td><td>J (molar J/mol)</td><td>μ</td><td>J/mol</td></tr>
+    <tr><td>c / m</td><td>mol/L / mol/kg</td><td>K<sub>F</sub>, K<sub>b</sub></td><td>K·kg/mol</td></tr>
+    <tr><td>a (VdW)</td><td>L²·atm/mol² · Pa·m⁶/mol²</td><td>b</td><td>L/mol · m³/mol</td></tr>
+  </table>
+</section>
+
+<section class="sec" data-u="11">
+  <h2><i>✓</i>Control de órdenes de magnitud</h2>
+  <table class="tb mag">
+    <tr><td>ΔH, ΔG de reacción</td><td>10 a 3000 kJ/mol</td><td>ΔS de reacción</td><td>±10 a 800 J/K</td></tr>
+    <tr><td>ΔT<sub>b</sub>, ΔT<sub>F</sub></td><td>0,01 a 5 K</td><td>E<sub>a</sub></td><td>40 a 250 kJ/mol</td></tr>
+    <tr><td>W de un gas (pocos mol)</td><td>0,1 a 10 kJ</td><td>T de inversión</td><td>cientos a miles de K</td></tr>
+    <tr><td>X, y</td><td>entre 0 y 1, suman 1</td><td>energía de enlace</td><td>150 a 1000 kJ/mol</td></tr>
+  </table>
+  <div class="c">Si te da ΔG de 10⁵ kJ: mezclaste J con kJ. T negativa: usaste °C o un signo de ΔS mal. X &gt; 1: invertiste P* de los componentes.</div>
+</section>
+
+<section class="sec" data-u="11">
+  <h2><i>☑</i>Antes de entregar</h2>
+  <ol class="proc">
+    <li>¿Contesté <b>todo</b> lo que pide cada ítem (a, b, c…)?</li>
+    <li>¿Cada resultado tiene <b>unidades</b> y signo?</li>
+    <li>¿T en K en todas las fórmulas con R, ln K, Arrhenius?</li>
+    <li>¿Escribí las hipótesis en los ítems que lo piden?</li>
+    <li>¿Algún valor fuera de la tabla de órdenes de magnitud? Revisalo.</li>
+  </ol>
+</section>
+
+</div>
+</div>

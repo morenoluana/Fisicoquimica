@@ -1,0 +1,26 @@
+/* Hoja de ruta: se carga después de hoja-examen.css y agrega diccionario, recetas, control y Q&A. */
+.tb.dic td { font-size: 6.3pt; vertical-align: top; padding: .32mm .5mm; }
+.tb.dic td:first-child { width: 46%; color: var(--suave); font-style: italic; }
+.tb.dic td:last-child { color: var(--tinta); }
+.tb.dic th { font-size: 6.1pt; }
+.tb.dic tr { break-inside: avoid; }
+.ruta { list-style: none; counter-reset: r; margin: .6mm 1.2mm 0; padding: 0; font-size: 6.45pt; line-height: 1.24; }
+.ruta li { counter-increment: r; position: relative; padding-left: 3.4mm; margin: .2mm 0; break-inside: avoid; }
+.ruta li::before { content: counter(r); position: absolute; left: 0; top: .2mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--u); color: #fff; font: 700 5.3pt/2.6mm var(--mono); text-align: center; }
+.ruta b { color: var(--u); }
+.ctl { background: #eef8f0; border-left: 1.6pt solid #15803d; border-radius: 0 1mm 1mm 0; padding: .5mm 1.1mm; margin-top: .6mm; font-size: 6.2pt; line-height: 1.22; color: #12361d; break-inside: avoid; }
+.qa { margin: .4mm 1.2mm 0; font-size: 6.35pt; line-height: 1.22; }
+.qa dt { font: 700 6.1pt/1.15 var(--cond); color: var(--u); text-transform: uppercase; letter-spacing: .04em; margin-top: .55mm; break-after: avoid; }
+.qa dd { margin: 0; break-inside: avoid; border-bottom: .4pt solid var(--linea); padding-bottom: .35mm; }
+.qa dd:last-child { border-bottom: 0; }
+.tb.mag td { font-size: 6.2pt; padding: .3mm .5mm; }
+.tb.mag td:nth-child(odd) { font-weight: 600; }
+.proc li:first-child b { text-transform: none; font-size: inherit; letter-spacing: 0; }
+.tb.dic { break-inside: auto; }
+/* letra un poco más grande que la hoja 1: esta hoja es de lectura */
+body { font-size: calc(6.85pt * 1.06); }
+.tb.dic td, .tb.dic th { font-size: calc(6.3pt * 1.06); }
+.ruta, .proc, .ojo, .ded li { font-size: calc(6.45pt * 1.06); }
+.ctl, .tb.mag td { font-size: calc(6.2pt * 1.06); }
+.qa { font-size: calc(6.35pt * 1.06); }
+.c { font-size: calc(6.3pt * 1.06); } .dp { font-size: calc(6.6pt * 1.06); }
